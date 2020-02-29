@@ -13,12 +13,13 @@ passages_file = 'project_files/passages_in.csv'
 
 trajectory_dict = {}
 
+
 def read_passages():
     """Read the different passages"""
     df_passages = pd.read_csv(passages_file, sep=';')
 
     # Get all the ships
-    df_vessels = df_passages[['ShipID','CEMTKlasse','Width', 'Length']].drop_duplicates(inplace=False)
+    df_vessels = df_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length']].drop_duplicates(inplace=False)
     df_vessels = df_vessels.reset_index(drop=True)
 
     # Make a global vessel dict
@@ -32,7 +33,6 @@ def read_passages():
         vessel = Vessel(row['ShipID'], row['Length'], row['Width'], row['CEMTKlasse'])
         vessel_dict[row['ShipID']] = vessel
 
-
     # Connect the route
     for index, row in df_passages.iterrows():
         # Get the corresponding vessel
@@ -43,26 +43,27 @@ def read_passages():
         vessel = vessel_dict.get(shipId)
         vessel.route.append(trajectory)
 
-    print()
+    #print()
+
 
 def read_trajectories():
     # read the trajectories
 
     f = open(trajectories_file)
 
-    #with open(trajectories) as jsonfile:
+    # with open(trajectories) as jsonfile:
     #    data = json.load(jsonfile)
     #    print(data)
-    #pass
+    # pass
 
     trajectories_df = gpd.read_file(trajectories_file)
-    #print(trajectories_df.head())
-    print(trajectories_df['LoLat'])
+    # print(trajectories_df.head())
+    #print(trajectories_df['LoLat'])
 
     global trajectories_dict
 
-    for index,row in trajectories_df.iterrows():
-        print(row['LoLat'], row['LoLong'])
+    for index, row in trajectories_df.iterrows():
+        #print(row['LoLat'], row['LoLong'])
 
         trajectoryName = row['TrajectName']
         if trajectoryName in trajectory_dict:
@@ -80,15 +81,18 @@ def read_trajectories():
 
     return trajectory_dict
 
+
 def read_network():
     # read the waterway network
     network_df = gpd.read_file(waterway_file)
     return network_df
 
+
 def read_bridges():
     # read the waterway network
     bridges_df = gpd.read_file(bridges_file)
     return bridges_df
+
 
 def read_terminals():
     # read the waterway network
