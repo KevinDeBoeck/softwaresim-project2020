@@ -1,38 +1,23 @@
 # Read the different data files
 from builtins import set
 
-import IO
 import setup
 import salabim as sim
+import simulation
+from model.Vessel import VesselComponentGenerator
 
+setup.read_data()
 
-def read_data():
-    """ Read all the relevant data"""
-    global trajectories_dict
-    global df_network
-    global df_network_totalbounds
-    global df_bridges
-    global df_terminal
-    global df_passages
-
-    trajectories_dict = IO.read_trajectories()
-    df_network = IO.read_network()
-    df_network_totalbounds = IO.read_network()
-    df_bridges = IO.read_bridges()
-    df_terminal = IO.read_terminals()
-    df_passages = IO.read_passages()
-
-
-# Read all data
-read_data()
+simulation.draw_scale = 10
 
 # Simulation
-env = sim.Environment(trace=True)
+simulation.environment = sim.Environment(trace=True)
+env = simulation.environment
 env.animate(True)
 env.modelname("Alsic Waterway Simulation")
 
-setup.draw_network(env,df_network.geometry)
+setup.draw_network()
 
+VesselComponentGenerator()
 
-
-env.run(100)
+env.run()
