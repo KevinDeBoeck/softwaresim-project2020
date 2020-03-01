@@ -4,7 +4,7 @@ import math
 import numpy as np
 
 
-class Vessel(sim.Component, sim.Animate):
+class Vessel(object):
     speed = 9  # km/h
 
     def __init__(self, shipID, length, width, cemt):
@@ -16,7 +16,7 @@ class Vessel(sim.Component, sim.Animate):
         self.current_trajectory = None
 
 
-class VesselComponent(sim.Component, sim.Animate):
+class VesselComponent(sim.Component):
 
     def __init__(self, vessel, **kwargs):
         super().__init__(**kwargs)
@@ -44,7 +44,6 @@ class VesselComponent(sim.Component, sim.Animate):
             self.animation = sim.Animate(circle0=(0.005,), fillcolor0="black", x0=start_xy[0] * draw_scale,
                                          x1=end_xy[0] * draw_scale,
                                          y0=start_xy[1] * draw_scale, y1=end_xy[1] * draw_scale,
-                                         t0=simulation.environment.now(),
                                          t1=simulation.environment.now() + required_time)
 
             return self.hold(required_time)

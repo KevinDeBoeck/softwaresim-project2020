@@ -7,3 +7,6 @@ global vessels_dict
 global moving_vessels
 global environment
 global draw_scale
+global zoomed
+global detailed_map
+global draw_trajectories
