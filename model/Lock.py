@@ -1,6 +1,4 @@
-class Bridge(object):
-    """Defines a bridge"""
-
+class Lock(object):
     def __init__(self, properties, lon, lat):
         self.properties = properties
         self.lon = lon

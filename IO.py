@@ -11,6 +11,7 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 terminals_file = 'project_files/terminals.geojson'
 passages_file = 'project_files/passages_in.csv'
+locks_file = 'project_files/locks.geojson'
 
 trajectory_dict = {}
 
@@ -100,3 +101,8 @@ def read_terminals():
     # read the waterway network
     terminals_df = gpd.read_file(terminals_file)
     return terminals_df
+
+
+def read_locks():
+    locks_df = gpd.read_file(locks_file)
+    return locks_df

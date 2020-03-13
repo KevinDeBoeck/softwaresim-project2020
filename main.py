@@ -8,13 +8,12 @@ from model.Vessel import VesselComponentGenerator
 
 setup.read_data()
 
-simulation.zoomed = True
-simulation.detailed_map = True
-simulation.draw_trajectories = False
-if simulation.zoomed:
-    simulation.draw_scale = 10
-else:
-    simulation.draw_scale = 1
+simulation.draw_trajectories = True
+simulation.draw_scale = 10
+simulation.draw_skip = 8
+simulation.width = 1920
+simulation.height = 1080
+
 
 # Simulation
 simulation.environment = sim.Environment(trace=False)
@@ -22,7 +21,7 @@ env = simulation.environment
 env.animate(True)
 env.modelname("Alsic Waterway Simulation")
 
-setup.draw_network()
+simulation.network.draw()
 
 VesselComponentGenerator()
 
