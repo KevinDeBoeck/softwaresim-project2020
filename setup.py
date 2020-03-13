@@ -21,7 +21,7 @@ def read_data():
     # Parse water
     print("Importing fairway sections")
     df_network = IO.read_network()
-    for index, row in df_network.iterrows():
+    for _, row in df_network.iterrows():
         xy = row.geometry[0].xy
         lon1 = xy[0][0]
         lat1 = xy[1][0]
@@ -60,5 +60,3 @@ def read_data():
         fw_code = row["sectionref"]
         lock = Lock(row, point[0], point[1])
         network.fairway_sections[fw_code].add_lock(lock)
-
-    network.generate_network()

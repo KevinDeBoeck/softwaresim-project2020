@@ -7,5 +7,3 @@ global draw_scale
 global draw_trajectories
 global draw_skip
 global network
-global height
-global width

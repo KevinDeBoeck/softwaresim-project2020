@@ -11,8 +11,6 @@ setup.read_data()
 simulation.draw_trajectories = True
 simulation.draw_scale = 10
 simulation.draw_skip = 8
-simulation.width = 1920
-simulation.height = 1080
 
 
 # Simulation
@@ -21,7 +19,8 @@ env = simulation.environment
 env.animate(True)
 env.modelname("Alsic Waterway Simulation")
 
-simulation.network.draw()
+simulation.network.draw_and_project()
+simulation.network.generate_graph()
 
 VesselComponentGenerator()
 

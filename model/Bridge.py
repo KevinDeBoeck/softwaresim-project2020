@@ -1,3 +1,7 @@
+import salabim as sim
+import simulation
+
+
 class Bridge(object):
     """Defines a bridge"""
 
@@ -7,6 +11,10 @@ class Bridge(object):
         self.lat = lat
         self.projected_lon = lon
         self.projected_lat = lat
+        self.animate = None
 
-    def animate(self):
-        print()
+    def draw(self):
+        draw_scale = simulation.draw_scale
+        self.animate = sim.AnimateCircle(radius=0.005, x=self.projected_lon * draw_scale,
+                                         y=self.projected_lat * draw_scale,
+                                         fillcolor="lime")
