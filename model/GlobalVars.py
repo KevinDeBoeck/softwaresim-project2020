@@ -8,6 +8,7 @@ bridges = []
 locks = []
 
 network = None
+environment = None
 zoom = True
 # Default dimensions for the visualisation pane
 # Settings for the visualization
@@ -23,7 +24,7 @@ node_x_max = float('-inf')
 node_y_min = float('inf')
 node_y_max = float('-inf')
 
-x_min = 3.140237
-y_min = 50.794897
-x_max = 3.371636
-y_max = 50.865251
+x_min = 0
+y_min = 0
+x_max = 0
+y_max = 0

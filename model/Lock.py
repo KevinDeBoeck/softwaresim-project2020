@@ -25,8 +25,14 @@ class Lock(Node):
                 min_distance = distance
                 insertion_idx = idx
 
-        # Append add the best index
-        fairway_section.nodes.insert(insertion_idx + 1, self)
+        if min_distance == 0:
+            fairway_section.nodes[insertion_idx] = self
+        else:
+            # Append add the best index
+            if insertion_idx >= len(fairway_section.nodes) - 1:
+                insertion_idx = insertion_idx - 1
+
+            fairway_section.nodes.insert(insertion_idx + 1, self)
 
     def draw(self):
         coordinate_tuple = Utilities.normalize(self.x, self.y)

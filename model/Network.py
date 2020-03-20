@@ -38,26 +38,33 @@ class Network:
 
     def generate_graph(self):
         """LETS SCREAM IT OUT"""
-
-        print("Generating fairway sections graph")
+        stop = (3.4084978395216, 50.911124847130168)
         for fairway in self.fairway_sections_list:
             start_pair = None
             for node in fairway.nodes:
                 end_pair = (node.x, node.y)
+                if end_pair == stop:
+                    print("STOP")
+
                 if type(node).__name__ == 'Node':
-                    self.graph.add_node(end_pair, artwork=None, pos=end_pair, fairway=fairway)
+                    if not self.graph.has_node(end_pair):
+                        self.graph.add_node(end_pair, artwork=None, pos=end_pair, fairway=fairway)
                 else:
-                    self.graph.add_node(end_pair, artwork=node, pos=end_pair, fairway=fairway)
+                    if not self.graph.has_node(end_pair):
+                        self.graph.add_node(end_pair, artwork=node, pos=end_pair, fairway=fairway)
+                    else:
+                        self.graph.nodes()[end_pair]['artwork'] = node
                 if start_pair is not None:
                     self.graph.add_edge(start_pair, end_pair, fairway=fairway,
                                         length=Utilities.haversine(start_pair, end_pair))
                 start_pair = end_pair
 
-        count = 0
+        stop = (3.4084978395216, 50.911124847130168)
         for node in self.graph.nodes:
             neighbors = list(self.graph.neighbors(node))
+            if node == stop:
+                print("STOP")
             if len(neighbors) > 2:
-                count = count +1
                 crossroad = CrossRoad(node)
                 crossroad.draw()
                 self.graph.nodes()[node]['artwork'] = crossroad
@@ -66,7 +73,6 @@ class Network:
                     crossroad.intersections[neighbor] = sim.Queue(
                         "Crosroad: " + str(node) + " => " + str(neighbor))
 
-        print(count)
         # nx.draw(self.graph, pos=nx.get_node_attributes(self.graph, 'pos'), node_size=1, alpha=0.5, node_color="blue",
         #         with_labels=False)
         # plt.axis('scaled')

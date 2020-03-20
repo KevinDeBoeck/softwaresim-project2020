@@ -152,9 +152,9 @@ def read_data():
     Config.fairway_section_list = read_network()
 
     # Read all the bridges in the network
-    #Config.bridges = read_bridges()
+    Config.bridges = read_bridges()
 
     # Read all the locks in the network
-    #Config.locks = read_locks()
+    Config.locks = read_locks()
 
-    #Config.vessels, Config.vessels_dict = read_passages()
+    Config.vessels, Config.vessels_dict = read_passages()

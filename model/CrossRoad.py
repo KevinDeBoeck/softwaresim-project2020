@@ -11,7 +11,7 @@ class CrossRoad(Node):
 
     def draw(self):
         coordinate_tuple = Utilities.normalize(self.x, self.y)
-        size = 5
+        size = 2
         if GlobalVars.zoom:
             size = size / 2
         self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='red', linewidth=size, layer=3)
