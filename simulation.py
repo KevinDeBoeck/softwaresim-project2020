@@ -1,9 +1,0 @@
-global trajectories_dict
-global df_passages
-global vessels_dict
-global moving_vessels
-global environment
-global draw_scale
-global draw_trajectories
-global draw_skip
-global network

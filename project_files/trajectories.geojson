@@ -1,19 +1,333 @@
 {
-"type": "FeatureCollection",
-"name": "trajectories",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "ID": 1, "TrajectName": "Traject1", "ISRS": "BEWEV15103F217600074", "LoLat": 50.8099, "LoLong": 3.219698, "RoLat": 50.808759, "RoLong": 3.22136 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.219698, 50.8099 ], [ 3.22136, 50.808759 ] ] } },
-{ "type": "Feature", "properties": { "ID": 2, "TrajectName": "Traject1", "ISRS": "BEKJK151030000000097", "LoLat": 50.825279, "LoLong": 3.240275, "RoLat": 50.824462, "RoLong": 3.241581 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.240275, 50.825279 ], [ 3.241581, 50.824462 ] ] } },
-{ "type": "Feature", "properties": { "ID": 3, "TrajectName": "Traject2", "ISRS": "BEKJK151030000000097", "LoLat": 50.825279, "LoLong": 3.240275, "RoLat": 50.824462, "RoLong": 3.241581 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.240275, 50.825279 ], [ 3.241581, 50.824462 ] ] } },
-{ "type": "Feature", "properties": { "ID": 4, "TrajectName": "Traject2", "ISRS": "BEKJK151040000000125", "LoLat": 50.83736, "LoLong": 3.274587, "RoLat": 50.836741, "RoLong": 3.27503 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.274587, 50.83736 ], [ 3.27503, 50.836741 ] ] } },
-{ "type": "Feature", "properties": { "ID": 5, "TrajectName": "Traject3", "ISRS": "BEKJK151040000000125", "LoLat": 50.83736, "LoLong": 3.274587, "RoLat": 50.836741, "RoLong": 3.27503 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.274587, 50.83736 ], [ 3.27503, 50.836741 ] ] } },
-{ "type": "Feature", "properties": { "ID": 6, "TrajectName": "Traject3", "ISRS": "BEKUU151040000000137", "LoLat": 50.844477, "LoLong": 3.285559, "RoLat": 50.84398, "RoLong": 3.287924 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.285559, 50.844477 ], [ 3.287924, 50.84398 ] ] } },
-{ "type": "Feature", "properties": { "ID": 7, "TrajectName": "Traject4", "ISRS": "BEKUU151040000000137", "LoLat": 50.844477, "LoLong": 3.285559, "RoLat": 50.84398, "RoLong": 3.287924 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.285559, 50.844477 ], [ 3.287924, 50.84398 ] ] } },
-{ "type": "Feature", "properties": { "ID": 8, "TrajectName": "Traject4", "ISRS": "BEKUU151050000000146", "LoLat": 50.849306, "LoLong": 3.296085, "RoLat": 50.848565, "RoLong": 3.296834 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.296085, 50.849306 ], [ 3.296834, 50.848565 ] ] } },
-{ "type": "Feature", "properties": { "ID": 9, "TrajectName": "Traject5", "ISRS": "BEKUU151050000000146", "LoLat": 50.849306, "LoLong": 3.296085, "RoLat": 50.848565, "RoLong": 3.296834 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.296085, 50.849306 ], [ 3.296834, 50.848565 ] ] } },
-{ "type": "Feature", "properties": { "ID": 10, "TrajectName": "Traject5", "ISRS": "BEHEJ151060000000158", "LoLat": 50.85709, "LoLong": 3.307147, "RoLat": 50.856444, "RoLong": 3.308648 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.307147, 50.85709 ], [ 3.308648, 50.856444 ] ] } },
-{ "type": "Feature", "properties": { "ID": 11, "TrajectName": "Traject6", "ISRS": "BEHEJ151060000000158", "LoLat": 50.85709, "LoLong": 3.307147, "RoLat": 50.856444, "RoLong": 3.308648 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.307147, 50.85709 ], [ 3.308648, 50.856444 ] ] } },
-{ "type": "Feature", "properties": { "ID": 12, "TrajectName": "Traject6", "ISRS": "BEWIK15106F301900210", "LoLat": 50.895171, "LoLong": 3.34684, "RoLat": 50.894272, "RoLong": 3.348662 }, "geometry": { "type": "LineString", "coordinates": [ [ 3.34684, 50.895171 ], [ 3.348662, 50.894272 ] ] } }
-]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 1,
+        "TrajectName": "Traject1",
+        "ISRS": "BEWEV15103F217600074",
+        "LoLat": 50.8099,
+        "LoLong": 3.219698,
+        "RoLat": 50.808759,
+        "RoLong": 3.22136,
+        "sectionref": 15102
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.219698,
+            50.8099
+          ],
+          [
+            3.22136,
+            50.808759
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2,
+        "TrajectName": "Traject1",
+        "ISRS": "BEKJK151030000000097",
+        "LoLat": 50.825279,
+        "LoLong": 3.240275,
+        "RoLat": 50.824462,
+        "RoLong": 3.241581
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.240275,
+            50.825279
+          ],
+          [
+            3.241581,
+            50.824462
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 3,
+        "TrajectName": "Traject2",
+        "ISRS": "BEKJK151030000000097",
+        "LoLat": 50.825279,
+        "LoLong": 3.240275,
+        "RoLat": 50.824462,
+        "RoLong": 3.241581,
+        "sectionref": 15103
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.240275,
+            50.825279
+          ],
+          [
+            3.241581,
+            50.824462
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 4,
+        "TrajectName": "Traject2",
+        "ISRS": "BEKJK151040000000125",
+        "LoLat": 50.83736,
+        "LoLong": 3.274587,
+        "RoLat": 50.836741,
+        "RoLong": 3.27503
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.274587,
+            50.83736
+          ],
+          [
+            3.27503,
+            50.836741
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 5,
+        "TrajectName": "Traject3",
+        "ISRS": "BEKJK151040000000125",
+        "LoLat": 50.83736,
+        "LoLong": 3.274587,
+        "RoLat": 50.836741,
+        "RoLong": 3.27503,
+        "sectionref": 15104
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.274587,
+            50.83736
+          ],
+          [
+            3.27503,
+            50.836741
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 6,
+        "TrajectName": "Traject3",
+        "ISRS": "BEKUU151040000000137",
+        "LoLat": 50.844477,
+        "LoLong": 3.285559,
+        "RoLat": 50.84398,
+        "RoLong": 3.287924
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.285559,
+            50.844477
+          ],
+          [
+            3.287924,
+            50.84398
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 7,
+        "TrajectName": "Traject4",
+        "ISRS": "BEKUU151040000000137",
+        "LoLat": 50.844477,
+        "LoLong": 3.285559,
+        "RoLat": 50.84398,
+        "RoLong": 3.287924,
+        "sectionref": 15104
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.285559,
+            50.844477
+          ],
+          [
+            3.287924,
+            50.84398
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 8,
+        "TrajectName": "Traject4",
+        "ISRS": "BEKUU151050000000146",
+        "LoLat": 50.849306,
+        "LoLong": 3.296085,
+        "RoLat": 50.848565,
+        "RoLong": 3.296834
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.296085,
+            50.849306
+          ],
+          [
+            3.296834,
+            50.848565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 9,
+        "TrajectName": "Traject5",
+        "ISRS": "BEKUU151050000000146",
+        "LoLat": 50.849306,
+        "LoLong": 3.296085,
+        "RoLat": 50.848565,
+        "RoLong": 3.296834,
+        "sectionref": 15105
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.296085,
+            50.849306
+          ],
+          [
+            3.296834,
+            50.848565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 10,
+        "TrajectName": "Traject5",
+        "ISRS": "BEHEJ151060000000158",
+        "LoLat": 50.85709,
+        "LoLong": 3.307147,
+        "RoLat": 50.856444,
+        "RoLong": 3.308648
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.307147,
+            50.85709
+          ],
+          [
+            3.308648,
+            50.856444
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 11,
+        "TrajectName": "Traject6",
+        "ISRS": "BEHEJ151060000000158",
+        "LoLat": 50.85709,
+        "LoLong": 3.307147,
+        "RoLat": 50.856444,
+        "RoLong": 3.308648,
+        "sectionref": 15106
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.307147,
+            50.85709
+          ],
+          [
+            3.308648,
+            50.856444
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "ID": 12,
+        "TrajectName": "Traject6",
+        "ISRS": "BEWIK15106F301900210",
+        "LoLat": 50.895171,
+        "LoLong": 3.34684,
+        "RoLat": 50.894272,
+        "RoLong": 3.348662,
+        "sectionref": 15106
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.34684,
+            50.895171
+          ],
+          [
+            3.348662,
+            50.894272
+          ]
+        ]
+      }
+    }
+  ]
 }

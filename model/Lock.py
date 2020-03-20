@@ -1,18 +1,36 @@
 import salabim as sim
-import simulation
+
+from model import GlobalVars, Utilities
+from model.Node import Node
 
 
-class Lock(object):
-    def __init__(self, properties, lon, lat):
-        self.properties = properties
-        self.lon = lon
-        self.lat = lat
-        self.projected_lon = lon
-        self.projected_lat = lat
-        self.animate = None
+class Lock(Node):
+    """Defines a lock on a fairway"""
+
+    def __init__(self, fw_code, coordinates_pair):
+        super().__init__(coordinates_pair[0], coordinates_pair[1])
+        self.fw_code = fw_code
+
+        # Get the fairway section this belongs to
+        if self.fw_code not in GlobalVars.fairway_section_dict:
+            print("We have problem here..")
+
+        insertion_idx = -1
+        min_distance = float('inf')
+
+        fairway_section = GlobalVars.fairway_section_dict.get(self.fw_code)
+        for idx, fairway_section_node in enumerate(fairway_section.nodes):
+            distance = Utilities.haversine([self.y, self.x], [fairway_section_node.y, fairway_section_node.x])
+            if distance < min_distance:
+                min_distance = distance
+                insertion_idx = idx
+
+        # Append add the best index
+        fairway_section.nodes.insert(insertion_idx + 1, self)
 
     def draw(self):
-        draw_scale = simulation.draw_scale
-        self.animate = sim.AnimateCircle(radius=0.005, x=self.projected_lon * draw_scale,
-                                         y=self.projected_lat * draw_scale,
-                                         fillcolor="orangered")
+        coordinate_tuple = Utilities.normalize(self.x, self.y)
+        size = 1
+        if GlobalVars.zoom:
+            size = size / 2
+        self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='orangered', linewidth=size, layer=2)

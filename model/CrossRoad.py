@@ -1,17 +1,17 @@
 import salabim as sim
 
-import simulation
+from model import Utilities, GlobalVars
+from model.Node import Node
 
 
-class CrossRoad(object):
-    def __init__(self, lon, lat):
-        self.lon = lon
-        self.lat = lat
-        self.animate = None
+class CrossRoad(Node):
+    def __init__(self, coordinates_pair):
+        super().__init__(coordinates_pair[0], coordinates_pair[1])
         self.intersections = {}
 
     def draw(self):
-        draw_scale = simulation.draw_scale
-        self.animate = sim.AnimateCircle(radius=0.01, x=self.lon * draw_scale,
-                                         y=self.lat * draw_scale,
-                                         fillcolor="red")
+        coordinate_tuple = Utilities.normalize(self.x, self.y)
+        size = 5
+        if GlobalVars.zoom:
+            size = size / 2
+        self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='red', linewidth=size, layer=3)
