@@ -38,32 +38,22 @@ class Network:
 
     def generate_graph(self):
         """LETS SCREAM IT OUT"""
-        stop = (3.4084978395216, 50.911124847130168)
+
         for fairway in self.fairway_sections_list:
             start_pair = None
             for node in fairway.nodes:
                 end_pair = (node.x, node.y)
-                if end_pair == stop:
-                    print("STOP")
-
-                if type(node).__name__ == 'Node':
-                    if not self.graph.has_node(end_pair):
-                        self.graph.add_node(end_pair, artwork=None, pos=end_pair, fairway=fairway)
-                else:
-                    if not self.graph.has_node(end_pair):
-                        self.graph.add_node(end_pair, artwork=node, pos=end_pair, fairway=fairway)
-                    else:
-                        self.graph.nodes()[end_pair]['artwork'] = node
+                if not self.graph.has_node(end_pair):
+                    self.graph.add_node(end_pair, artwork=node, pos=end_pair, fairway=fairway)
+                elif type(node).__name__ != 'Node':
+                    self.graph.nodes()[end_pair]['artwork'] = node
                 if start_pair is not None:
                     self.graph.add_edge(start_pair, end_pair, fairway=fairway,
                                         length=Utilities.haversine(start_pair, end_pair))
                 start_pair = end_pair
 
-        stop = (3.4084978395216, 50.911124847130168)
         for node in self.graph.nodes:
             neighbors = list(self.graph.neighbors(node))
-            if node == stop:
-                print("STOP")
             if len(neighbors) > 2:
                 crossroad = CrossRoad(node)
                 crossroad.draw()
@@ -71,7 +61,10 @@ class Network:
                 neighbors = sorted(neighbors, key=lambda element: angle_between_points(node, element))
                 for neighbor in neighbors:
                     crossroad.intersections[neighbor] = sim.Queue(
-                        "Crosroad: " + str(node) + " => " + str(neighbor))
+                        "Crossroad at " + str(node) + " => " + str(neighbor))
+
+        for node in self.graph.nodes:
+            self.graph.nodes()[node]['artwork'].init_node(self.graph)
 
         # nx.draw(self.graph, pos=nx.get_node_attributes(self.graph, 'pos'), node_size=1, alpha=0.5, node_color="blue",
         #         with_labels=False)

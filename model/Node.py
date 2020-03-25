@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class Node(ABC):
@@ -10,4 +10,7 @@ class Node(ABC):
         self.animate = None
 
     def draw(self):
+        pass
+
+    def init_node(self, graph):
         pass

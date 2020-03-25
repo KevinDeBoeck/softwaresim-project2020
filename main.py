@@ -19,7 +19,7 @@ GlobalVars.x_min, GlobalVars.y_min = Utilities.normalize(GlobalVars.x_min, Globa
 GlobalVars.x_max = 3.6
 GlobalVars.y_max = 50.8
 GlobalVars.x_max, GlobalVars.y_max = Utilities.normalize(GlobalVars.x_max, GlobalVars.y_max)
-env = sim.Environment(trace=True)
+env = sim.Environment(trace=False, time_unit='minutes')
 GlobalVars.environment = env
 if GlobalVars.zoom:
     env.animation_parameters(x0=GlobalVars.x_min, x1=GlobalVars.x_max, y0=GlobalVars.y_min,
@@ -32,8 +32,8 @@ else:
 env.modelname("Alsic Waterway Simulation")
 network.generate_graph()
 network.draw_network()
-
+env.suppress_trace_linenumbers(True)
 # Generate the vessel
 VesselComponentGenerator()
 
-env.run()
+env.run(till=sim.inf)

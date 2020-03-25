@@ -80,8 +80,8 @@ def read_trajectories():
             lat1 = row['LoLat']
             lon1 = row['LoLong']
             # It does not exist, make the trajectory
-            sectionref = row['sectionref']
-            trajectory = Trajectory(lon1, lat1, trajectory_name)
+            section_ref = row['sectionref']
+            trajectory = Trajectory(lon1, lat1, trajectory_name,section_ref)
             trajectory_dict[trajectory_name] = trajectory
 
     return trajectory_dict
