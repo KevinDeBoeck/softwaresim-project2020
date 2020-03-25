@@ -36,4 +36,4 @@ env.suppress_trace_linenumbers(True)
 # Generate the vessel
 VesselComponentGenerator()
 
-env.run(till=sim.inf)
+env.run()

@@ -23,7 +23,7 @@ class Lock(Node, sim.Component):
         self.left = None
         self.right = None
         self.length = 100
-        self.width = 100
+        self.width = 10
         self.key_in = {}
         self.wait_in = {}
         self.key_out = None
@@ -86,21 +86,22 @@ class Lock(Node, sim.Component):
         yield self.request(self.key_out)
 
         while True:
-            for vessel in self.wait_in[side]:
+            for vessel in self.wait_in[self.side]:
                 vessel.activate()
             if len(self.wait_in[self.side]) == 0:
                 if len(self.wait_in[-self.side]) == 0:
                     yield self.passivate()
+
             self.release(self.key_in[self.side])
             yield self.hold(self.wait_time, mode="Wait")
             yield self.request((self.key_in[self.side], 1, 1000))
-            self.packer.reset()
-            self.packer.add_bin(self.width, self.length)
-            self.packer.pack()
             yield self.hold(self.switch_time, mode="Switch")
             self.side = -self.side
             self.release(self.key_out)
             yield self.request(self.key_out, mode="Wait")
+            self.packer = newPacker(sort_algo=SORT_NONE, pack_algo=SkylineBl, rotation=False)
+            self.packer.add_bin(self.width, self.length)
+            self.packer.pack()
 
     def check_fit(self, vessel: Vessel) -> bool:
         if (len(self.packer.rect_list())) == 0:

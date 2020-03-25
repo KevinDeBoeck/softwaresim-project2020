@@ -1,5 +1,6 @@
 import networkx as nx
 import salabim as sim
+import math
 
 from model import GlobalVars, Utilities
 
@@ -12,8 +13,14 @@ class Vessel(object):
 
     def __init__(self, ship_id, length, width, cemt):
         self.id = ship_id
-        self.length = length
-        self.width = width
+        if math.isnan(length):
+            self.length = 1
+        else:
+            self.length = length
+        if math.isnan(width):
+            self.width = 1
+        else:
+            self.width = width
         self.cemt = cemt
         self.trajectory_route = []
         self.current_trajectory = None
@@ -74,7 +81,6 @@ class VesselComponent(sim.Component):
                 return self.hold(0)
 
     def perform_lock(self):
-        print(str(self.vessel.id) + " ENCOUNTERED A LOCK")
         lock = self.next_node
         if lock.left == (self.current_node.x, self.current_node.y):
             side = left
@@ -83,12 +89,15 @@ class VesselComponent(sim.Component):
 
         if lock.ispassive():
             lock.activate()
-
-        while lock.side != side and not lock.check_fit(self.vessel):
+        possible = False
+        while not possible:
+            if lock.side == side:
+                if lock.check_fit(self.vessel):
+                    possible = True
+                    continue
             self.enter(lock.wait_in[side])
             yield self.passivate()
             self.leave(lock.wait_in[side])
-
         yield self.request(lock.key_in[side])
         # self.enter(lockqueue)
         yield self.hold(lock.in_time)
@@ -97,21 +106,17 @@ class VesselComponent(sim.Component):
         yield self.hold(lock.out_time)
         # self.leave(lockqueue)
         self.release(lock.key_out)
-        print(str(self.vessel.id) + " EXITED A LOCK")
 
     def perform_bridge(self):
-        print(str(self.vessel.id) + " ENCOUNTERED A BRIDGE")
         bridge = self.next_node
 
         if bridge.ispassive():
             bridge.activate()
 
         yield self.request(bridge.key_in)
+        bridge.hold(10 + bridge.pass_time)
         yield self.hold(bridge.pass_time)
         self.release(bridge.key_in)
-        bridge.hold(10)
-
-        print(str(self.vessel.id) + " EXITED A BRIDGE")
 
 
 class VesselComponentGenerator(sim.Component):
