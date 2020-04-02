@@ -15,7 +15,7 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_in.csv'
+passages_file = 'project_files/passages_gen.csv'
 
 trajectory_dict = {}
 
@@ -81,7 +81,7 @@ def read_trajectories():
             lon1 = row['LoLong']
             # It does not exist, make the trajectory
             section_ref = str(int(row['sectionref']))
-            trajectory = Trajectory(lon1, lat1, trajectory_name,section_ref)
+            trajectory = Trajectory(lon1, lat1, trajectory_name, section_ref)
             trajectory_dict[trajectory_name] = trajectory
 
     return trajectory_dict
@@ -139,7 +139,7 @@ def read_locks():
         fw_code = feature['properties']['sectionref']
         length = feature['properties']['length']
         width = feature['properties']['width']
-        lock = Lock(fw_code,length,width, feature['geometry']['coordinates'])
+        lock = Lock(fw_code, length, width, feature['geometry']['coordinates'])
         locks.append(lock)
 
     return locks

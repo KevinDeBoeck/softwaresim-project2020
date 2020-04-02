@@ -189,16 +189,16 @@ class VesselComponent(sim.Component):
         GlobalVars.update_counters()
 
     def perform_bridge(self):
-        GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge + 1
-        GlobalVars.update_counters()
-
         bridge = self.next_node
-
-        if bridge.ispassive():
-            bridge.activate()
-
-        yield self.request(bridge.key_in)
         if bridge.movable:
+            GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge + 1
+            GlobalVars.update_counters()
+
+            if bridge.ispassive():
+                bridge.activate()
+
+            yield self.request(bridge.key_in)
+
             bridge.hold(10 + bridge.pass_time)
             yield self.hold(bridge.pass_time)
             if len(self.special_nodes_path) != 0:
@@ -206,10 +206,10 @@ class VesselComponent(sim.Component):
             else:
                 self.next_special_node = None
             self.stop_time = float('inf')
-        self.release(bridge.key_in)
+            self.release(bridge.key_in)
 
-        GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge - 1
-        GlobalVars.update_counters()
+            GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge - 1
+            GlobalVars.update_counters()
 
     def perform_crossroad(self):
         GlobalVars.num_vessels_waiting_crossroad = GlobalVars.num_vessels_waiting_crossroad + 1
