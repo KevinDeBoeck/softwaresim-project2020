@@ -80,7 +80,7 @@ def read_trajectories():
             lat1 = row['LoLat']
             lon1 = row['LoLong']
             # It does not exist, make the trajectory
-            section_ref = row['sectionref']
+            section_ref = str(int(row['sectionref']))
             trajectory = Trajectory(lon1, lat1, trajectory_name,section_ref)
             trajectory_dict[trajectory_name] = trajectory
 
@@ -115,7 +115,13 @@ def read_bridges():
     for feature in data['features']:
         # print(feature)
         fw_code = feature['properties']['fw_code']
-        bridge = Bridge(fw_code, feature['geometry']['coordinates'])
+        movable_tmp = feature['properties']['bedienbaar']
+        if movable_tmp == 1:
+            movable = True
+        else:
+            movable = False
+
+        bridge = Bridge(fw_code, movable, feature['geometry']['coordinates'])
         bridges.append(bridge)
 
     return bridges
@@ -131,7 +137,9 @@ def read_locks():
 
     for feature in data['features']:
         fw_code = feature['properties']['sectionref']
-        lock = Lock(fw_code, feature['geometry']['coordinates'])
+        length = feature['properties']['length']
+        width = feature['properties']['width']
+        lock = Lock(fw_code,length,width, feature['geometry']['coordinates'])
         locks.append(lock)
 
     return locks

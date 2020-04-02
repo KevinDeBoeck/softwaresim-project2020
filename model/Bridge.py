@@ -14,13 +14,14 @@ class Bridge(Node, sim.Component):
     open_time = 5
     pass_time = 1
 
-    def __init__(self, fw_code, coordinates_pair):
+    def __init__(self, fw_code,movable, coordinates_pair):
         Node.__init__(self, coordinates_pair[0], coordinates_pair[1])
         self.fw_code = fw_code
         self.left = None
         self.right = None
         self.state = closed
         self.key_in = None
+        self.movable = movable
 
         # Get the fairway section this belongs to
         if self.fw_code not in GlobalVars.fairway_section_dict:
@@ -64,22 +65,25 @@ class Bridge(Node, sim.Component):
         self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
 
     def process(self):
-        yield self.request(self.key_in)
-
-        while True:
-            if len(self.key_in.requesters()) == 0:
-                yield self.passivate()
-
-            yield self.hold(self.open_time)
-            self.release(self.key_in)
-            self.state = -self.state
-            yield self.hold(10)
+        if self.movable:
             yield self.request(self.key_in)
-            yield self.hold(self.open_time)
-            self.state = -self.state
+
+            while True:
+                if len(self.key_in.requesters()) == 0:
+                    yield self.passivate()
+
+                yield self.hold(self.open_time)
+                self.release(self.key_in)
+                self.state = -self.state
+                yield self.hold(10)
+                yield self.request(self.key_in)
+                yield self.hold(self.open_time)
+                self.state = -self.state
+        else:
+            self.state = open
 
     def check_fit(self, vessel: Vessel) -> bool:
-        if self.state == open:
+        if self.state == open or not self.movable:
             return True
         else:
             return False

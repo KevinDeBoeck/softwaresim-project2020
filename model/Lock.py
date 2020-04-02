@@ -17,17 +17,17 @@ class Lock(Node, sim.Component):
     wait_time = 10
     switch_time = 5
 
-    def __init__(self, fw_code, coordinates_pair):
+    def __init__(self, fw_code,length,width, coordinates_pair):
         Node.__init__(self, coordinates_pair[0], coordinates_pair[1])
         self.fw_code = fw_code
         self.left = None
         self.right = None
-        self.length = 100
-        self.width = 10
         self.key_in = {}
         self.wait_in = {}
         self.key_out = None
         self.side = left
+        self.length = length
+        self.width = width
 
         self.packer = newPacker(sort_algo=SORT_NONE, pack_algo=SkylineBl, rotation=False)
         # GuillotineBssfSas
@@ -110,7 +110,7 @@ class Lock(Node, sim.Component):
             count = len(self.packer[0])
         self.packer.add_rect(vessel.width, vessel.length)
         self.packer.pack()
-        if len(self.packer[0]) > count:
+        if len(self.packer) > 0 and len(self.packer[0]) > count:
             return True
         else:
             return False

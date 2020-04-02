@@ -32,6 +32,10 @@ else:
 env.modelname("Alsic Waterway Simulation")
 network.generate_graph()
 network.draw_network()
+
+GlobalVars.update_counters()
+
+
 env.suppress_trace_linenumbers(True)
 # Generate the vessel
 VesselComponentGenerator()

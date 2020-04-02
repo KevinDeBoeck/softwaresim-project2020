@@ -7,6 +7,7 @@ from model.Node import Node
 
 class FairwaySection:
     """Defines a single fairway section"""
+    speed = 13 * 1000 / 60  # m/min
 
     def __init__(self, fw_code, set_of_coordinate_pairs):
         self.nodes = []
@@ -18,7 +19,7 @@ class FairwaySection:
         tmp = []
         for coordinate_pairs in set_of_coordinate_pairs:
             for coordinates in coordinate_pairs:
-                coordinates_tuple = (coordinates[0],coordinates[1])
+                coordinates_tuple = (coordinates[0], coordinates[1])
                 if coordinates_tuple not in tmp:
                     tmp.append(coordinates_tuple)
 

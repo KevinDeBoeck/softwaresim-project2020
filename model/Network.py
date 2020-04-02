@@ -49,7 +49,8 @@ class Network:
                     self.graph.nodes()[end_pair]['artwork'] = node
                 if start_pair is not None:
                     self.graph.add_edge(start_pair, end_pair, fairway=fairway,
-                                        length=Utilities.haversine(start_pair, end_pair))
+                                        # length=Utilities.haversine(start_pair, end_pair),
+                                        time=Utilities.haversine(start_pair, end_pair) / fairway.speed)
                 start_pair = end_pair
 
         for node in self.graph.nodes:

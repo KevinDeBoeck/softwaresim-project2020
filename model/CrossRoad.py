@@ -8,6 +8,7 @@ class CrossRoad(Node):
     def __init__(self, coordinates_pair):
         super().__init__(coordinates_pair[0], coordinates_pair[1])
         self.intersections = {}
+        self.claim = sim.Resource()
 
     def draw(self):
         coordinate_tuple = Utilities.normalize(self.x, self.y)

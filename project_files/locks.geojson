@@ -1,110 +1,3514 @@
 {
-"type": "FeatureCollection",
-"name": "locks",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "objectid": 1, "sectionref": "11820", "objectcode": "LOCKS", "hectom": "00653", "locode": "BEDDR11820LOCKS00653", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Dendermonde", "objectname": "Sluis te Dendermonde", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Dendermonde", "centroper": 0, "orient": 250, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.084687596779537, 51.043415392427754 ] } },
-{ "type": "Feature", "properties": { "objectid": 2, "sectionref": "11810", "objectcode": "LOCKS", "hectom": "00209", "locode": "BEGEA11810LOCKS00209", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Geraardsbergen", "objectname": "Sluis te Geraardsbergen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis te Geraardsbergen", "centroper": 0, "orient": 170, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.880500514578156, 50.769795068587953 ] } },
-{ "type": "Feature", "properties": { "objectid": 3, "sectionref": "15413", "objectcode": "LOCKS", "hectom": "00455", "locode": "BEBGS15413LOCKS00455", "function": "lokare", "ww_name": "Kanaal Gent-Oostende", "rt_name": "Kanaal Gent-Oostende", "loname": "Brugge", "objectname": "Dammepoortsluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 5 (Kanalen-Oost)", "vplnpunt": 1, "comcha": "18", "comname": "Dammepoortsluis", "centroper": 0, "orient": 150, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.233880018108583, 51.221324823322767 ] } },
-{ "type": "Feature", "properties": { "objectid": 4, "sectionref": "15411", "objectcode": "LOCKS", "hectom": "00341", "locode": "BEBRM15411LOCKS00341", "function": "lokare", "ww_name": "Kanaal Gent-Oostende", "rt_name": "Kanaal Gent-Oostende", "loname": "Beernem", "objectname": "Keersluis te Beernem", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 5 (Kanalen-Oost)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 102, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.297250992746322, 51.143012584158924 ] } },
-{ "type": "Feature", "properties": { "objectid": 5, "sectionref": "15404", "objectcode": "LOCKS", "hectom": "00063", "locode": "BELVO15404LOCKS00063", "function": "lokare", "ww_name": "Kanaal Gent-Oostende", "rt_name": "Kanaal Gent-Oostende", "loname": "Lovendegem", "objectname": "Keersluis K1 te Vinderhoute", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": "80", "comname": "Keersluis K1 te Vinderhoute", "centroper": 0, "orient": 128, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.660932554211556, 51.086262159148632 ] } },
-{ "type": "Feature", "properties": { "objectid": 6, "sectionref": "17101", "objectcode": "LOCKS", "hectom": "00042", "locode": "BEIPR17101LOCKS00042", "function": "lokare", "ww_name": "Kanaal Ieper-IJzer", "rt_name": "Kanaal Ieper-IJzer", "loname": "Ieper", "objectname": "Sluis Boezinge Dorp", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis Boezinge Dorp", "centroper": 0, "orient": 130, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.867083986415029, 50.893257225481541 ] } },
-{ "type": "Feature", "properties": { "objectid": 7, "sectionref": "17102", "objectcode": "LOCKS", "hectom": "00065", "locode": "BEIPR17102LOCKS00065", "function": "lokare", "ww_name": "Kanaal Ieper-IJzer", "rt_name": "Kanaal Ieper-IJzer", "loname": "Ieper", "objectname": "Sluis Boezinge Sas", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis Boezinge Sas", "centroper": 0, "orient": 160, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.849894645179705, 50.910004456340793 ] } },
-{ "type": "Feature", "properties": { "objectid": 8, "sectionref": "17501", "objectcode": "LOCKS", "hectom": "00001", "locode": "BEBGS17501LOCKS00001", "function": "lokare", "ww_name": "Kanaal Brugge-Zeebrugge", "rt_name": "Kanaal Brugge-Zeebrugge", "loname": "Brugge", "objectname": "Verbindingssluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "MBZ", "vplnpunt": 1, "comcha": "68", "comname": "Verbindingssluis", "centroper": 0, "orient": 171, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.223327862430525, 51.223075031176492 ] } },
-{ "type": "Feature", "properties": { "objectid": 9, "sectionref": "15701", "objectcode": "LOCKS", "hectom": "00004", "locode": "BEAVL15701LOCKS00004", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Avelgem", "objectname": "Sluis te Bossuit", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Bossuit", "centroper": 1, "orient": 162, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.411667848883357, 50.749309116999477 ] } },
-{ "type": "Feature", "properties": { "objectid": 10, "sectionref": "15702", "objectcode": "LOCKS", "hectom": "00045", "locode": "BEZWE15702LOCKS00045", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Zwevegem", "objectname": "Sluis te Moen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Moen", "centroper": 1, "orient": 146, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.379908471945335, 50.779473208853517 ] } },
-{ "type": "Feature", "properties": { "objectid": 11, "sectionref": "15703", "objectcode": "LOCKS", "hectom": "00099", "locode": "BEZWE15703LOCKS00099", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Zwevegem", "objectname": "Nieuwe sluis te Zwevegem", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Nieuwe sluis te Zwevegem", "centroper": 1, "orient": 153, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.345312927566863, 50.823069432294972 ] } },
-{ "type": "Feature", "properties": { "objectid": 12, "sectionref": "15705", "objectcode": "LOCKS", "hectom": "00143", "locode": "BEKJK15705LOCKS00143", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Kortrijk", "objectname": "Sluis 9 te Kortrijk", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 9 te Kortrijk", "centroper": 0, "orient": 111, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.286657693857171, 50.830830943368063 ] } },
-{ "type": "Feature", "properties": { "objectid": 13, "sectionref": "15706", "objectcode": "LOCKS", "hectom": "00150", "locode": "BEKJK15706LOCKS00150", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Kortrijk", "objectname": "Sluis 10 te Kortrijk", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 10 te Kortrijk", "centroper": 0, "orient": 110, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.277452709210037, 50.832897804675092 ] } },
-{ "type": "Feature", "properties": { "objectid": 14, "sectionref": "15503", "objectcode": "LOCKS", "hectom": "00142", "locode": "BENVL15503LOCKS00142", "function": "lokare", "ww_name": "Afleidingskanaal van de Leie", "rt_name": "Afleidingskanaal van de Leie", "loname": "Nevele", "objectname": "Sluis te Schipdonk", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 5 (Kanalen-Oost)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Schipdonk", "centroper": 0, "orient": 167, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.563892066898402, 51.095715108450833 ] } },
-{ "type": "Feature", "properties": { "objectid": 15, "sectionref": "15112", "objectcode": "LOCKS", "hectom": "00413", "locode": "BEDEZ15112LOCKS00413", "function": "lokare", "ww_name": "Leie", "rt_name": "Toeristische Leie", "loname": "Deinze", "objectname": "Stuwsluis te Astene", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 252, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.567324140794853, 50.991492142503297 ] } },
-{ "type": "Feature", "properties": { "objectid": 16, "sectionref": "15907", "objectcode": "LOCKS", "hectom": "00181", "locode": "BEMRL15907LOCKS00181", "function": "lokare", "ww_name": "Ringvaart om Gent", "rt_name": "Ringvaart om Gent", "loname": "Merelbeke", "objectname": "Sluizen te Merelbeke", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": "20", "comname": "Sluizen te Merelbeke", "centroper": 0, "orient": 296, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.74851150733677, 51.0086055339181 ] } },
-{ "type": "Feature", "properties": { "objectid": 17, "sectionref": "15903", "objectcode": "LOCKS", "hectom": "00052", "locode": "BEEVM15903LOCKS00052", "function": "lokare", "ww_name": "Ringvaart om Gent", "rt_name": "Ringvaart om Gent", "loname": "Evergem", "objectname": "Sluizen te Evergem", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": "28", "comname": "Sluizen te Evergem", "centroper": 0, "orient": 243, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.66996691160144, 51.089637854402149 ] } },
-{ "type": "Feature", "properties": { "objectid": 18, "sectionref": "15I01", "objectcode": "LOCKS", "hectom": "00020", "locode": "BEGNE15I01LOCKS00020", "function": "lokare", "ww_name": "Verbindingskanaal Gent", "rt_name": "Verbindingskanaal Gent", "loname": "Gent", "objectname": "Tolhuissluis te Gent", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": "20", "comname": "Tolhuissluis te Gent", "centroper": 0, "orient": 253, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.728442618749396, 51.069284418793792 ] } },
-{ "type": "Feature", "properties": { "objectid": 19, "sectionref": "13138", "objectcode": "LOCKS", "hectom": "00340", "locode": "BEBON13138LOCKS00340", "function": "lokare", "ww_name": "Zeekanaal Brussel-Schelde", "rt_name": "Zeekanaal Brussel-Schelde", "loname": "Bornem", "objectname": "Nieuwe Zeesluis Wintam", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "68", "comname": "Nieuwe Zeesluis Wintam", "centroper": 0, "orient": 187, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.302400786984857, 51.117380355631006 ] } },
-{ "type": "Feature", "properties": { "objectid": 20, "sectionref": "13122", "objectcode": "LOCKS", "hectom": "00183", "locode": "BEZET13122LOCKS00183", "function": "lokare", "ww_name": "Zeekanaal Brussel-Schelde", "rt_name": "Zeekanaal Brussel-Schelde", "loname": "Zemst", "objectname": "Sluis Zemst", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "68", "comname": "Sluis Zemst", "centroper": 0, "orient": 150, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.37295762465728, 50.998719041386295 ] } },
-{ "type": "Feature", "properties": { "objectid": 21, "sectionref": "13402", "objectcode": "LOCKS", "hectom": "00010", "locode": "BEWLB13402LOCKS00010", "function": "lokare", "ww_name": "Aftakking Oude Arm Klein-Willebroek", "rt_name": "Aftakking Oude Arm Klein-Willebroek", "loname": "Willebroek", "objectname": "Sluis Klein-Willebroek", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "68", "comname": "Sluis Klein-Willebroek", "centroper": 0, "orient": 184, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.36686691433143, 51.0811176549675 ] } },
-{ "type": "Feature", "properties": { "objectid": 22, "sectionref": "13213", "objectcode": "LOCKS", "hectom": "00270", "locode": "BEECH13213LOCKS00270", "function": "lokare", "ww_name": "Kanaal Leuven-Dijle", "rt_name": "Kanaal Leuven-Dijle", "loname": "Mechelen", "objectname": "Battelsluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "20", "comname": "Battelsluis", "centroper": 1, "orient": 135, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.446144387397084, 51.038473964213267 ] } },
-{ "type": "Feature", "properties": { "objectid": 23, "sectionref": "13214", "objectcode": "LOCKS", "hectom": "00301", "locode": "BEECH13214LOCKS00301", "function": "lokare", "ww_name": "Kanaal Leuven-Dijle", "rt_name": "Kanaal Leuven-Dijle", "loname": "Mechelen", "objectname": "Zennegatsluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 159, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.430574970496402, 51.063617010795369 ] } },
-{ "type": "Feature", "properties": { "objectid": 24, "sectionref": "13208", "objectcode": "LOCKS", "hectom": "00129", "locode": "BEKMH13208LOCKS00129", "function": "lokare", "ww_name": "Kanaal Leuven-Dijle", "rt_name": "Kanaal Leuven-Dijle", "loname": "Kampenhout", "objectname": "Sluis Kampenhout", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis Kampenhout", "centroper": 1, "orient": 104, "tidedep": 0, "remark": "De maximale afmetingen geldt voor traditionele schepen (type Kempenaar) waarbij zowel de voor- als de    achtersteven zijn afgerond.  Voor rechthoekige vaartuigen of combinaties dient steeds vooraf met de Vlaamse Waterweg contact opgenomen worden", "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.594033626996057, 50.956176153833951 ] } },
-{ "type": "Feature", "properties": { "objectid": 25, "sectionref": "13210", "objectcode": "LOCKS", "hectom": "00161", "locode": "BEBMB13210LOCKS00161", "function": "lokare", "ww_name": "Kanaal Leuven-Dijle", "rt_name": "Kanaal Leuven-Dijle", "loname": "Boortmeerbeek", "objectname": "Sluis Boortmeerbeek", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis Boortmeerbeek", "centroper": 1, "orient": 134, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.560688148596815, 50.973431212693583 ] } },
-{ "type": "Feature", "properties": { "objectid": 26, "sectionref": "13030", "objectcode": "LOCKS", "hectom": "00485", "locode": "BEHFB13030LOCKS00485", "function": "lokare", "ww_name": "Kanaal naar Charleroi", "rt_name": "Kanaal naar Charleroi", "loname": "Halle", "objectname": "Sluis 6 - Lembeek", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "\n20", "comname": "Sluis 6 - Lembeek", "centroper": 1, "orient": 221, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.221946064802786, 50.709069251940242 ] } },
-{ "type": "Feature", "properties": { "objectid": 27, "sectionref": "13032", "objectcode": "LOCKS", "hectom": "00524", "locode": "BEHFB13032LOCKS00524", "function": "lokare", "ww_name": "Kanaal naar Charleroi", "rt_name": "Kanaal naar Charleroi", "loname": "Halle", "objectname": "Sluis 7 - Halle", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 7 - Halle", "centroper": 1, "orient": 195, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.241667335872041, 50.738274390469705 ] } },
-{ "type": "Feature", "properties": { "objectid": 28, "sectionref": "13035", "objectcode": "LOCKS", "hectom": "00562", "locode": "BEBEE13035LOCKS00562", "function": "lokare", "ww_name": "Kanaal naar Charleroi", "rt_name": "Kanaal naar Charleroi", "loname": "Beersel", "objectname": "Sluis 8 - Lot", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "\n20", "comname": "Sluis 8 - Lot", "centroper": 1, "orient": 222, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.269663420536774, 50.76634798008233 ] } },
-{ "type": "Feature", "properties": { "objectid": 29, "sectionref": "11811", "objectcode": "LOCKS", "hectom": "00272", "locode": "BEGEA11811LOCKS00272", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Geraardsbergen", "objectname": "Sluis te Idegem", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis te Idegem", "centroper": 0, "orient": 250, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.929926068776625, 50.799034830318696 ] } },
-{ "type": "Feature", "properties": { "objectid": 30, "sectionref": "11812", "objectcode": "LOCKS", "hectom": "00352", "locode": "BENNV11812LOCKS00352", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Ninove", "objectname": "Sluis te Pollare", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis te Pollare", "centroper": 0, "orient": 270, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.009942831018105, 50.829730210053597 ] } },
-{ "type": "Feature", "properties": { "objectid": 31, "sectionref": "11813", "objectcode": "LOCKS", "hectom": "00432", "locode": "BEDRW11813LOCKS00432", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Denderleeuw", "objectname": "Sluis te Denderleeuw", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis te Denderleeuw", "centroper": 0, "orient": 224, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.077322745991919, 50.873871000808258 ] } },
-{ "type": "Feature", "properties": { "objectid": 32, "sectionref": "11814", "objectcode": "LOCKS", "hectom": "00459", "locode": "BEAFF11814LOCKS00459", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Affligem", "objectname": "Sluis te Teralfene", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "18", "comname": "Sluis te Teralfene", "centroper": 0, "orient": 150, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.081448593434629, 50.892207433270329 ] } },
-{ "type": "Feature", "properties": { "objectid": 33, "sectionref": "11816", "objectcode": "LOCKS", "hectom": "00520", "locode": "BEAAB11816LOCKS00520", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Aalst", "objectname": "Sluis te Aalst", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Aalst", "centroper": 0, "orient": 155, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.045762638742507, 50.938142322135505 ] } },
-{ "type": "Feature", "properties": { "objectid": 34, "sectionref": "11303", "objectcode": "LOCKS", "hectom": "00218", "locode": "BEECH11303LOCKS00218", "function": "lokare", "ww_name": "Dijle", "rt_name": "Boven-Dijle", "loname": "Mechelen", "objectname": "Benedensluis Mechelen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 4 (Dijle, Demer, Beneden-Zenne)", "vplnpunt": 1, "comcha": "20", "comname": "Benedensluis Mechelen", "centroper": 0, "orient": 140, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.467797466451457, 51.033231962546189 ] } },
-{ "type": "Feature", "properties": { "objectid": 35, "sectionref": "17701", "objectcode": "LOCKS", "hectom": "00003", "locode": "BENIE17701LOCKS00003", "function": "lokare", "ww_name": "Verbindingskanaal te Nieuwpoort", "rt_name": "Verbindingskanaal te Nieuwpoort", "loname": "Nieuwpoort", "objectname": "St.-Jorissluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "20", "comname": "St.-Jorissluis", "centroper": 0, "orient": 38, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.771533319390961, 51.136866899059932 ] } },
-{ "type": "Feature", "properties": { "objectid": 36, "sectionref": "17005", "objectcode": "LOCKS", "hectom": "00438", "locode": "BENIE17005LOCKS00438", "function": "lokare", "ww_name": "IJzer", "rt_name": "IJzer", "loname": "Nieuwpoort", "objectname": "Iepersluis te Nieuwpoort (Ganzepoot)", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 100, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.758048748337656, 51.134561997323182 ] } },
-{ "type": "Feature", "properties": { "objectid": 37, "sectionref": "18510", "objectcode": "LOCKS", "hectom": "00149", "locode": "BEMEN18510LOCKS00149", "function": "lokare", "ww_name": "Grensleie", "rt_name": "Grensleie", "loname": "Menen", "objectname": "Nieuwe stuwsluis te Menen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 3 (Leie)", "vplnpunt": 1, "comcha": "20", "comname": "Nieuwe stuwsluis te Menen", "centroper": 0, "orient": 230, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.101080998710593, 50.78083423031633 ] } },
-{ "type": "Feature", "properties": { "objectid": 38, "sectionref": "15105", "objectcode": "LOCKS", "hectom": "00156", "locode": "BEHEJ15105LOCKS00156", "function": "lokare", "ww_name": "Leie", "rt_name": "Leie", "loname": "Harelbeke", "objectname": "Stuwsluis te Harelbeke", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 3 (Leie)", "vplnpunt": 1, "comcha": "20", "comname": "Stuwsluis te Harelbeke", "centroper": 0, "orient": 229, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.305560688153178, 50.854913981794141 ] } },
-{ "type": "Feature", "properties": { "objectid": 39, "sectionref": "15115", "objectcode": "LOCKS", "hectom": "00615", "locode": "BEGNE15115LOCKS00615", "function": "lokare", "ww_name": "Leie", "rt_name": "Leie Doortocht Gent", "loname": "Gent", "objectname": "Keersluis K2 te Gent", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 230, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.684087321979752, 51.036753705710375 ] } },
-{ "type": "Feature", "properties": { "objectid": 40, "sectionref": "15109", "objectcode": "LOCKS", "hectom": "00264", "locode": "BEWIK15109LOCKS00264", "function": "lokare", "ww_name": "Leie", "rt_name": "Leie", "loname": "Wielsbeke", "objectname": "Sluis te Sint-Baafs-Vijve", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 3 (Leie)", "vplnpunt": 1, "comcha": "22", "comname": "Sluis te Sint-Baafs-Vijve", "centroper": 0, "orient": 236, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.415577012221051, 50.914206256002466 ] } },
-{ "type": "Feature", "properties": { "objectid": 41, "sectionref": "17301", "objectcode": "LOCKS", "hectom": "00001", "locode": "BELRI17301LOCKS00001", "function": "lokare", "ww_name": "Lokanaal", "rt_name": "Lokanaal", "loname": "Lo-Reninge", "objectname": "Fintelesluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "20", "comname": "Fintelesluis", "centroper": 0, "orient": 174, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.736196535619257, 50.957480565235258 ] } },
-{ "type": "Feature", "properties": { "objectid": 42, "sectionref": "11406", "objectcode": "LOCKS", "hectom": "00147", "locode": "BEDUF11406LOCKS00147", "function": "lokare", "ww_name": "Netekanaal", "rt_name": "Netekanaal", "loname": "Duffel", "objectname": "Duffelsluizen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "22", "comname": "Duffelsluizen", "centroper": 0, "orient": 68, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.535695952634714, 51.110278140823574 ] } },
-{ "type": "Feature", "properties": { "objectid": 43, "sectionref": "11401", "objectcode": "LOCKS", "hectom": "00002", "locode": "BEZAN11401LOCKS00002", "function": "lokare", "ww_name": "Netekanaal", "rt_name": "Netekanaal", "loname": "Zandhoven", "objectname": "Vierselsluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "22", "comname": "Vierselsluis", "centroper": 0, "orient": 17, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.667859564935491, 51.188449475514481 ] } },
-{ "type": "Feature", "properties": { "objectid": 44, "sectionref": "15010", "objectcode": "LOCKS", "hectom": "00279", "locode": "BESPI15010LOCKS00279", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde", "loname": "Spiere-Helkijn", "objectname": "Stuwsluis Spiere", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 201, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.366078361071321, 50.720534309833887 ] } },
-{ "type": "Feature", "properties": { "objectid": 45, "sectionref": "15021", "objectcode": "LOCKS", "hectom": "00405", "locode": "BEKSR15021LOCKS00405", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde", "loname": "Kluisbergen", "objectname": "Sluis te Kerkhove", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Kerkhove", "centroper": 0, "orient": 222, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.494265461579559, 50.789745439958942 ] } },
-{ "type": "Feature", "properties": { "objectid": 46, "sectionref": "15023", "objectcode": "LOCKS", "hectom": "00524", "locode": "BEOUD15023LOCKS00524", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde", "loname": "Oudenaarde", "objectname": "Sluis te Oudenaarde", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Oudenaarde", "centroper": 0, "orient": 232, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.618802122107822, 50.850464443735845 ] } },
-{ "type": "Feature", "properties": { "objectid": 47, "sectionref": "15025", "objectcode": "LOCKS", "hectom": "00631", "locode": "BEGVR15025LOCKS00631", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde", "loname": "Gavere", "objectname": "Sluis te Asper", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Asper", "centroper": 0, "orient": 160, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.666947417556013, 50.916741989240187 ] } },
-{ "type": "Feature", "properties": { "objectid": 48, "sectionref": "15034", "objectcode": "LOCKS", "hectom": "00828", "locode": "BEGNE15034LOCKS00828", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde doortocht Gent", "loname": "Gent", "objectname": "Sluis Gentbrugge", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 221, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.745862913449947, 51.046452834913886 ] } },
-{ "type": "Feature", "properties": { "objectid": 49, "sectionref": "15032", "objectcode": "LOCKS", "hectom": "00821", "locode": "BEGNE15032LOCKS00821", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde doortocht Gent", "loname": "Gent", "objectname": "Brusselsepoortsluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 214, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.739788732656443, 51.04162406895049 ] } },
-{ "type": "Feature", "properties": { "objectid": 50, "sectionref": "15030", "objectcode": "LOCKS", "hectom": "00780", "locode": "BEMRL15030LOCKS00780", "function": "lokare", "ww_name": "Boven-Schelde", "rt_name": "Boven-Schelde doortocht Gent", "loname": "Merelbeke", "objectname": "Sluis E3 te Merelbeke", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 242, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.739870546855207, 51.012607060403099 ] } },
-{ "type": "Feature", "properties": { "objectid": 51, "sectionref": "11818", "objectcode": "LOCKS", "hectom": "00600", "locode": "BEDDR11818LOCKS00600", "function": "lokare", "ww_name": "Dender", "rt_name": "Dender", "loname": "Dendermonde", "objectname": "Sluis te Denderbelle", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 4 (Dender, Moervaart)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis te Denderbelle", "centroper": 0, "orient": 185, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.077934668765164, 51.001016646950589 ] } },
-{ "type": "Feature", "properties": { "objectid": 52, "sectionref": "13205", "objectcode": "LOCKS", "hectom": "00075", "locode": "BEHAC13205LOCKS00075", "function": "lokare", "ww_name": "Kanaal Leuven-Dijle", "rt_name": "Kanaal Leuven-Dijle", "loname": "Haacht", "objectname": "Tildonk sluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)", "vplnpunt": 1, "comcha": "20", "comname": "Tildonk sluis", "centroper": 1, "orient": 135, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.665535089052502, 50.939655988528699 ] } },
-{ "type": "Feature", "properties": { "objectid": 53, "sectionref": "13037", "objectcode": "LOCKS", "hectom": "00593", "locode": "BESPT13037LOCKS00593", "function": "lokare", "ww_name": "Kanaal naar Charleroi", "rt_name": "Kanaal naar Charleroi", "loname": "Sint-Pieters-Leeuw", "objectname": "Sluis 9 - Ruisbroek", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 9 - Ruisbroek", "centroper": 1, "orient": 208, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.292905471140378, 50.789795247143019 ] } },
-{ "type": "Feature", "properties": { "objectid": 54, "sectionref": "17805", "objectcode": "LOCKS", "hectom": "00105", "locode": "BEVEU17805LOCKS00105", "function": "lokare", "ww_name": "Kanaal Nieuwpoort-Duinkerke", "rt_name": "Kanaal Nieuwpoort-Duinkerke", "loname": "Veurne", "objectname": "Nieuwpoortsluis te Veurne", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "20", "comname": "Nieuwpoortsluis te Veurne", "centroper": 0, "orient": 28, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.668118852162466, 51.070618972055961 ] } },
-{ "type": "Feature", "properties": { "objectid": 55, "sectionref": "17201", "objectcode": "LOCKS", "hectom": "00001", "locode": "BEOBG17201LOCKS00001", "function": "lokare", "ww_name": "Kanaal Plassendale-Nieuwpoort", "rt_name": "Kanaal Plassendale-Nieuwpoort", "loname": "Oudenburg", "objectname": "Plassendalesluis te Oudenburg", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 6 (Kanalen-West)", "vplnpunt": 1, "comcha": "20", "comname": "Plassendalesluis te Oudenburg", "centroper": 0, "orient": 24, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.003488899696796, 51.209215727280551 ] } },
-{ "type": "Feature", "properties": { "objectid": 56, "sectionref": "15604", "objectcode": "LOCKS", "hectom": "00163", "locode": "BEWIK15604LOCKS00163", "function": "lokare", "ww_name": "Kanaal Roeselare-Leie", "rt_name": "Kanaal Roeselare-Leie", "loname": "Wielsbeke", "objectname": "Sluizen te Ooigem", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 3 (Leie)", "vplnpunt": 1, "comcha": "18", "comname": "Sluizen te Ooigem", "centroper": 0, "orient": 306, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.343662517448571, 50.897211888749602 ] } },
-{ "type": "Feature", "properties": { "objectid": 57, "sectionref": "15707", "objectcode": "LOCKS", "hectom": "00155", "locode": "BEKJK15707LOCKS00155", "function": "lokare", "ww_name": "Kanaal Bossuit-Kortrijk", "rt_name": "Kanaal Bossuit-Kortrijk", "loname": "Kortrijk", "objectname": "Sluis 11 te Kortrijk", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 2 (Boven-Schelde)", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 11 te Kortrijk", "centroper": 0, "orient": 112, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.270793860768274, 50.834543413305617 ] } },
-{ "type": "Feature", "properties": { "objectid": 58, "sectionref": "17206", "objectcode": "LOCKS", "hectom": "00211", "locode": "BENIE17206LOCKS00211", "function": "lokare", "ww_name": "Kanaal Plassendale-Nieuwpoort", "rt_name": "Kanaal Plassendale-Nieuwpoort", "loname": "Nieuwpoort", "objectname": "Gravensluis te Nieuwpoort (Ganzepoot)", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 6 (Kanalen-West)", "vplnpunt": 1, "comcha": "20 ", "comname": "Gravensluis te Nieuwpoort (Ganzepoot)", "centroper": 0, "orient": 40, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.757143138411168, 51.135819470408812 ] } },
-{ "type": "Feature", "properties": { "objectid": 59, "sectionref": "15118", "objectcode": "LOCKS", "hectom": "00672", "locode": "BEGNE15118LOCKS00672", "function": "lokare", "ww_name": "Leie", "rt_name": "Leie Doortocht Gent", "loname": "Gent", "objectname": "St. Jorissluis te Gent", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 1 (Gent)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 340, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.731688189447226, 51.058180011511126 ] } },
-{ "type": "Feature", "properties": { "objectid": 60, "sectionref": "11301", "objectcode": "LOCKS", "hectom": "00194", "locode": "BEECH11301LOCKS00194", "function": "lokare", "ww_name": "Dijle", "rt_name": "Boven-Dijle", "loname": "Mechelen", "objectname": "Bovensluis Mechelen", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 4 (Dijle, Demer, Beneden-Zenne)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 90, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.49354577563076, 51.023499309835927 ] } },
-{ "type": "Feature", "properties": { "objectid": 61, "sectionref": "17802", "objectcode": "LOCKS", "hectom": "00001", "locode": "BENIE17802LOCKS00001", "function": "lokare", "ww_name": "Kanaal Nieuwpoort-Duinkerke", "rt_name": "Kanaal Nieuwpoort-Duinkerke", "loname": "Nieuwpoort", "objectname": "Veurnesluis te Nieuwpoort (Ganzepoot)", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aBS - District 7 (IJzer)", "vplnpunt": 1, "comcha": "20", "comname": "Veurnesluis te Nieuwpoort (Ganzepoot)", "centroper": 0, "orient": 330, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 2.756671347394462, 51.133609721265408 ] } },
-{ "type": "Feature", "properties": { "objectid": 62, "sectionref": "1V900", "objectcode": "LOCKS", "hectom": "00004", "locode": "BEANR09210LOCKS00003", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Kattendijksluis", "loname": "Antwerpen", "objectname": "Kattendijksluis", "wwauthorit": "Waterwegen en Zeekanaal NV", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "69", "comname": "Kattendijksluis", "centroper": 0, "orient": 271, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.40459266379648, 51.235190014287809 ] } },
-{ "type": "Feature", "properties": { "objectid": 63, "sectionref": "02408", "objectcode": "LOCKS", "hectom": "00278", "locode": "BEMLO02408LOCKS00278", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Mol", "objectname": "sluis 2N  Mol", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "18", "comname": "sluis 2N  Mol", "centroper": 0, "orient": 95, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.209698502489101, 51.238497092411116 ] } },
-{ "type": "Feature", "properties": { "objectid": 64, "sectionref": "02412", "objectcode": "LOCKS", "hectom": "00328", "locode": "BEDSE02412LOCKS00328", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Dessel", "objectname": "Sluis 5 Dessel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 73, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.140138350189269, 51.229780027613565 ] } },
-{ "type": "Feature", "properties": { "objectid": 65, "sectionref": "02420", "objectcode": "LOCKS", "hectom": "00561", "locode": "BEHER02420LOCKS00561", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Herentals", "objectname": "Sluis 10 Herentals", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "80", "comname": "Sluis 10 Herentals", "centroper": 0, "orient": 100, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.832105978242561, 51.169362769092189 ] } },
-{ "type": "Feature", "properties": { "objectid": 66, "sectionref": "02417", "objectcode": "LOCKS", "hectom": "00467", "locode": "BEGEL02417LOCKS00467", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Geel", "objectname": "Sluis 9 Geel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 48, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.955450059321474, 51.190128924713832 ] } },
-{ "type": "Feature", "properties": { "objectid": 67, "sectionref": "02416", "objectcode": "LOCKS", "hectom": "00440", "locode": "BEGEL02416LOCKS00440", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Geel", "objectname": "Sluis 8 Geel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 73, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.986381072401254, 51.201978906114412 ] } },
-{ "type": "Feature", "properties": { "objectid": 68, "sectionref": "02415", "objectcode": "LOCKS", "hectom": "00401", "locode": "BEMLO02415LOCKS00401", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Mol", "objectname": "Sluis 7 Geel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 73, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.039888987900444, 51.211672122773074 ] } },
-{ "type": "Feature", "properties": { "objectid": 69, "sectionref": "02414", "objectcode": "LOCKS", "hectom": "00374", "locode": "BEMLO02414LOCKS00374", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Mol", "objectname": "Sluis 6 Mol", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 73, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.077086667027363, 51.21845791448532 ] } },
-{ "type": "Feature", "properties": { "objectid": 70, "sectionref": "12620", "objectcode": "LOCKS", "hectom": "00628", "locode": "BESCT12620LOCKS00628", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Schoten", "objectname": "sluis 10 Schoten", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": "20", "comname": "sluis 10 Schoten", "centroper": 0, "orient": 17, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.501760485408557, 51.241237742092594 ] } },
-{ "type": "Feature", "properties": { "objectid": 71, "sectionref": "12619", "objectcode": "LOCKS", "hectom": "00617", "locode": "BESCT12619LOCKS00617", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Schoten", "objectname": "sluis 9 Schoten", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 19, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.50627712275623, 51.250260650843778 ] } },
-{ "type": "Feature", "properties": { "objectid": 72, "sectionref": "12618", "objectcode": "LOCKS", "hectom": "00593", "locode": "BESCT12618LOCKS00593", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Schoten", "objectname": "sluis 8 Schoten", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 38, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.518664532584294, 51.270567141974965 ] } },
-{ "type": "Feature", "properties": { "objectid": 73, "sectionref": "12617", "objectcode": "LOCKS", "hectom": "00569", "locode": "BESCT12617LOCKS00569", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Schoten", "objectname": "sluis 7 Schoten", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 39, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.540458323554145, 51.287641476186586 ] } },
-{ "type": "Feature", "properties": { "objectid": 74, "sectionref": "12616", "objectcode": "LOCKS", "hectom": "00559", "locode": "BESCT12616LOCKS00559", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Schoten", "objectname": "sluis 6 Schoten", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 56, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.549592546353363, 51.294116807943908 ] } },
-{ "type": "Feature", "properties": { "objectid": 75, "sectionref": "12614", "objectcode": "LOCKS", "hectom": "00542", "locode": "BEBRC12614LOCKS00542", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Brecht", "objectname": "sluis 4 St.-Job-in't-Goor", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 57, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.570173876750424, 51.302445974100536 ] } },
-{ "type": "Feature", "properties": { "objectid": 76, "sectionref": "12615", "objectcode": "LOCKS", "hectom": "00551", "locode": "BEBRC12615LOCKS00551", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Brecht", "objectname": "sluis 5 St.-Job-in't-Goor", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 57, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.559183884455232, 51.298005781164342 ] } },
-{ "type": "Feature", "properties": { "objectid": 77, "sectionref": "12609", "objectcode": "LOCKS", "hectom": "00384", "locode": "BERIJ12609LOCKS00384", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Rijkevorsel", "objectname": "sluis 1 Rijkevorsel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": "20", "comname": "sluis 1 Rijkevorsel", "centroper": 1, "orient": 102, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.773927246180979, 51.329057584723273 ] } },
-{ "type": "Feature", "properties": { "objectid": 78, "sectionref": "02901", "objectcode": "LOCKS", "hectom": "00426", "locode": "BEBOC02901LOCKS00426", "function": "lokare", "ww_name": "Zuid-Willemsvaart", "rt_name": "Zuid-Willemsvaart noord", "loname": "Bocholt", "objectname": "Sluis Bocholt", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "20", "comname": "Sluis Bocholt", "centroper": 0, "orient": 130, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.564100627479702, 51.18866246851745 ] } },
-{ "type": "Feature", "properties": { "objectid": 79, "sectionref": "02017", "objectcode": "LOCKS", "hectom": "00455", "locode": "BEDPK02017LOCKS00455", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Diepenbeek", "objectname": "sluis Diepenbeek", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 1", "vplnpunt": 1, "comcha": "18", "comname": "sluis Diepenbeek", "centroper": 0, "orient": 93, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.432273599979458, 50.938301340523836 ] } },
-{ "type": "Feature", "properties": { "objectid": 80, "sectionref": "02016", "objectcode": "LOCKS", "hectom": "00414", "locode": "BEGNK02016LOCKS00414", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Genk", "objectname": "sluis Genk", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 1", "vplnpunt": 1, "comcha": "80", "comname": "sluis Genk", "centroper": 0, "orient": 98, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.490797873506581, 50.935783582879786 ] } },
-{ "type": "Feature", "properties": { "objectid": 81, "sectionref": "02019", "objectcode": "LOCKS", "hectom": "00500", "locode": "BEHSS02019LOCKS00500", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Hasselt", "objectname": "sluis Hasselt", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 1", "vplnpunt": 1, "comcha": "18", "comname": "sluis Hasselt", "centroper": 0, "orient": 91, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.368748804806619, 50.940617836575292 ] } },
-{ "type": "Feature", "properties": { "objectid": 82, "sectionref": "02033", "objectcode": "LOCKS", "hectom": "00771", "locode": "BEHAW02033LOCKS00771", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Ham", "objectname": "sluis Kwaadmechelen", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 1", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 102, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.107717770052757, 51.097864013958592 ] } },
-{ "type": "Feature", "properties": { "objectid": 83, "sectionref": "02201", "objectcode": "LOCKS", "hectom": "00012", "locode": "BELAN02201LOCKS00012", "function": "lokare", "ww_name": "Kanaal Briegden-Neerharen", "rt_name": "Kanaal Briegden-Neerharen", "loname": "Lanaken", "objectname": "sluis Lanaken", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "80", "comname": "sluis Lanaken", "centroper": 0, "orient": 221, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.654897612013757, 50.885077132720667 ] } },
-{ "type": "Feature", "properties": { "objectid": 84, "sectionref": "02902", "objectcode": "LOCKS", "hectom": "00449", "locode": "BEBOC02902LOCKS00449", "function": "lokare", "ww_name": "Zuid-Willemsvaart", "rt_name": "Zuid-Willemsvaart noord", "loname": "Bocholt", "objectname": "sluis Lozen", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "18", "comname": "sluis Lozen", "centroper": 0, "orient": 240, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.555720980245347, 51.207144187086762 ] } },
-{ "type": "Feature", "properties": { "objectid": 85, "sectionref": "02202", "objectcode": "LOCKS", "hectom": "00039", "locode": "BELAN02202LOCKS00039", "function": "lokare", "ww_name": "Kanaal Briegden-Neerharen", "rt_name": "Kanaal Briegden-Neerharen", "loname": "Lanaken", "objectname": "sluis Neerharen", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "10", "comname": "sluis Neerharen", "centroper": 0, "orient": 225, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.682973212717341, 50.901715104126055 ] } },
-{ "type": "Feature", "properties": { "objectid": 86, "sectionref": "02038", "objectcode": "LOCKS", "hectom": "00958", "locode": "BEOLN02038LOCKS00958", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Olen", "objectname": "sluis Olen", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": "20", "comname": "sluis Olen", "centroper": 0, "orient": 113, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.860202382604278, 51.159121056557453 ] } },
-{ "type": "Feature", "properties": { "objectid": 87, "sectionref": "02407", "objectcode": "LOCKS", "hectom": "00269", "locode": "BELML02407LOCKS00269", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Lommel", "objectname": "Sluis 1N Lommel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "20", "comname": "Sluis 1N Lommel", "centroper": 0, "orient": 70, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.221545080761593, 51.238322595009386 ] } },
-{ "type": "Feature", "properties": { "objectid": 88, "sectionref": "02047", "objectcode": "LOCKS", "hectom": "01198", "locode": "BEWJG02047LOCKS01198", "function": "lokare", "ww_name": "Albertkanaal", "rt_name": "Albertkanaal", "loname": "Wijnegem", "objectname": "Sluis Wijnegem", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": "80", "comname": "Sluis Wijnegem", "centroper": 0, "orient": 116, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.537800655444117, 51.226653809580228 ] } },
-{ "type": "Feature", "properties": { "objectid": 89, "sectionref": "02409", "objectcode": "LOCKS", "hectom": "00293", "locode": "BEMLO02409LOCKS00293", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Mol", "objectname": "sluis 3N Mol", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "18", "comname": "sluis 3N Mol", "centroper": 0, "orient": 86, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.189155909446352, 51.239099229678516 ] } },
-{ "type": "Feature", "properties": { "objectid": 90, "sectionref": "02411", "objectcode": "LOCKS", "hectom": "00311", "locode": "BEDSE02411LOCKS00311", "function": "lokare", "ww_name": "Kanaal Bocholt-Herentals", "rt_name": "Kanaal Bocholt-Herentals", "loname": "Dessel", "objectname": "Sluis 4 Dessel", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 2", "vplnpunt": 1, "comcha": "80", "comname": "Sluis 4 Dessel", "centroper": 0, "orient": 70, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.162897410245188, 51.233876121160385 ] } },
-{ "type": "Feature", "properties": { "objectid": 91, "sectionref": "12613", "objectcode": "LOCKS", "hectom": "00534", "locode": "BEBRC12613LOCKS00534", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Brecht", "objectname": "sluis 3 Brecht", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 56, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.579372023087457, 51.306166609119586 ] } },
-{ "type": "Feature", "properties": { "objectid": 92, "sectionref": "12612", "objectcode": "LOCKS", "hectom": "00527", "locode": "BEBRC12612LOCKS00527", "function": "lokare", "ww_name": "Kanaal Dessel-Turnhout-Schoten", "rt_name": "Kanaal Dessel-Turnhout-Schoten", "loname": "Brecht", "objectname": "sluis 2 Brecht", "wwauthorit": "De Vlaamse Waterweg nv", "areaname": "aPS - District 3", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 56, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.58816533778579, 51.309726778168731 ] } },
-{ "type": "Feature", "properties": { "objectid": 93, "sectionref": "01741", "objectcode": "LKA11", "hectom": "00007", "locode": "BEANR01740LKA1100007", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Royerssluis", "loname": "Antwerpen", "objectname": "Royerssluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "22", "comname": "Royerssluis", "centroper": 0, "orient": 231, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.402825636678604, 51.24142804205507 ] } },
-{ "type": "Feature", "properties": { "objectid": 94, "sectionref": "09006", "objectcode": "LKA11", "hectom": "00037", "locode": "BEBEV09010LKA1100037", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "WAASLANDKANAAL", "loname": "Beveren", "objectname": "Kallosluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "28", "comname": "Kallosluis", "centroper": 0, "orient": 263, "tidedep": 1, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.27708568772733, 51.263813747582532 ] } },
-{ "type": "Feature", "properties": { "objectid": 95, "sectionref": "01778", "objectcode": "LKA11", "hectom": "00005", "locode": "BEANR01778LKA1100005", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Van Cauwelaertsluis", "loname": "Antwerpen", "objectname": "Van Cauwelaertsluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "71", "comname": "Van Cauwelaertsluis", "centroper": 0, "orient": 138, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.330395155340741, 51.27601880390128 ] } },
-{ "type": "Feature", "properties": { "objectid": 96, "sectionref": "01781", "objectcode": "LKA11", "hectom": "00005", "locode": "BEANR01781LKA1100005", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Boudewijnsluis", "loname": "Antwerpen", "objectname": "Boudewijnsluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "71", "comname": "Boudewijnsluis", "centroper": 0, "orient": 137, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.333074489258795, 51.277509365706429 ] } },
-{ "type": "Feature", "properties": { "objectid": 97, "sectionref": "01743", "objectcode": "LKA11", "hectom": "00008", "locode": "BEANR01743LKA1100013", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Zandvlietsluis", "loname": "Antwerpen", "objectname": "Zandvlietsluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "79", "comname": "Zandvlietsluis", "centroper": 0, "orient": 96, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.285671006383638, 51.346360024996173 ] } },
-{ "type": "Feature", "properties": { "objectid": 98, "sectionref": "01739", "objectcode": "LKA11", "hectom": "00009", "locode": "BEANR01739LKA1100014", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "Berendrechtsluis", "loname": "Antwerpen", "objectname": "Berendrechtsluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": "79", "comname": "Berendrechtsluis", "centroper": 0, "orient": 95, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.285596798605034, 51.344032309208536 ] } },
-{ "type": "Feature", "properties": { "objectid": 99, "sectionref": "09101", "objectcode": "LKA11", "hectom": "00008", "locode": "BEBEV09101LKA1100011", "function": "lokare", "ww_name": "De haven van Antwerpen", "rt_name": "DEURGANCKDOK", "loname": "Beveren", "objectname": "Kieldrechtsluis", "wwauthorit": "De haven van Antwerpen", "areaname": "aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)", "vplnpunt": 1, "comcha": null, "comname": null, "centroper": 0, "orient": 212, "tidedep": 0, "remark": null, "active": 0 }, "geometry": { "type": "Point", "coordinates": [ 4.246613594596138, 51.277995149624537 ] } },
-{ "type": "Feature", "properties": { "objectid": 100, "sectionref": "13052", "objectcode": "LOCKS", "hectom": "00668", "locode": "BEMSJ13052LOCKS00668", "function": "lokare", "ww_name": "Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel", "rt_name": "Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel", "loname": "Molenbeek-St-Jean \/ St-Jans-Molenbeek", "objectname": "Ecluse n°11 de Molenbeek-St-Jean \/ Sluis n°11 van St-Jans-Molenbeek", "wwauthorit": "Haven van Brussel", "areaname": "Brussel", "vplnpunt": 0, "comcha": null, "comname": null, "centroper": null, "orient": 250, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.334806276827297, 50.849622743895836 ] } },
-{ "type": "Feature", "properties": { "objectid": 101, "sectionref": "13050", "objectcode": "LOCKS", "hectom": "00627", "locode": "BEANL13050LOCKS00627", "function": "lokare", "ww_name": "Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel", "rt_name": "Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel", "loname": "Anderlecht \/ Anderlecht", "objectname": "Ecluse n°10 d'Anderlecht \/ Sluis n°10 van Anderlecht", "wwauthorit": "Haven van Brussel", "areaname": "Brussel", "vplnpunt": 0, "comcha": null, "comname": null, "centroper": null, "orient": 200, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.30174027104119, 50.819554759811211 ] } },
-{ "type": "Feature", "properties": { "objectid": 102, "sectionref": "1Q501", "objectcode": "LOCKS", "hectom": "00003", "locode": "BEZEE1Q501LOCKS00003", "function": "lokare", "ww_name": "Pierre Vandammesluis - CDNB", "rt_name": "Pierre Vandammesluis - CDNB", "loname": "Zeebrugge", "objectname": "Pierre Vandamme-sluisgebied", "wwauthorit": "MBZ", "areaname": "MBZ", "vplnpunt": 0, "comcha": null, "comname": null, "centroper": null, "orient": 150, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.21730287192425, 51.333809846149819 ] } },
-{ "type": "Feature", "properties": { "objectid": 103, "sectionref": "1Q401", "objectcode": "LOCKS", "hectom": "00001", "locode": "BEZEE1Q401LOCKS00001", "function": "lokare", "ww_name": "Visartsluis - CDNB", "rt_name": "Visartsluis - CDNB", "loname": "Zeebrugge", "objectname": "Visartsluis-gebied", "wwauthorit": "MBZ", "areaname": "MBZ", "vplnpunt": 0, "comcha": null, "comname": null, "centroper": null, "orient": 170, "tidedep": 0, "remark": null, "active": 1 }, "geometry": { "type": "Point", "coordinates": [ 3.198235874271912, 51.327798851660752 ] } }
-]
+   "type":"FeatureCollection",
+   "name":"locks",
+   "crs":{
+      "type":"name",
+      "properties":{
+         "name":"urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+   },
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":1,
+            "sectionref":"11820",
+            "objectcode":"LOCKS",
+            "hectom":"00653",
+            "locode":"BEDDR11820LOCKS00653",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Dendermonde",
+            "objectname":"Sluis te Dendermonde",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Dendermonde",
+            "centroper":0,
+            "orient":250,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.084687596779537,
+               51.043415392427754
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":2,
+            "sectionref":"11810",
+            "objectcode":"LOCKS",
+            "hectom":"00209",
+            "locode":"BEGEA11810LOCKS00209",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Geraardsbergen",
+            "objectname":"Sluis te Geraardsbergen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis te Geraardsbergen",
+            "centroper":0,
+            "orient":170,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.880500514578156,
+               50.769795068587953
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":3,
+            "sectionref":"15413",
+            "objectcode":"LOCKS",
+            "hectom":"00455",
+            "locode":"BEBGS15413LOCKS00455",
+            "function":"lokare",
+            "ww_name":"Kanaal Gent-Oostende",
+            "rt_name":"Kanaal Gent-Oostende",
+            "loname":"Brugge",
+            "objectname":"Dammepoortsluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 5 (Kanalen-Oost)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Dammepoortsluis",
+            "centroper":0,
+            "orient":150,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":86,
+            "width":10.2
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.233880018108583,
+               51.221324823322767
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":4,
+            "sectionref":"15411",
+            "objectcode":"LOCKS",
+            "hectom":"00341",
+            "locode":"BEBRM15411LOCKS00341",
+            "function":"lokare",
+            "ww_name":"Kanaal Gent-Oostende",
+            "rt_name":"Kanaal Gent-Oostende",
+            "loname":"Beernem",
+            "objectname":"Keersluis te Beernem",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 5 (Kanalen-Oost)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":102,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":89.7,
+            "width":10.2
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.297250992746322,
+               51.143012584158924
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":5,
+            "sectionref":"15404",
+            "objectcode":"LOCKS",
+            "hectom":"00063",
+            "locode":"BELVO15404LOCKS00063",
+            "function":"lokare",
+            "ww_name":"Kanaal Gent-Oostende",
+            "rt_name":"Kanaal Gent-Oostende",
+            "loname":"Lovendegem",
+            "objectname":"Keersluis K1 te Vinderhoute",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"Keersluis K1 te Vinderhoute",
+            "centroper":0,
+            "orient":128,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":50,
+            "width":6.6
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.660932554211556,
+               51.086262159148632
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":6,
+            "sectionref":"17101",
+            "objectcode":"LOCKS",
+            "hectom":"00042",
+            "locode":"BEIPR17101LOCKS00042",
+            "function":"lokare",
+            "ww_name":"Kanaal Ieper-IJzer",
+            "rt_name":"Kanaal Ieper-IJzer",
+            "loname":"Ieper",
+            "objectname":"Sluis Boezinge Dorp",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis Boezinge Dorp",
+            "centroper":0,
+            "orient":130,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.867083986415029,
+               50.893257225481541
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":7,
+            "sectionref":"17102",
+            "objectcode":"LOCKS",
+            "hectom":"00065",
+            "locode":"BEIPR17102LOCKS00065",
+            "function":"lokare",
+            "ww_name":"Kanaal Ieper-IJzer",
+            "rt_name":"Kanaal Ieper-IJzer",
+            "loname":"Ieper",
+            "objectname":"Sluis Boezinge Sas",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis Boezinge Sas",
+            "centroper":0,
+            "orient":160,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.849894645179705,
+               50.910004456340793
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":8,
+            "sectionref":"17501",
+            "objectcode":"LOCKS",
+            "hectom":"00001",
+            "locode":"BEBGS17501LOCKS00001",
+            "function":"lokare",
+            "ww_name":"Kanaal Brugge-Zeebrugge",
+            "rt_name":"Kanaal Brugge-Zeebrugge",
+            "loname":"Brugge",
+            "objectname":"Verbindingssluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"MBZ",
+            "vplnpunt":1,
+            "comcha":"68",
+            "comname":"Verbindingssluis",
+            "centroper":0,
+            "orient":171,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":10.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.223327862430525,
+               51.223075031176492
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":9,
+            "sectionref":"15701",
+            "objectcode":"LOCKS",
+            "hectom":"00004",
+            "locode":"BEAVL15701LOCKS00004",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Avelgem",
+            "objectname":"Sluis te Bossuit",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Bossuit",
+            "centroper":1,
+            "orient":162,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.411667848883357,
+               50.749309116999477
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":10,
+            "sectionref":"15702",
+            "objectcode":"LOCKS",
+            "hectom":"00045",
+            "locode":"BEZWE15702LOCKS00045",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Zwevegem",
+            "objectname":"Sluis te Moen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Moen",
+            "centroper":1,
+            "orient":146,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.379908471945335,
+               50.779473208853517
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":11,
+            "sectionref":"15703",
+            "objectcode":"LOCKS",
+            "hectom":"00099",
+            "locode":"BEZWE15703LOCKS00099",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Zwevegem",
+            "objectname":"Nieuwe sluis te Zwevegem",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Nieuwe sluis te Zwevegem",
+            "centroper":1,
+            "orient":153,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.345312927566863,
+               50.823069432294972
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":12,
+            "sectionref":"15705",
+            "objectcode":"LOCKS",
+            "hectom":"00143",
+            "locode":"BEKJK15705LOCKS00143",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Kortrijk",
+            "objectname":"Sluis 9 te Kortrijk",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 9 te Kortrijk",
+            "centroper":0,
+            "orient":111,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.286657693857171,
+               50.830830943368063
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":13,
+            "sectionref":"15706",
+            "objectcode":"LOCKS",
+            "hectom":"00150",
+            "locode":"BEKJK15706LOCKS00150",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Kortrijk",
+            "objectname":"Sluis 10 te Kortrijk",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 10 te Kortrijk",
+            "centroper":0,
+            "orient":110,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.277452709210037,
+               50.832897804675092
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":14,
+            "sectionref":"15503",
+            "objectcode":"LOCKS",
+            "hectom":"00142",
+            "locode":"BENVL15503LOCKS00142",
+            "function":"lokare",
+            "ww_name":"Afleidingskanaal van de Leie",
+            "rt_name":"Afleidingskanaal van de Leie",
+            "loname":"Nevele",
+            "objectname":"Sluis te Schipdonk",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 5 (Kanalen-Oost)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Schipdonk",
+            "centroper":0,
+            "orient":167,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.563892066898402,
+               51.095715108450833
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":15,
+            "sectionref":"15112",
+            "objectcode":"LOCKS",
+            "hectom":"00413",
+            "locode":"BEDEZ15112LOCKS00413",
+            "function":"lokare",
+            "ww_name":"Leie",
+            "rt_name":"Toeristische Leie",
+            "loname":"Deinze",
+            "objectname":"Stuwsluis te Astene",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":252,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.05
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.567324140794853,
+               50.991492142503297
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":16,
+            "sectionref":"15907",
+            "objectcode":"LOCKS",
+            "hectom":"00181",
+            "locode":"BEMRL15907LOCKS00181",
+            "function":"lokare",
+            "ww_name":"Ringvaart om Gent",
+            "rt_name":"Ringvaart om Gent",
+            "loname":"Merelbeke",
+            "objectname":"Sluizen te Merelbeke",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluizen te Merelbeke",
+            "centroper":0,
+            "orient":296,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.74851150733677,
+               51.0086055339181
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":17,
+            "sectionref":"15903",
+            "objectcode":"LOCKS",
+            "hectom":"00052",
+            "locode":"BEEVM15903LOCKS00052",
+            "function":"lokare",
+            "ww_name":"Ringvaart om Gent",
+            "rt_name":"Ringvaart om Gent",
+            "loname":"Evergem",
+            "objectname":"Sluizen te Evergem",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":"28",
+            "comname":"Sluizen te Evergem",
+            "centroper":0,
+            "orient":243,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.66996691160144,
+               51.089637854402149
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":18,
+            "sectionref":"15I01",
+            "objectcode":"LOCKS",
+            "hectom":"00020",
+            "locode":"BEGNE15I01LOCKS00020",
+            "function":"lokare",
+            "ww_name":"Verbindingskanaal Gent",
+            "rt_name":"Verbindingskanaal Gent",
+            "loname":"Gent",
+            "objectname":"Tolhuissluis te Gent",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Tolhuissluis te Gent",
+            "centroper":0,
+            "orient":253,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":80,
+            "width":9.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.728442618749396,
+               51.069284418793792
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":19,
+            "sectionref":"13138",
+            "objectcode":"LOCKS",
+            "hectom":"00340",
+            "locode":"BEBON13138LOCKS00340",
+            "function":"lokare",
+            "ww_name":"Zeekanaal Brussel-Schelde",
+            "rt_name":"Zeekanaal Brussel-Schelde",
+            "loname":"Bornem",
+            "objectname":"Nieuwe Zeesluis Wintam",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"68",
+            "comname":"Nieuwe Zeesluis Wintam",
+            "centroper":0,
+            "orient":187,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":180,
+            "width":24
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.302400786984857,
+               51.117380355631006
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":20,
+            "sectionref":"13122",
+            "objectcode":"LOCKS",
+            "hectom":"00183",
+            "locode":"BEZET13122LOCKS00183",
+            "function":"lokare",
+            "ww_name":"Zeekanaal Brussel-Schelde",
+            "rt_name":"Zeekanaal Brussel-Schelde",
+            "loname":"Zemst",
+            "objectname":"Sluis Zemst",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"68",
+            "comname":"Sluis Zemst",
+            "centroper":0,
+            "orient":150,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":140,
+            "width":19
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.37295762465728,
+               50.998719041386295
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":21,
+            "sectionref":"13402",
+            "objectcode":"LOCKS",
+            "hectom":"00010",
+            "locode":"BEWLB13402LOCKS00010",
+            "function":"lokare",
+            "ww_name":"Aftakking Oude Arm Klein-Willebroek",
+            "rt_name":"Aftakking Oude Arm Klein-Willebroek",
+            "loname":"Willebroek",
+            "objectname":"Sluis Klein-Willebroek",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"68",
+            "comname":"Sluis Klein-Willebroek",
+            "centroper":0,
+            "orient":184,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":50,
+            "width":6.6
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.36686691433143,
+               51.0811176549675
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":22,
+            "sectionref":"13213",
+            "objectcode":"LOCKS",
+            "hectom":"00270",
+            "locode":"BEECH13213LOCKS00270",
+            "function":"lokare",
+            "ww_name":"Kanaal Leuven-Dijle",
+            "rt_name":"Kanaal Leuven-Dijle",
+            "loname":"Mechelen",
+            "objectname":"Battelsluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Battelsluis",
+            "centroper":1,
+            "orient":135,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.7,
+            "width":7.55
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.446144387397084,
+               51.038473964213267
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":23,
+            "sectionref":"13214",
+            "objectcode":"LOCKS",
+            "hectom":"00301",
+            "locode":"BEECH13214LOCKS00301",
+            "function":"lokare",
+            "ww_name":"Kanaal Leuven-Dijle",
+            "rt_name":"Kanaal Leuven-Dijle",
+            "loname":"Mechelen",
+            "objectname":"Zennegatsluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":159,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.7,
+            "width":7.55
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.430574970496402,
+               51.063617010795369
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":24,
+            "sectionref":"13208",
+            "objectcode":"LOCKS",
+            "hectom":"00129",
+            "locode":"BEKMH13208LOCKS00129",
+            "function":"lokare",
+            "ww_name":"Kanaal Leuven-Dijle",
+            "rt_name":"Kanaal Leuven-Dijle",
+            "loname":"Kampenhout",
+            "objectname":"Sluis Kampenhout",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis Kampenhout",
+            "centroper":1,
+            "orient":104,
+            "tidedep":0,
+            "remark":"De maximale afmetingen geldt voor traditionele schepen (type Kempenaar) waarbij zowel de voor- als de    achtersteven zijn afgerond.  Voor rechthoekige vaartuigen of combinaties dient steeds vooraf met de Vlaamse Waterweg contact opgenomen worden",
+            "active":1,
+            "length":51.55,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.594033626996057,
+               50.956176153833951
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":25,
+            "sectionref":"13210",
+            "objectcode":"LOCKS",
+            "hectom":"00161",
+            "locode":"BEBMB13210LOCKS00161",
+            "function":"lokare",
+            "ww_name":"Kanaal Leuven-Dijle",
+            "rt_name":"Kanaal Leuven-Dijle",
+            "loname":"Boortmeerbeek",
+            "objectname":"Sluis Boortmeerbeek",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis Boortmeerbeek",
+            "centroper":1,
+            "orient":134,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.7,
+            "width":7.55
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.560688148596815,
+               50.973431212693583
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":26,
+            "sectionref":"13030",
+            "objectcode":"LOCKS",
+            "hectom":"00485",
+            "locode":"BEHFB13030LOCKS00485",
+            "function":"lokare",
+            "ww_name":"Kanaal naar Charleroi",
+            "rt_name":"Kanaal naar Charleroi",
+            "loname":"Halle",
+            "objectname":"Sluis 6 - Lembeek",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"\n20",
+            "comname":"Sluis 6 - Lembeek",
+            "centroper":1,
+            "orient":221,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.3,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.221946064802786,
+               50.709069251940242
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":27,
+            "sectionref":"13032",
+            "objectcode":"LOCKS",
+            "hectom":"00524",
+            "locode":"BEHFB13032LOCKS00524",
+            "function":"lokare",
+            "ww_name":"Kanaal naar Charleroi",
+            "rt_name":"Kanaal naar Charleroi",
+            "loname":"Halle",
+            "objectname":"Sluis 7 - Halle",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 7 - Halle",
+            "centroper":1,
+            "orient":195,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.3,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.241667335872041,
+               50.738274390469705
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":28,
+            "sectionref":"13035",
+            "objectcode":"LOCKS",
+            "hectom":"00562",
+            "locode":"BEBEE13035LOCKS00562",
+            "function":"lokare",
+            "ww_name":"Kanaal naar Charleroi",
+            "rt_name":"Kanaal naar Charleroi",
+            "loname":"Beersel",
+            "objectname":"Sluis 8 - Lot",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"\n20",
+            "comname":"Sluis 8 - Lot",
+            "centroper":1,
+            "orient":222,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.3,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.269663420536774,
+               50.76634798008233
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":29,
+            "sectionref":"11811",
+            "objectcode":"LOCKS",
+            "hectom":"00272",
+            "locode":"BEGEA11811LOCKS00272",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Geraardsbergen",
+            "objectname":"Sluis te Idegem",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis te Idegem",
+            "centroper":0,
+            "orient":250,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.929926068776625,
+               50.799034830318696
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":30,
+            "sectionref":"11812",
+            "objectcode":"LOCKS",
+            "hectom":"00352",
+            "locode":"BENNV11812LOCKS00352",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Ninove",
+            "objectname":"Sluis te Pollare",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis te Pollare",
+            "centroper":0,
+            "orient":270,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.009942831018105,
+               50.829730210053597
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":31,
+            "sectionref":"11813",
+            "objectcode":"LOCKS",
+            "hectom":"00432",
+            "locode":"BEDRW11813LOCKS00432",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Denderleeuw",
+            "objectname":"Sluis te Denderleeuw",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis te Denderleeuw",
+            "centroper":0,
+            "orient":224,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.077322745991919,
+               50.873871000808258
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":32,
+            "sectionref":"11814",
+            "objectcode":"LOCKS",
+            "hectom":"00459",
+            "locode":"BEAFF11814LOCKS00459",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Affligem",
+            "objectname":"Sluis te Teralfene",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluis te Teralfene",
+            "centroper":0,
+            "orient":150,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.081448593434629,
+               50.892207433270329
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":33,
+            "sectionref":"11816",
+            "objectcode":"LOCKS",
+            "hectom":"00520",
+            "locode":"BEAAB11816LOCKS00520",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Aalst",
+            "objectname":"Sluis te Aalst",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Aalst",
+            "centroper":0,
+            "orient":155,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.045762638742507,
+               50.938142322135505
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":34,
+            "sectionref":"11303",
+            "objectcode":"LOCKS",
+            "hectom":"00218",
+            "locode":"BEECH11303LOCKS00218",
+            "function":"lokare",
+            "ww_name":"Dijle",
+            "rt_name":"Boven-Dijle",
+            "loname":"Mechelen",
+            "objectname":"Benedensluis Mechelen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 4 (Dijle, Demer, Beneden-Zenne)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Benedensluis Mechelen",
+            "centroper":0,
+            "orient":140,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":80,
+            "width":9.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.467797466451457,
+               51.033231962546189
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":35,
+            "sectionref":"17701",
+            "objectcode":"LOCKS",
+            "hectom":"00003",
+            "locode":"BENIE17701LOCKS00003",
+            "function":"lokare",
+            "ww_name":"Verbindingskanaal te Nieuwpoort",
+            "rt_name":"Verbindingskanaal te Nieuwpoort",
+            "loname":"Nieuwpoort",
+            "objectname":"St.-Jorissluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"St.-Jorissluis",
+            "centroper":0,
+            "orient":38,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.771533319390961,
+               51.136866899059932
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":36,
+            "sectionref":"17005",
+            "objectcode":"LOCKS",
+            "hectom":"00438",
+            "locode":"BENIE17005LOCKS00438",
+            "function":"lokare",
+            "ww_name":"IJzer",
+            "rt_name":"IJzer",
+            "loname":"Nieuwpoort",
+            "objectname":"Iepersluis te Nieuwpoort (Ganzepoot)",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":100,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.758048748337656,
+               51.134561997323182
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":37,
+            "sectionref":"18510",
+            "objectcode":"LOCKS",
+            "hectom":"00149",
+            "locode":"BEMEN18510LOCKS00149",
+            "function":"lokare",
+            "ww_name":"Grensleie",
+            "rt_name":"Grensleie",
+            "loname":"Menen",
+            "objectname":"Nieuwe stuwsluis te Menen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 3 (Leie)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Nieuwe stuwsluis te Menen",
+            "centroper":0,
+            "orient":230,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":86,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.101080998710593,
+               50.78083423031633
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":38,
+            "sectionref":"15105",
+            "objectcode":"LOCKS",
+            "hectom":"00156",
+            "locode":"BEHEJ15105LOCKS00156",
+            "function":"lokare",
+            "ww_name":"Leie",
+            "rt_name":"Leie",
+            "loname":"Harelbeke",
+            "objectname":"Stuwsluis te Harelbeke",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 3 (Leie)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Stuwsluis te Harelbeke",
+            "centroper":0,
+            "orient":229,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.305560688153178,
+               50.854913981794141
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":39,
+            "sectionref":"15115",
+            "objectcode":"LOCKS",
+            "hectom":"00615",
+            "locode":"BEGNE15115LOCKS00615",
+            "function":"lokare",
+            "ww_name":"Leie",
+            "rt_name":"Leie Doortocht Gent",
+            "loname":"Gent",
+            "objectname":"Keersluis K2 te Gent",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":230,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.684087321979752,
+               51.036753705710375
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":40,
+            "sectionref":"15109",
+            "objectcode":"LOCKS",
+            "hectom":"00264",
+            "locode":"BEWIK15109LOCKS00264",
+            "function":"lokare",
+            "ww_name":"Leie",
+            "rt_name":"Leie",
+            "loname":"Wielsbeke",
+            "objectname":"Sluis te Sint-Baafs-Vijve",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 3 (Leie)",
+            "vplnpunt":1,
+            "comcha":"22",
+            "comname":"Sluis te Sint-Baafs-Vijve",
+            "centroper":0,
+            "orient":236,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.415577012221051,
+               50.914206256002466
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":41,
+            "sectionref":"17301",
+            "objectcode":"LOCKS",
+            "hectom":"00001",
+            "locode":"BELRI17301LOCKS00001",
+            "function":"lokare",
+            "ww_name":"Lokanaal",
+            "rt_name":"Lokanaal",
+            "loname":"Lo-Reninge",
+            "objectname":"Fintelesluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Fintelesluis",
+            "centroper":0,
+            "orient":174,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.736196535619257,
+               50.957480565235258
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":42,
+            "sectionref":"11406",
+            "objectcode":"LOCKS",
+            "hectom":"00147",
+            "locode":"BEDUF11406LOCKS00147",
+            "function":"lokare",
+            "ww_name":"Netekanaal",
+            "rt_name":"Netekanaal",
+            "loname":"Duffel",
+            "objectname":"Duffelsluizen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"22",
+            "comname":"Duffelsluizen",
+            "centroper":0,
+            "orient":68,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":54.7,
+            "width":7.2
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.535695952634714,
+               51.110278140823574
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":43,
+            "sectionref":"11401",
+            "objectcode":"LOCKS",
+            "hectom":"00002",
+            "locode":"BEZAN11401LOCKS00002",
+            "function":"lokare",
+            "ww_name":"Netekanaal",
+            "rt_name":"Netekanaal",
+            "loname":"Zandhoven",
+            "objectname":"Vierselsluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"22",
+            "comname":"Vierselsluis",
+            "centroper":0,
+            "orient":17,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.3,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.667859564935491,
+               51.188449475514481
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":44,
+            "sectionref":"15010",
+            "objectcode":"LOCKS",
+            "hectom":"00279",
+            "locode":"BESPI15010LOCKS00279",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde",
+            "loname":"Spiere-Helkijn",
+            "objectname":"Stuwsluis Spiere",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":201,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.366078361071321,
+               50.720534309833887
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":45,
+            "sectionref":"15021",
+            "objectcode":"LOCKS",
+            "hectom":"00405",
+            "locode":"BEKSR15021LOCKS00405",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde",
+            "loname":"Kluisbergen",
+            "objectname":"Sluis te Kerkhove",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Kerkhove",
+            "centroper":0,
+            "orient":222,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.494265461579559,
+               50.789745439958942
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":46,
+            "sectionref":"15023",
+            "objectcode":"LOCKS",
+            "hectom":"00524",
+            "locode":"BEOUD15023LOCKS00524",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde",
+            "loname":"Oudenaarde",
+            "objectname":"Sluis te Oudenaarde",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Oudenaarde",
+            "centroper":0,
+            "orient":232,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.618802122107822,
+               50.850464443735845
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":47,
+            "sectionref":"15025",
+            "objectcode":"LOCKS",
+            "hectom":"00631",
+            "locode":"BEGVR15025LOCKS00631",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde",
+            "loname":"Gavere",
+            "objectname":"Sluis te Asper",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Asper",
+            "centroper":0,
+            "orient":160,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.666947417556013,
+               50.916741989240187
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":48,
+            "sectionref":"15034",
+            "objectcode":"LOCKS",
+            "hectom":"00828",
+            "locode":"BEGNE15034LOCKS00828",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde doortocht Gent",
+            "loname":"Gent",
+            "objectname":"Sluis Gentbrugge",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":221,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":50,
+            "width":6.6
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.745862913449947,
+               51.046452834913886
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":49,
+            "sectionref":"15032",
+            "objectcode":"LOCKS",
+            "hectom":"00821",
+            "locode":"BEGNE15032LOCKS00821",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde doortocht Gent",
+            "loname":"Gent",
+            "objectname":"Brusselsepoortsluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":214,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.739788732656443,
+               51.04162406895049
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":50,
+            "sectionref":"15030",
+            "objectcode":"LOCKS",
+            "hectom":"00780",
+            "locode":"BEMRL15030LOCKS00780",
+            "function":"lokare",
+            "ww_name":"Boven-Schelde",
+            "rt_name":"Boven-Schelde doortocht Gent",
+            "loname":"Merelbeke",
+            "objectname":"Sluis E3 te Merelbeke",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":242,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.739870546855207,
+               51.012607060403099
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":51,
+            "sectionref":"11818",
+            "objectcode":"LOCKS",
+            "hectom":"00600",
+            "locode":"BEDDR11818LOCKS00600",
+            "function":"lokare",
+            "ww_name":"Dender",
+            "rt_name":"Dender",
+            "loname":"Dendermonde",
+            "objectname":"Sluis te Denderbelle",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 4 (Dender, Moervaart)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis te Denderbelle",
+            "centroper":0,
+            "orient":185,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.077934668765164,
+               51.001016646950589
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":52,
+            "sectionref":"13205",
+            "objectcode":"LOCKS",
+            "hectom":"00075",
+            "locode":"BEHAC13205LOCKS00075",
+            "function":"lokare",
+            "ww_name":"Kanaal Leuven-Dijle",
+            "rt_name":"Kanaal Leuven-Dijle",
+            "loname":"Haacht",
+            "objectname":"Tildonk sluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 6 (Kanaal Leuven-Dijle, Netekanaal)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Tildonk sluis",
+            "centroper":1,
+            "orient":135,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.7,
+            "width":7.55
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.665535089052502,
+               50.939655988528699
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":53,
+            "sectionref":"13037",
+            "objectcode":"LOCKS",
+            "hectom":"00593",
+            "locode":"BESPT13037LOCKS00593",
+            "function":"lokare",
+            "ww_name":"Kanaal naar Charleroi",
+            "rt_name":"Kanaal naar Charleroi",
+            "loname":"Sint-Pieters-Leeuw",
+            "objectname":"Sluis 9 - Ruisbroek",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 5 (Zeekanaal Brussel-Schelde, Boven-Zenne, Kanaal naar Charleroi)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 9 - Ruisbroek",
+            "centroper":1,
+            "orient":208,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.3,
+            "width":10.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.292905471140378,
+               50.789795247143019
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":54,
+            "sectionref":"17805",
+            "objectcode":"LOCKS",
+            "hectom":"00105",
+            "locode":"BEVEU17805LOCKS00105",
+            "function":"lokare",
+            "ww_name":"Kanaal Nieuwpoort-Duinkerke",
+            "rt_name":"Kanaal Nieuwpoort-Duinkerke",
+            "loname":"Veurne",
+            "objectname":"Nieuwpoortsluis te Veurne",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Nieuwpoortsluis te Veurne",
+            "centroper":0,
+            "orient":28,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.668118852162466,
+               51.070618972055961
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":55,
+            "sectionref":"17201",
+            "objectcode":"LOCKS",
+            "hectom":"00001",
+            "locode":"BEOBG17201LOCKS00001",
+            "function":"lokare",
+            "ww_name":"Kanaal Plassendale-Nieuwpoort",
+            "rt_name":"Kanaal Plassendale-Nieuwpoort",
+            "loname":"Oudenburg",
+            "objectname":"Plassendalesluis te Oudenburg",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 6 (Kanalen-West)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Plassendalesluis te Oudenburg",
+            "centroper":0,
+            "orient":24,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.003488899696796,
+               51.209215727280551
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":56,
+            "sectionref":"15604",
+            "objectcode":"LOCKS",
+            "hectom":"00163",
+            "locode":"BEWIK15604LOCKS00163",
+            "function":"lokare",
+            "ww_name":"Kanaal Roeselare-Leie",
+            "rt_name":"Kanaal Roeselare-Leie",
+            "loname":"Wielsbeke",
+            "objectname":"Sluizen te Ooigem",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 3 (Leie)",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"Sluizen te Ooigem",
+            "centroper":0,
+            "orient":306,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":110,
+            "width":11.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.343662517448571,
+               50.897211888749602
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":57,
+            "sectionref":"15707",
+            "objectcode":"LOCKS",
+            "hectom":"00155",
+            "locode":"BEKJK15707LOCKS00155",
+            "function":"lokare",
+            "ww_name":"Kanaal Bossuit-Kortrijk",
+            "rt_name":"Kanaal Bossuit-Kortrijk",
+            "loname":"Kortrijk",
+            "objectname":"Sluis 11 te Kortrijk",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 2 (Boven-Schelde)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 11 te Kortrijk",
+            "centroper":0,
+            "orient":112,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.270793860768274,
+               50.834543413305617
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":58,
+            "sectionref":"17206",
+            "objectcode":"LOCKS",
+            "hectom":"00211",
+            "locode":"BENIE17206LOCKS00211",
+            "function":"lokare",
+            "ww_name":"Kanaal Plassendale-Nieuwpoort",
+            "rt_name":"Kanaal Plassendale-Nieuwpoort",
+            "loname":"Nieuwpoort",
+            "objectname":"Gravensluis te Nieuwpoort (Ganzepoot)",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 6 (Kanalen-West)",
+            "vplnpunt":1,
+            "comcha":"20 ",
+            "comname":"Gravensluis te Nieuwpoort (Ganzepoot)",
+            "centroper":0,
+            "orient":40,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.757143138411168,
+               51.135819470408812
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":59,
+            "sectionref":"15118",
+            "objectcode":"LOCKS",
+            "hectom":"00672",
+            "locode":"BEGNE15118LOCKS00672",
+            "function":"lokare",
+            "ww_name":"Leie",
+            "rt_name":"Leie Doortocht Gent",
+            "loname":"Gent",
+            "objectname":"St. Jorissluis te Gent",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 1 (Gent)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":340,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":15,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.731688189447226,
+               51.058180011511126
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":60,
+            "sectionref":"11301",
+            "objectcode":"LOCKS",
+            "hectom":"00194",
+            "locode":"BEECH11301LOCKS00194",
+            "function":"lokare",
+            "ww_name":"Dijle",
+            "rt_name":"Boven-Dijle",
+            "loname":"Mechelen",
+            "objectname":"Bovensluis Mechelen",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 4 (Dijle, Demer, Beneden-Zenne)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":90,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":15,
+            "width":4
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.49354577563076,
+               51.023499309835927
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":61,
+            "sectionref":"17802",
+            "objectcode":"LOCKS",
+            "hectom":"00001",
+            "locode":"BENIE17802LOCKS00001",
+            "function":"lokare",
+            "ww_name":"Kanaal Nieuwpoort-Duinkerke",
+            "rt_name":"Kanaal Nieuwpoort-Duinkerke",
+            "loname":"Nieuwpoort",
+            "objectname":"Veurnesluis te Nieuwpoort (Ganzepoot)",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aBS - District 7 (IJzer)",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Veurnesluis te Nieuwpoort (Ganzepoot)",
+            "centroper":0,
+            "orient":330,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":38.5,
+            "width":5.1
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               2.756671347394462,
+               51.133609721265408
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":62,
+            "sectionref":"1V900",
+            "objectcode":"LOCKS",
+            "hectom":"00004",
+            "locode":"BEANR09210LOCKS00003",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Kattendijksluis",
+            "loname":"Antwerpen",
+            "objectname":"Kattendijksluis",
+            "wwauthorit":"Waterwegen en Zeekanaal NV",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"69",
+            "comname":"Kattendijksluis",
+            "centroper":0,
+            "orient":271,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":90,
+            "width":12
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.40459266379648,
+               51.235190014287809
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":63,
+            "sectionref":"02408",
+            "objectcode":"LOCKS",
+            "hectom":"00278",
+            "locode":"BEMLO02408LOCKS00278",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Mol",
+            "objectname":"sluis 2N  Mol",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"sluis 2N  Mol",
+            "centroper":0,
+            "orient":95,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.209698502489101,
+               51.238497092411116
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":64,
+            "sectionref":"02412",
+            "objectcode":"LOCKS",
+            "hectom":"00328",
+            "locode":"BEDSE02412LOCKS00328",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Dessel",
+            "objectname":"Sluis 5 Dessel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":73,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.140138350189269,
+               51.229780027613565
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":65,
+            "sectionref":"02420",
+            "objectcode":"LOCKS",
+            "hectom":"00561",
+            "locode":"BEHER02420LOCKS00561",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Herentals",
+            "objectname":"Sluis 10 Herentals",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"Sluis 10 Herentals",
+            "centroper":0,
+            "orient":100,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.832105978242561,
+               51.169362769092189
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":66,
+            "sectionref":"02417",
+            "objectcode":"LOCKS",
+            "hectom":"00467",
+            "locode":"BEGEL02417LOCKS00467",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Geel",
+            "objectname":"Sluis 9 Geel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":48,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.955450059321474,
+               51.190128924713832
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":67,
+            "sectionref":"02416",
+            "objectcode":"LOCKS",
+            "hectom":"00440",
+            "locode":"BEGEL02416LOCKS00440",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Geel",
+            "objectname":"Sluis 8 Geel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":73,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.986381072401254,
+               51.201978906114412
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":68,
+            "sectionref":"02415",
+            "objectcode":"LOCKS",
+            "hectom":"00401",
+            "locode":"BEMLO02415LOCKS00401",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Mol",
+            "objectname":"Sluis 7 Geel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":73,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.039888987900444,
+               51.211672122773074
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":69,
+            "sectionref":"02414",
+            "objectcode":"LOCKS",
+            "hectom":"00374",
+            "locode":"BEMLO02414LOCKS00374",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Mol",
+            "objectname":"Sluis 6 Mol",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":73,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.077086667027363,
+               51.21845791448532
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":70,
+            "sectionref":"12620",
+            "objectcode":"LOCKS",
+            "hectom":"00628",
+            "locode":"BESCT12620LOCKS00628",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Schoten",
+            "objectname":"sluis 10 Schoten",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"sluis 10 Schoten",
+            "centroper":0,
+            "orient":17,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.501760485408557,
+               51.241237742092594
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":71,
+            "sectionref":"12619",
+            "objectcode":"LOCKS",
+            "hectom":"00617",
+            "locode":"BESCT12619LOCKS00617",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Schoten",
+            "objectname":"sluis 9 Schoten",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":19,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.50627712275623,
+               51.250260650843778
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":72,
+            "sectionref":"12618",
+            "objectcode":"LOCKS",
+            "hectom":"00593",
+            "locode":"BESCT12618LOCKS00593",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Schoten",
+            "objectname":"sluis 8 Schoten",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":38,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.518664532584294,
+               51.270567141974965
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":73,
+            "sectionref":"12617",
+            "objectcode":"LOCKS",
+            "hectom":"00569",
+            "locode":"BESCT12617LOCKS00569",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Schoten",
+            "objectname":"sluis 7 Schoten",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":39,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.540458323554145,
+               51.287641476186586
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":74,
+            "sectionref":"12616",
+            "objectcode":"LOCKS",
+            "hectom":"00559",
+            "locode":"BESCT12616LOCKS00559",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Schoten",
+            "objectname":"sluis 6 Schoten",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":56,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.549592546353363,
+               51.294116807943908
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":75,
+            "sectionref":"12614",
+            "objectcode":"LOCKS",
+            "hectom":"00542",
+            "locode":"BEBRC12614LOCKS00542",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Brecht",
+            "objectname":"sluis 4 St.-Job-in't-Goor",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":57,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.570173876750424,
+               51.302445974100536
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":76,
+            "sectionref":"12615",
+            "objectcode":"LOCKS",
+            "hectom":"00551",
+            "locode":"BEBRC12615LOCKS00551",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Brecht",
+            "objectname":"sluis 5 St.-Job-in't-Goor",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":57,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.559183884455232,
+               51.298005781164342
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":77,
+            "sectionref":"12609",
+            "objectcode":"LOCKS",
+            "hectom":"00384",
+            "locode":"BERIJ12609LOCKS00384",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Rijkevorsel",
+            "objectname":"sluis 1 Rijkevorsel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"sluis 1 Rijkevorsel",
+            "centroper":1,
+            "orient":102,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.773927246180979,
+               51.329057584723273
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":78,
+            "sectionref":"02901",
+            "objectcode":"LOCKS",
+            "hectom":"00426",
+            "locode":"BEBOC02901LOCKS00426",
+            "function":"lokare",
+            "ww_name":"Zuid-Willemsvaart",
+            "rt_name":"Zuid-Willemsvaart noord",
+            "loname":"Bocholt",
+            "objectname":"Sluis Bocholt",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis Bocholt",
+            "centroper":0,
+            "orient":130,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":52,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.564100627479702,
+               51.18866246851745
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":79,
+            "sectionref":"02017",
+            "objectcode":"LOCKS",
+            "hectom":"00455",
+            "locode":"BEDPK02017LOCKS00455",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Diepenbeek",
+            "objectname":"sluis Diepenbeek",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 1",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"sluis Diepenbeek",
+            "centroper":0,
+            "orient":93,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.432273599979458,
+               50.938301340523836
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":80,
+            "sectionref":"02016",
+            "objectcode":"LOCKS",
+            "hectom":"00414",
+            "locode":"BEGNK02016LOCKS00414",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Genk",
+            "objectname":"sluis Genk",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 1",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"sluis Genk",
+            "centroper":0,
+            "orient":98,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.490797873506581,
+               50.935783582879786
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":81,
+            "sectionref":"02019",
+            "objectcode":"LOCKS",
+            "hectom":"00500",
+            "locode":"BEHSS02019LOCKS00500",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Hasselt",
+            "objectname":"sluis Hasselt",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 1",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"sluis Hasselt",
+            "centroper":0,
+            "orient":91,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.368748804806619,
+               50.940617836575292
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":82,
+            "sectionref":"02033",
+            "objectcode":"LOCKS",
+            "hectom":"00771",
+            "locode":"BEHAW02033LOCKS00771",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Ham",
+            "objectname":"sluis Kwaadmechelen",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 1",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":102,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.107717770052757,
+               51.097864013958592
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":83,
+            "sectionref":"02201",
+            "objectcode":"LOCKS",
+            "hectom":"00012",
+            "locode":"BELAN02201LOCKS00012",
+            "function":"lokare",
+            "ww_name":"Kanaal Briegden-Neerharen",
+            "rt_name":"Kanaal Briegden-Neerharen",
+            "loname":"Lanaken",
+            "objectname":"sluis Lanaken",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"sluis Lanaken",
+            "centroper":0,
+            "orient":221,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55.2,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.654897612013757,
+               50.885077132720667
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":84,
+            "sectionref":"02902",
+            "objectcode":"LOCKS",
+            "hectom":"00449",
+            "locode":"BEBOC02902LOCKS00449",
+            "function":"lokare",
+            "ww_name":"Zuid-Willemsvaart",
+            "rt_name":"Zuid-Willemsvaart noord",
+            "loname":"Bocholt",
+            "objectname":"sluis Lozen",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"sluis Lozen",
+            "centroper":0,
+            "orient":240,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":52,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.555720980245347,
+               51.207144187086762
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":85,
+            "sectionref":"02202",
+            "objectcode":"LOCKS",
+            "hectom":"00039",
+            "locode":"BELAN02202LOCKS00039",
+            "function":"lokare",
+            "ww_name":"Kanaal Briegden-Neerharen",
+            "rt_name":"Kanaal Briegden-Neerharen",
+            "loname":"Lanaken",
+            "objectname":"sluis Neerharen",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"10",
+            "comname":"sluis Neerharen",
+            "centroper":0,
+            "orient":225,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55.2,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.682973212717341,
+               50.901715104126055
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":86,
+            "sectionref":"02038",
+            "objectcode":"LOCKS",
+            "hectom":"00958",
+            "locode":"BEOLN02038LOCKS00958",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Olen",
+            "objectname":"sluis Olen",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"sluis Olen",
+            "centroper":0,
+            "orient":113,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.860202382604278,
+               51.159121056557453
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":87,
+            "sectionref":"02407",
+            "objectcode":"LOCKS",
+            "hectom":"00269",
+            "locode":"BELML02407LOCKS00269",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Lommel",
+            "objectname":"Sluis 1N Lommel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"20",
+            "comname":"Sluis 1N Lommel",
+            "centroper":0,
+            "orient":70,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.221545080761593,
+               51.238322595009386
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":88,
+            "sectionref":"02047",
+            "objectcode":"LOCKS",
+            "hectom":"01198",
+            "locode":"BEWJG02047LOCKS01198",
+            "function":"lokare",
+            "ww_name":"Albertkanaal",
+            "rt_name":"Albertkanaal",
+            "loname":"Wijnegem",
+            "objectname":"Sluis Wijnegem",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"Sluis Wijnegem",
+            "centroper":0,
+            "orient":116,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":135,
+            "width":15
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.537800655444117,
+               51.226653809580228
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":89,
+            "sectionref":"02409",
+            "objectcode":"LOCKS",
+            "hectom":"00293",
+            "locode":"BEMLO02409LOCKS00293",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Mol",
+            "objectname":"sluis 3N Mol",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"18",
+            "comname":"sluis 3N Mol",
+            "centroper":0,
+            "orient":86,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":55,
+            "width":7.3
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.189155909446352,
+               51.239099229678516
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":90,
+            "sectionref":"02411",
+            "objectcode":"LOCKS",
+            "hectom":"00311",
+            "locode":"BEDSE02411LOCKS00311",
+            "function":"lokare",
+            "ww_name":"Kanaal Bocholt-Herentals",
+            "rt_name":"Kanaal Bocholt-Herentals",
+            "loname":"Dessel",
+            "objectname":"Sluis 4 Dessel",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 2",
+            "vplnpunt":1,
+            "comcha":"80",
+            "comname":"Sluis 4 Dessel",
+            "centroper":0,
+            "orient":70,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.162897410245188,
+               51.233876121160385
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":91,
+            "sectionref":"12613",
+            "objectcode":"LOCKS",
+            "hectom":"00534",
+            "locode":"BEBRC12613LOCKS00534",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Brecht",
+            "objectname":"sluis 3 Brecht",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":56,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.579372023087457,
+               51.306166609119586
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":92,
+            "sectionref":"12612",
+            "objectcode":"LOCKS",
+            "hectom":"00527",
+            "locode":"BEBRC12612LOCKS00527",
+            "function":"lokare",
+            "ww_name":"Kanaal Dessel-Turnhout-Schoten",
+            "rt_name":"Kanaal Dessel-Turnhout-Schoten",
+            "loname":"Brecht",
+            "objectname":"sluis 2 Brecht",
+            "wwauthorit":"De Vlaamse Waterweg nv",
+            "areaname":"aPS - District 3",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":56,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":51.5,
+            "width":6.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.58816533778579,
+               51.309726778168731
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":93,
+            "sectionref":"01741",
+            "objectcode":"LKA11",
+            "hectom":"00007",
+            "locode":"BEANR01740LKA1100007",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Royerssluis",
+            "loname":"Antwerpen",
+            "objectname":"Royerssluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"22",
+            "comname":"Royerssluis",
+            "centroper":0,
+            "orient":231,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":182.5,
+            "width":22
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.402825636678604,
+               51.24142804205507
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":94,
+            "sectionref":"09006",
+            "objectcode":"LKA11",
+            "hectom":"00037",
+            "locode":"BEBEV09010LKA1100037",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"WAASLANDKANAAL",
+            "loname":"Beveren",
+            "objectname":"Kallosluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"28",
+            "comname":"Kallosluis",
+            "centroper":0,
+            "orient":263,
+            "tidedep":1,
+            "remark":null,
+            "active":1,
+            "length":360,
+            "width":48
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.27708568772733,
+               51.263813747582532
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":95,
+            "sectionref":"01778",
+            "objectcode":"LKA11",
+            "hectom":"00005",
+            "locode":"BEANR01778LKA1100005",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Van Cauwelaertsluis",
+            "loname":"Antwerpen",
+            "objectname":"Van Cauwelaertsluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"71",
+            "comname":"Van Cauwelaertsluis",
+            "centroper":0,
+            "orient":138,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":270,
+            "width":35
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.330395155340741,
+               51.27601880390128
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":96,
+            "sectionref":"01781",
+            "objectcode":"LKA11",
+            "hectom":"00005",
+            "locode":"BEANR01781LKA1100005",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Boudewijnsluis",
+            "loname":"Antwerpen",
+            "objectname":"Boudewijnsluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"71",
+            "comname":"Boudewijnsluis",
+            "centroper":0,
+            "orient":137,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":360,
+            "width":45
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.333074489258795,
+               51.277509365706429
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":97,
+            "sectionref":"01743",
+            "objectcode":"LKA11",
+            "hectom":"00008",
+            "locode":"BEANR01743LKA1100013",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Zandvlietsluis",
+            "loname":"Antwerpen",
+            "objectname":"Zandvlietsluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"79",
+            "comname":"Zandvlietsluis",
+            "centroper":0,
+            "orient":96,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":500,
+            "width":57
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.285671006383638,
+               51.346360024996173
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":98,
+            "sectionref":"01739",
+            "objectcode":"LKA11",
+            "hectom":"00009",
+            "locode":"BEANR01739LKA1100014",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"Berendrechtsluis",
+            "loname":"Antwerpen",
+            "objectname":"Berendrechtsluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":"79",
+            "comname":"Berendrechtsluis",
+            "centroper":0,
+            "orient":95,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":500,
+            "width":68
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.285596798605034,
+               51.344032309208536
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":99,
+            "sectionref":"09101",
+            "objectcode":"LKA11",
+            "hectom":"00008",
+            "locode":"BEBEV09101LKA1100011",
+            "function":"lokare",
+            "ww_name":"De haven van Antwerpen",
+            "rt_name":"DEURGANCKDOK",
+            "loname":"Beveren",
+            "objectname":"Kieldrechtsluis",
+            "wwauthorit":"De haven van Antwerpen",
+            "areaname":"aZZ - District 2 (Boven-Zeeschelde (oost), Beneden-Zeeschelde, Rupel)",
+            "vplnpunt":1,
+            "comcha":null,
+            "comname":null,
+            "centroper":0,
+            "orient":212,
+            "tidedep":0,
+            "remark":null,
+            "active":0,
+            "length":500,
+            "width":68
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.246613594596138,
+               51.277995149624537
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":100,
+            "sectionref":"13052",
+            "objectcode":"LOCKS",
+            "hectom":"00668",
+            "locode":"BEMSJ13052LOCKS00668",
+            "function":"lokare",
+            "ww_name":"Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel",
+            "rt_name":"Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel",
+            "loname":"Molenbeek-St-Jean \/ St-Jans-Molenbeek",
+            "objectname":"Ecluse n°11 de Molenbeek-St-Jean \/ Sluis n°11 van St-Jans-Molenbeek",
+            "wwauthorit":"Haven van Brussel",
+            "areaname":"Brussel",
+            "vplnpunt":0,
+            "comcha":null,
+            "comname":null,
+            "centroper":null,
+            "orient":250,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.6,
+            "width":10.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.334806276827297,
+               50.849622743895836
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":101,
+            "sectionref":"13050",
+            "objectcode":"LOCKS",
+            "hectom":"00627",
+            "locode":"BEANL13050LOCKS00627",
+            "function":"lokare",
+            "ww_name":"Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel",
+            "rt_name":"Canal Charleroi-Bruxelles \/ Kanaal Charleroi-Brussel",
+            "loname":"Anderlecht \/ Anderlecht",
+            "objectname":"Ecluse n°10 d'Anderlecht \/ Sluis n°10 van Anderlecht",
+            "wwauthorit":"Haven van Brussel",
+            "areaname":"Brussel",
+            "vplnpunt":0,
+            "comcha":null,
+            "comname":null,
+            "centroper":null,
+            "orient":200,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":81.6,
+            "width":10.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               4.30174027104119,
+               50.819554759811211
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":102,
+            "sectionref":"1Q501",
+            "objectcode":"LOCKS",
+            "hectom":"00003",
+            "locode":"BEZEE1Q501LOCKS00003",
+            "function":"lokare",
+            "ww_name":"Pierre Vandammesluis - CDNB",
+            "rt_name":"Pierre Vandammesluis - CDNB",
+            "loname":"Zeebrugge",
+            "objectname":"Pierre Vandamme-sluisgebied",
+            "wwauthorit":"MBZ",
+            "areaname":"MBZ",
+            "vplnpunt":0,
+            "comcha":null,
+            "comname":null,
+            "centroper":null,
+            "orient":150,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":500,
+            "width":57
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.21730287192425,
+               51.333809846149819
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "objectid":103,
+            "sectionref":"1Q401",
+            "objectcode":"LOCKS",
+            "hectom":"00001",
+            "locode":"BEZEE1Q401LOCKS00001",
+            "function":"lokare",
+            "ww_name":"Visartsluis - CDNB",
+            "rt_name":"Visartsluis - CDNB",
+            "loname":"Zeebrugge",
+            "objectname":"Visartsluis-gebied",
+            "wwauthorit":"MBZ",
+            "areaname":"MBZ",
+            "vplnpunt":0,
+            "comcha":null,
+            "comname":null,
+            "centroper":null,
+            "orient":170,
+            "tidedep":0,
+            "remark":null,
+            "active":1,
+            "length":165,
+            "width":19.7
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               3.198235874271912,
+               51.327798851660752
+            ]
+         }
+      }
+   ]
 }

@@ -1,3 +1,5 @@
+from salabim import Animate
+
 fairway_section_dict = {}
 fairway_section_list = []
 
@@ -28,3 +30,41 @@ x_min = 0
 y_min = 0
 x_max = 0
 y_max = 0
+
+num_vessels_in_network = 0
+num_vessels_waiting_bridge = 0
+num_vessels_waiting_lock = 0
+num_vessels_waiting_crossroad = 0
+anim_num_vessels_in_network = None
+anim_num_vessels_waiting_bridge = None
+anim_num_vessels_waiting_lock = None
+anim_num_vessels_waiting_crossroad = None
+
+crossroad_stop_time = 2
+
+
+def update_counters():
+    global anim_num_vessels_in_network
+    global anim_num_vessels_waiting_bridge
+    global anim_num_vessels_waiting_lock
+    global anim_num_vessels_waiting_crossroad
+    delta = x_max - x_min
+    if anim_num_vessels_in_network is None:
+        anim_num_vessels_in_network = Animate(text='Vessels: ' + str(num_vessels_in_network),
+                                              textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.6 * delta,
+                                              fontsize0=4)
+        anim_num_vessels_waiting_bridge = Animate(text='Vessels at bridges: ' + str(num_vessels_waiting_bridge),
+                                                  textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.55 * delta,
+                                                  fontsize0=4)
+        anim_num_vessels_waiting_lock = Animate(text='Vessels at locks: ' + str(num_vessels_waiting_lock),
+                                                textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.5 * delta,
+                                                fontsize0=4)
+        anim_num_vessels_waiting_crossroad = Animate(text='Vessels at crossroad: ' + str(num_vessels_waiting_crossroad),
+                                                     textcolor0='black', x0=x_min + 0.8 * delta,
+                                                     y0=y_min + 0.45 * delta,
+                                                     fontsize0=4)
+    else:
+        anim_num_vessels_in_network.update(text='Vessels: ' + str(num_vessels_in_network))
+        anim_num_vessels_waiting_bridge.update(text='Vessels at bridges: ' + str(num_vessels_waiting_bridge))
+        anim_num_vessels_waiting_lock.update(text='Vessels at locks: ' + str(num_vessels_waiting_lock))
+        anim_num_vessels_waiting_crossroad.update(text='Vessels at crossroad: ' + str(num_vessels_waiting_crossroad))
