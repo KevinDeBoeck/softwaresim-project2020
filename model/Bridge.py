@@ -11,10 +11,7 @@ open = +1
 class Bridge(Node, sim.Component):
     """Defines a bridge on a fairway"""
 
-    open_time = 5
-    pass_time = 1
-
-    def __init__(self, fw_code,movable, coordinates_pair):
+    def __init__(self, fw_code, movable, coordinates_pair):
         Node.__init__(self, coordinates_pair[0], coordinates_pair[1])
         self.fw_code = fw_code
         self.left = None
@@ -72,12 +69,12 @@ class Bridge(Node, sim.Component):
                 if len(self.key_in.requesters()) == 0:
                     yield self.passivate()
 
-                yield self.hold(self.open_time)
+                yield self.hold(GlobalVars.bridge_open_time)
                 self.release(self.key_in)
                 self.state = -self.state
                 yield self.hold(10)
                 yield self.request(self.key_in)
-                yield self.hold(self.open_time)
+                yield self.hold(GlobalVars.bridge_open_time)
                 self.state = -self.state
         else:
             self.state = open

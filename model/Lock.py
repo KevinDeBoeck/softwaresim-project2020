@@ -12,12 +12,7 @@ right = +1
 class Lock(Node, sim.Component):
     """Defines a lock on a fairway"""
 
-    in_time = 1
-    out_time = 1
-    wait_time = 10
-    switch_time = 5
-
-    def __init__(self, fw_code,length,width, coordinates_pair):
+    def __init__(self, fw_code, length, width, coordinates_pair):
         Node.__init__(self, coordinates_pair[0], coordinates_pair[1])
         self.fw_code = fw_code
         self.left = None
@@ -93,9 +88,9 @@ class Lock(Node, sim.Component):
                     yield self.passivate()
 
             self.release(self.key_in[self.side])
-            yield self.hold(self.wait_time, mode="Wait")
+            yield self.hold(GlobalVars.lock_wait_time, mode="Wait")
             yield self.request((self.key_in[self.side], 1, 1000))
-            yield self.hold(self.switch_time, mode="Switch")
+            yield self.hold(GlobalVars.lock_switch_time, mode="Switch")
             self.side = -self.side
             self.release(self.key_out)
             yield self.request(self.key_out, mode="Wait")

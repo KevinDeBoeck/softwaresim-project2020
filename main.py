@@ -3,6 +3,7 @@ import salabim as sim
 
 import IO
 from model import Utilities, GlobalVars
+from model.CrossRoad import CrossRoadType
 from model.Network import Network
 from model.Vessel import VesselComponentGenerator
 
@@ -12,6 +13,8 @@ IO.read_data()
 network = Network()
 GlobalVars.network = network
 # Simulation
+GlobalVars.crossroad_type = CrossRoadType.SmartSigns
+GlobalVars.animate = False
 GlobalVars.zoom = True
 GlobalVars.x_min = 3.140237
 GlobalVars.y_min = 50.794897
@@ -23,11 +26,11 @@ env = sim.Environment(trace=False, time_unit='minutes')
 GlobalVars.environment = env
 if GlobalVars.zoom:
     env.animation_parameters(x0=GlobalVars.x_min, x1=GlobalVars.x_max, y0=GlobalVars.y_min,
-                             modelname="Alsic Waterway Simulation", animate=True,
+                             modelname="Alsic Waterway Simulation", animate=GlobalVars.animate,
                              background_color="lightgray")
 else:
     env.animation_parameters(
-        modelname="Alsic Waterway Simulation", animate=True,
+        modelname="Alsic Waterway Simulation", animate=GlobalVars.animate,
         background_color="lightgray")
 env.modelname("Alsic Waterway Simulation")
 network.generate_graph()

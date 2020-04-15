@@ -1,8 +1,9 @@
-import networkx as nx
-import salabim as sim
 import math
 
+import salabim as sim
+
 from model import GlobalVars, Utilities
+from model.CrossRoad import CrossRoadType
 
 left = -1
 right = +1
@@ -97,7 +98,9 @@ class VesselComponent(sim.Component):
             self.animation.remove()
 
         GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
+        GlobalVars.num_vessels_finished = GlobalVars.num_vessels_finished + 1
         GlobalVars.update_counters()
+        print("Vessel " + str(self.vessel.id) + " finished at " + str(GlobalVars.environment.now()))
 
     def perform_animation(self):
         start = (self.current_node.x, self.current_node.y)
@@ -179,10 +182,10 @@ class VesselComponent(sim.Component):
             self.leave(lock.wait_in[side])
         yield self.request(lock.key_in[side])
         # self.enter(lockqueue)
-        yield self.hold(lock.in_time)
+        yield self.hold(GlobalVars.lock_inout_time)
         self.release(lock.key_in[side])
         yield self.request(lock.key_out)
-        yield self.hold(lock.out_time)
+        yield self.hold(GlobalVars.lock_inout_time)
         # self.leave(lockqueue)
         self.release(lock.key_out)
 
@@ -206,8 +209,8 @@ class VesselComponent(sim.Component):
 
             yield self.request(bridge.key_in)
 
-            bridge.hold(10 + bridge.pass_time)
-            yield self.hold(bridge.pass_time)
+            bridge.hold(10 + GlobalVars.bridge_pass_time)
+            yield self.hold(GlobalVars.bridge_pass_time)
             if len(self.special_nodes_path) != 0:
                 self.next_special_node = self.special_nodes_path.pop(0)
             else:
@@ -222,17 +225,36 @@ class VesselComponent(sim.Component):
         GlobalVars.num_vessels_waiting_crossroad = GlobalVars.num_vessels_waiting_crossroad + 1
         GlobalVars.update_counters()
 
-        print("ENTERED: " + self.vessel.id)
-        yield self.request(self.next_special_node.claim)
-        yield from self.perform_animation_to_crossroad()
-        self.release(self.next_special_node.claim)
+        # print("ENTERED: " + self.vessel.id)
+        crossroad = self.next_special_node
+
+        if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:
+            self.enter(crossroad.intersections[self.get_node_before_crossroad()])
+            if crossroad.ispassive() and crossroad.crossroad_empty:
+                crossroad.activate()
+            yield self.passivate()
+            yield self.request(crossroad.claim)
+            yield from self.perform_animation_to_crossroad()
+            self.release(crossroad.claim)
+            if crossroad.ispassive():
+                crossroad.activate()
+        elif GlobalVars.crossroad_type == CrossRoadType.CyclicSigns:
+            self.enter(crossroad.intersections[self.get_node_before_crossroad()])
+            yield self.passivate()
+            yield from self.perform_animation_to_crossroad()
+        elif GlobalVars.crossroad_type == CrossRoadType.SmartSigns:
+            self.enter(crossroad.intersections[self.get_node_before_crossroad()])
+            if crossroad.ispassive():
+                crossroad.activate()
+            yield self.passivate()
+            yield from self.perform_animation_to_crossroad()
 
         if len(self.special_nodes_path) != 0:
             self.next_special_node = self.special_nodes_path.pop(0)
         else:
             self.next_special_node = None
         self.stop_time = float('inf')
-        print("LEFT: " + self.vessel.id)
+        # print("LEFT: " + self.vessel.id)
 
         GlobalVars.num_vessels_waiting_crossroad = GlobalVars.num_vessels_waiting_crossroad - 1
         GlobalVars.update_counters()
@@ -251,6 +273,13 @@ class VesselComponent(sim.Component):
             if node == self.next_special_node:
                 return time
         print("WE DID NOT ENCOUNTER THE SPECIAL NODE")
+
+    def get_node_before_crossroad(self):
+        for node in self.nodes_path:
+            if node is self.next_special_node:
+                return previous.x, previous.y
+            else:
+                previous = node
 
 
 class VesselComponentGenerator(sim.Component):

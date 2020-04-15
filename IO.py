@@ -4,6 +4,7 @@ import geopandas as gpd
 import pandas as pd
 
 import model.GlobalVars as Config
+from model import GlobalVars
 from model.Bridge import Bridge
 from model.FairwaySection import FairwaySection
 from model.Lock import Lock
@@ -58,6 +59,7 @@ def read_passages():
     #         if index < (l-1):
     #             next_trajectory = vessel.trajectory_route[index + 1]
 
+    GlobalVars.num_vessels = len(vessels)
     return vessels, vessel_dict
 
 
