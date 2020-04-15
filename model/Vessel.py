@@ -42,13 +42,20 @@ class VesselComponent(sim.Component):
     def process(self):
         GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network + 1
         GlobalVars.update_counters()
-
+        """
         while len(self.vessel.trajectory_route) != 0:
             self.vessel.current_trajectory = self.vessel.trajectory_route.pop(0)
             if len(self.nodes_path) != 0:
                 self.nodes_path.pop()
             self.nodes_path.extend(
                 GlobalVars.network.fairway_sections_dict[self.vessel.current_trajectory.section_ref].nodes)
+        """
+
+        for section_ref in range(15102, 15107):
+            if len(self.nodes_path) != 0:
+                self.nodes_path.pop()
+            self.nodes_path.extend(
+                GlobalVars.network.fairway_sections_dict[str(section_ref)].nodes)
 
         for idx, node in enumerate(self.nodes_path):
             node_pos = (node.x, node.y)
