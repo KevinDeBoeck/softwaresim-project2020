@@ -71,3 +71,26 @@ class Network:
         #         with_labels=False)
         # plt.axis('scaled')
         # plt.show()
+        for traject_name, trajectory in GlobalVars.trajectories_dict.items():
+            start_section_ref = trajectory.section_ref_1
+            end_section_ref = trajectory.section_ref_2
+            start_point = (trajectory.lon1, trajectory.lat1)
+            end_point = (trajectory.lon2, trajectory.lat2)
+            start_node = get_closest_node_in_section(start_point, self.fairway_sections_dict[start_section_ref])
+            end_node = get_closest_node_in_section(end_point, self.fairway_sections_dict[end_section_ref])
+            trajectory_nodes_tmp = nx.bidirectional_shortest_path(self.graph, (start_node.x, start_node.y),
+                                                              (end_node.x, end_node.y))
+            for trajectory_node in trajectory_nodes_tmp:
+                trajectory.nodes.append(self.graph.nodes()[trajectory_node]['artwork'])
+
+
+def get_closest_node_in_section(point, fairway):
+    dist = float('inf')
+    closest = None
+
+    for node in fairway.nodes:
+        tmp = Utilities.haversine([point[1], point[0]], [node.y, node.x])
+        if tmp < dist:
+            dist = tmp
+            closest = node
+    return closest

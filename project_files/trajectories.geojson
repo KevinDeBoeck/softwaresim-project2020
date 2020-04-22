@@ -14,7 +14,8 @@
             "LoLong":3.219698,
             "RoLat":50.808759,
             "RoLong":3.22136,
-            "sectionref":15102
+            "hectometerpunt":74.00,
+            "sectionref":"15102"
          },
          "geometry":{
             "type":"LineString",
@@ -40,7 +41,8 @@
             "LoLong":3.240275,
             "RoLat":50.824462,
             "RoLong":3.241581,
-            "sectionref":15103
+            "hectometerpunt":97.06,
+            "sectionref":"15103"
          },
          "geometry":{
             "type":"LineString",
@@ -69,7 +71,8 @@
             "LoLong":3.240275,
             "RoLat":50.824462,
             "RoLong":3.241581,
-            "sectionref":15103
+            "hectometerpunt":97.06,
+            "sectionref":"15103"
          },
          "geometry":{
             "type":"LineString",
@@ -95,7 +98,8 @@
             "LoLong":3.274587,
             "RoLat":50.836741,
             "RoLong":3.27503,
-            "sectionref":15104
+            "hectometerpunt":125.00,
+            "sectionref":"15104"
          },
          "geometry":{
             "type":"LineString",
@@ -124,7 +128,8 @@
             "LoLong":3.274587,
             "RoLat":50.836741,
             "RoLong":3.27503,
-            "sectionref":15104
+            "hectometerpunt":125.00,
+            "sectionref":"15104"
          },
          "geometry":{
             "type":"LineString",
@@ -150,7 +155,8 @@
             "LoLong":3.285559,
             "RoLat":50.84398,
             "RoLong":3.287924,
-            "sectionref":15104
+            "hectometerpunt":137.00,
+            "sectionref":"15104"
          },
          "geometry":{
             "type":"LineString",
@@ -179,7 +185,8 @@
             "LoLong":3.285559,
             "RoLat":50.84398,
             "RoLong":3.287924,
-            "sectionref":15104
+            "hectometerpunt":137.00,
+            "sectionref":"15104"
          },
          "geometry":{
             "type":"LineString",
@@ -205,7 +212,8 @@
             "LoLong":3.296085,
             "RoLat":50.848565,
             "RoLong":3.296834,
-            "sectionref":15105
+            "hectometerpunt":146.00,
+            "sectionref":"15105"
          },
          "geometry":{
             "type":"LineString",
@@ -234,7 +242,8 @@
             "LoLong":3.296085,
             "RoLat":50.848565,
             "RoLong":3.296834,
-            "sectionref":15105
+            "hectometerpunt":146.00,
+            "sectionref":"15105"
          },
          "geometry":{
             "type":"LineString",
@@ -260,7 +269,8 @@
             "LoLong":3.307147,
             "RoLat":50.856444,
             "RoLong":3.308648,
-            "sectionref":15106
+            "hectometerpunt":158.00,
+            "sectionref":"15106"
          },
          "geometry":{
             "type":"LineString",
@@ -289,7 +299,8 @@
             "LoLong":3.307147,
             "RoLat":50.856444,
             "RoLong":3.308648,
-            "sectionref":15106
+            "hectometerpunt":158.00,
+            "sectionref":"15106"
          },
          "geometry":{
             "type":"LineString",
@@ -318,7 +329,8 @@
             "LoLong":3.34684,
             "RoLat":50.894272,
             "RoLong":3.348662,
-            "sectionref":15106
+            "hectometerpunt":210.00,
+            "sectionref":"15106"
          },
          "geometry":{
             "type":"LineString",

@@ -11,14 +11,16 @@ open = +1
 class Bridge(Node, sim.Component):
     """Defines a bridge on a fairway"""
 
-    def __init__(self, fw_code, movable, coordinates_pair):
+    def __init__(self, fw_code, movable, height, coordinates_pair):
         Node.__init__(self, coordinates_pair[0], coordinates_pair[1])
         self.fw_code = fw_code
         self.left = None
         self.right = None
         self.state = closed
         self.key_in = None
+        self.order = None
         self.movable = movable
+        self.height = height
 
         # Get the fairway section this belongs to
         if self.fw_code not in GlobalVars.fairway_section_dict:
@@ -60,6 +62,7 @@ class Bridge(Node, sim.Component):
         self.left = neighbors[0]
         self.right = neighbors[1]
         self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
+        self.order = sim.Resource(name="Bridge at " + str(coordinate) + " => order")
 
     def process(self):
         if self.movable:
@@ -72,7 +75,7 @@ class Bridge(Node, sim.Component):
                 yield self.hold(GlobalVars.bridge_open_time)
                 self.release(self.key_in)
                 self.state = -self.state
-                yield self.hold(10)
+                yield self.hold(GlobalVars.bridge_min_wait)
                 yield self.request(self.key_in)
                 yield self.hold(GlobalVars.bridge_open_time)
                 self.state = -self.state
@@ -80,7 +83,7 @@ class Bridge(Node, sim.Component):
             self.state = open
 
     def check_fit(self, vessel: Vessel) -> bool:
-        if self.state == open or not self.movable:
+        if self.state == open or not self.movable or vessel.vessel.height < self.height:
             return True
         else:
             return False

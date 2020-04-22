@@ -57,6 +57,7 @@ lock_switch_time = 5
 
 bridge_open_time = 5
 bridge_pass_time = 1
+bridge_min_wait = 10
 
 
 def update_counters():

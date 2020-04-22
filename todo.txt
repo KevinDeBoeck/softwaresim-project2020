@@ -1,0 +1,9 @@
+TODO:
+Mapping trajectory + bepalen richting
+Kruis tabellen max 1 section kijken
+
+FIXING OF BRIDGES
+
+Wachten op data:
+snellere sluizen? -> wanneer wisselen?
+Kleine boten onder bruggen => WE NEED HEIGHT OF BOATS + TESTING
