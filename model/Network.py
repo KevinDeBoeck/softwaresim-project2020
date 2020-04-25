@@ -64,9 +64,6 @@ class Network:
                     crossroad.intersections[neighbor] = sim.Queue(
                         "Crossroad at " + str(node) + " => " + str(neighbor))
 
-        for node in self.graph.nodes:
-            self.graph.nodes()[node]['artwork'].init_node(self.graph)
-
         # nx.draw(self.graph, pos=nx.get_node_attributes(self.graph, 'pos'), node_size=1, alpha=0.5, node_color="blue",
         #         with_labels=False)
         # plt.axis('scaled')
@@ -79,9 +76,13 @@ class Network:
             start_node = get_closest_node_in_section(start_point, self.fairway_sections_dict[start_section_ref])
             end_node = get_closest_node_in_section(end_point, self.fairway_sections_dict[end_section_ref])
             trajectory_nodes_tmp = nx.bidirectional_shortest_path(self.graph, (start_node.x, start_node.y),
-                                                              (end_node.x, end_node.y))
+                                                                  (end_node.x, end_node.y))
             for trajectory_node in trajectory_nodes_tmp:
                 trajectory.nodes.append(self.graph.nodes()[trajectory_node]['artwork'])
+                self.graph.nodes()[trajectory_node]['artwork'].useful = True
+
+        for node in self.graph.nodes:
+            self.graph.nodes()[node]['artwork'].init_node(self.graph)
 
 
 def get_closest_node_in_section(point, fairway):

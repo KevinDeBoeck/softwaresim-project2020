@@ -61,19 +61,20 @@ class Lock(Node, sim.Component):
         self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='orangered', linewidth=size, layer=2)
 
     def init_node(self, graph):
-        sim.Component.__init__(self)
-        coordinate = (self.x, self.y)
-        neighbors = list(graph.neighbors(coordinate))
-        if len(neighbors) != 2:
-            print("Well well well, WE ARE FUCKED")
+        if self.useful:
+            sim.Component.__init__(self)
+            coordinate = (self.x, self.y)
+            neighbors = list(graph.neighbors(coordinate))
+            if len(neighbors) != 2:
+                print("Well well well, WE ARE FUCKED")
 
-        self.left = neighbors[0]
-        self.right = neighbors[1]
-        self.key_in[left] = sim.Resource(name="Lock at " + str(coordinate) + " => left key in")
-        self.key_in[right] = sim.Resource(name="Lock at " + str(coordinate) + " => right key in")
-        self.wait_in[left] = sim.Queue(name="Lock at " + str(coordinate) + " => left queue in")
-        self.wait_in[right] = sim.Queue(name="Lock at " + str(coordinate) + " => right queue in")
-        self.key_out = sim.Resource(name="Lock at " + str(coordinate) + " => key out")
+            self.left = neighbors[0]
+            self.right = neighbors[1]
+            self.key_in[left] = sim.Resource(name="Lock at " + str(coordinate) + " => left key in")
+            self.key_in[right] = sim.Resource(name="Lock at " + str(coordinate) + " => right key in")
+            self.wait_in[left] = sim.Queue(name="Lock at " + str(coordinate) + " => left queue in")
+            self.wait_in[right] = sim.Queue(name="Lock at " + str(coordinate) + " => right queue in")
+            self.key_out = sim.Resource(name="Lock at " + str(coordinate) + " => key out")
 
     def process(self):
         for side in (left, right):

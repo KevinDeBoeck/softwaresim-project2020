@@ -29,9 +29,10 @@ class CrossRoad(Node, sim.Component):
         self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='red', linewidth=size, layer=3)
 
     def init_node(self, graph):
-        self.last_queue_tmp = list(self.intersections.values())[-1]
-        self.intersections_list = list(self.intersections.values())
-        sim.Component.__init__(self)
+        if self.useful:
+            self.last_queue_tmp = list(self.intersections.values())[-1]
+            self.intersections_list = list(self.intersections.values())
+            sim.Component.__init__(self)
 
     def process(self):
         if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:

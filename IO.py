@@ -1,4 +1,5 @@
 import json
+import math
 import random
 
 import geopandas as gpd
@@ -17,7 +18,8 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages.csv'
+passages_file = 'project_files/passages_gen.csv'
+trajectory_info_base = 'project_files/trajectory_info/'
 
 trajectory_dict = {}
 
@@ -37,7 +39,7 @@ def read_passages():
     for index, row in df_vessels.iterrows():
         # Make a new object
 
-        height = random.randint(1, 11)
+        height = random.randint(1, 7)
 
         vessel = Vessel(row['ShipID'], row['Length'], row['Width'], height, row['CEMTKlasse'])
         vessel_dict[row['ShipID']] = vessel
@@ -89,6 +91,20 @@ def read_trajectories():
             section_ref_1 = str(int(row['sectionref']))
             trajectory = Trajectory(lon1, lat1, trajectory_name, section_ref_1)
             trajectory_dict[trajectory_name] = trajectory
+
+    for trajectory_name, trajectory in trajectory_dict.items():
+        df = pd.read_csv('%s%s.csv' % (trajectory_info_base, trajectory_name), sep=';')
+        for cross_tuple in df.itertuples():
+            if not math.isnan(cross_tuple.I):
+                cross_table = trajectory.cross_table
+                ship_type = cross_tuple[1]
+                cross_table[ship_type] = {}
+                cross_table[ship_type]['I'] = bool(cross_tuple.I)
+                cross_table[ship_type]['II'] = bool(cross_tuple.II)
+                cross_table[ship_type]['III'] = bool(cross_tuple.III)
+                cross_table[ship_type]['IV'] = bool(cross_tuple.IV)
+                cross_table[ship_type]['Va'] = bool(cross_tuple.Va)
+                cross_table[ship_type]['Vb'] = bool(cross_tuple.Vb)
 
     return trajectory_dict
 

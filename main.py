@@ -13,7 +13,7 @@ IO.read_data()
 network = Network()
 GlobalVars.network = network
 # Simulation
-GlobalVars.crossroad_type = CrossRoadType.SmartSigns
+GlobalVars.crossroad_type = CrossRoadType.AdvanceRight
 GlobalVars.animate = True
 GlobalVars.zoom = True
 GlobalVars.x_min = 3.140237

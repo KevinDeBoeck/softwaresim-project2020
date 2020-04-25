@@ -8,6 +8,9 @@ from model.CrossRoad import CrossRoadType
 left = -1
 right = +1
 
+DOWN = -1
+UP = +1
+
 
 class Vessel(object):
 
@@ -38,22 +41,52 @@ class VesselComponent(sim.Component):
         self.pos = object
         self.nodes_path = []
         self.special_nodes_path = []
+        self.previous_node = None
         self.current_node = None
         self.next_node = None
         self.next_special_node = None
         self.stop_time = float('inf')
         self.remaining_time = 0
+        self.trajectories = []
+        tmp = self.vessel.trajectory_route.copy()
+        if len(tmp) == 1:
+            self.trajectories.append((tmp[0], UP))
+        elif len(tmp) >= 2:
+            first = tmp.pop(0)
+            second = tmp.pop(0)
+            if first.get_start_point(UP) == second.get_start_point(UP):
+                self.trajectories.append((first, DOWN))
+                self.trajectories.append((second, UP))
+            elif first.get_end_point(UP) == second.get_start_point(UP):
+                self.trajectories.append((first, UP))
+                self.trajectories.append((second, UP))
+            elif first.get_start_point(UP) == second.get_end_point(UP):
+                self.trajectories.append((first, DOWN))
+                self.trajectories.append((second, DOWN))
+            elif first.get_end_point(UP) == second.get_end_point(UP):
+                self.trajectories.append((first, UP))
+                self.trajectories.append((second, DOWN))
+            count = 1
+            while len(tmp) != 0:
+                route = tmp.pop(0)
+                if self.trajectories[count][0].get_end_point(self.trajectories[count][1]) == route.get_start_point(
+                        UP):
+                    self.trajectories.append((route, UP))
+                else:
+                    self.trajectories.append((route, DOWN))
+                count += 1
 
     def process(self):
         GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network + 1
         GlobalVars.update_counters()
 
-        while len(self.vessel.trajectory_route) != 0:
-            self.vessel.current_trajectory = self.vessel.trajectory_route.pop(0)
+        for trajectory, direction in self.trajectories:
             if len(self.nodes_path) != 0:
                 self.nodes_path.pop()
-            self.nodes_path.extend(self.vessel.current_trajectory.nodes)
-
+            if direction == UP:
+                self.nodes_path.extend(trajectory.nodes)
+            else:
+                self.nodes_path.extend(reversed(trajectory.nodes))
 
         # for section_ref in range(15102, 15107):
         #     if len(self.nodes_path) != 0:
@@ -72,6 +105,8 @@ class VesselComponent(sim.Component):
 
         self.current_node = self.nodes_path.pop(0)
         if len(self.special_nodes_path) != 0:
+            self.next_special_node = self.special_nodes_path.pop(0)
+        if self.current_node == self.next_special_node:
             self.next_special_node = self.special_nodes_path.pop(0)
         while len(self.nodes_path) != 0:
             if type(self.next_special_node).__name__ == 'CrossRoad':
@@ -96,7 +131,9 @@ class VesselComponent(sim.Component):
                 yield from self.perform_lock()
             elif type(self.next_node).__name__ == 'Bridge':
                 yield from self.perform_bridge()
+            self.previous_node = self.current_node
             self.current_node = self.next_node
+            yield from self.check_new_fairway()
         if self.animation is not None:
             self.animation.remove()
 
@@ -149,7 +186,9 @@ class VesselComponent(sim.Component):
 
         # FINISH REMAINING NODES TILL CROSSROAD
         while self.next_node != self.next_special_node:
+            self.previous_node = self.current_node
             self.current_node = self.next_node
+            # yield self.check_new_fairway()
             self.next_node = self.nodes_path.pop(0)
             start = (self.current_node.x, self.current_node.y)
             end = (self.next_node.x, self.next_node.y)
@@ -215,9 +254,8 @@ class VesselComponent(sim.Component):
                 bridge.activate()
                 needed_up = True
 
-            yield self.request(bridge.key_in)
-
             if needed_up:
+                yield self.request(bridge.key_in)
                 bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
             yield self.hold(GlobalVars.bridge_pass_time)
             if len(self.special_nodes_path) != 0:
@@ -225,7 +263,10 @@ class VesselComponent(sim.Component):
             else:
                 self.next_special_node = None
             self.stop_time = float('inf')
-            self.release(bridge.key_in)
+
+            if needed_up:
+                self.release(bridge.key_in)
+
             self.release(bridge.order)
 
             GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge - 1
@@ -282,14 +323,39 @@ class VesselComponent(sim.Component):
             start = end
             if node == self.next_special_node:
                 return time
-        print("WE DID NOT ENCOUNTER THE SPECIAL NODE")
+        print("WE DID NOT ENCOUNTER THE SPECIAL NODE: %s" % self.vessel.id)
 
     def get_node_before_crossroad(self):
+        previous = (self.nodes_path[0].x, self.nodes_path[0].y)
         for node in self.nodes_path:
             if node is self.next_special_node:
                 return previous.x, previous.y
             else:
                 previous = node
+
+    def check_new_fairway(self):
+        current_trajectory = self.trajectories[0][0]
+        current_direction = self.trajectories[0][1]
+        if self.current_node == current_trajectory.get_end_point(current_direction):
+            self.trajectories.pop(0)
+            current_trajectory.moving[current_direction].remove(self)
+            for vessel in current_trajectory.waiting[-current_direction]:
+                vessel.activate()
+        else:
+            if self.previous_node == current_trajectory.get_start_point(current_direction):
+                current_trajectory.waiting[current_direction].append(self)
+                while not self.can_enter():
+                    yield self.passivate()
+                current_trajectory.waiting[current_direction].remove(self)
+                current_trajectory.moving[current_direction].append(self)
+
+    def can_enter(self):
+        current_trajectory = self.trajectories[0][0]
+        current_direction = self.trajectories[0][1]
+        for vessel in current_trajectory.moving[-current_direction]:
+            if not current_trajectory.cross_table[self.vessel.cemt][vessel.vessel.cemt]:
+                return False
+        return True
 
 
 class VesselComponentGenerator(sim.Component):

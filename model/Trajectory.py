@@ -1,3 +1,7 @@
+DOWN = -1
+UP = +1
+
+
 class Trajectory:
     """Defines a trajectory, having four coordinates"""
 
@@ -10,3 +14,18 @@ class Trajectory:
         self.section_ref_2 = None
         self.trajectory_name = trajectory_name
         self.nodes = []
+        self.cross_table = {}
+        self.moving = {UP: [], DOWN: []}
+        self.waiting = {UP: [], DOWN: []}
+
+    def get_start_point(self, direction):
+        if direction == UP:
+            return self.nodes[0]
+        else:
+            return self.nodes[len(self.nodes) - 1]
+
+    def get_end_point(self, direction):
+        if direction == DOWN:
+            return self.nodes[0]
+        else:
+            return self.nodes[len(self.nodes) - 1]

@@ -1,3 +1,5 @@
+import math
+
 import salabim as sim
 
 from model import GlobalVars, Utilities
@@ -20,7 +22,9 @@ class Bridge(Node, sim.Component):
         self.key_in = None
         self.order = None
         self.movable = movable
-        self.height = height
+        if height is None or math.isnan(height):
+            height = 0
+        self.height = height / 100
 
         # Get the fairway section this belongs to
         if self.fw_code not in GlobalVars.fairway_section_dict:
@@ -53,16 +57,17 @@ class Bridge(Node, sim.Component):
         self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='lime', linewidth=size, layer=0)
 
     def init_node(self, graph):
-        sim.Component.__init__(self)
-        coordinate = (self.x, self.y)
-        neighbors = list(graph.neighbors(coordinate))
-        if len(neighbors) != 2:
-            print("Well well well, WE ARE FUCKED")
+        if self.useful:
+            sim.Component.__init__(self)
+            coordinate = (self.x, self.y)
+            neighbors = list(graph.neighbors(coordinate))
+            if len(neighbors) != 2:
+                print("Well well well, WE ARE FUCKED")
 
-        self.left = neighbors[0]
-        self.right = neighbors[1]
-        self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
-        self.order = sim.Resource(name="Bridge at " + str(coordinate) + " => order")
+            self.left = neighbors[0]
+            self.right = neighbors[1]
+            self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
+            self.order = sim.Resource(name="Bridge at " + str(coordinate) + " => order")
 
     def process(self):
         if self.movable:

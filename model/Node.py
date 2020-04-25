@@ -8,6 +8,7 @@ class Node(ABC):
         self.x = x
         self.y = y
         self.animate = None
+        self.useful = False
 
     def draw(self):
         pass
