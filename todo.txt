@@ -1,6 +1,5 @@
 TODO:
 Crossroad => TESTING
-Kruis tabellen max 1 section kijken => TESTING
 
 Wachten op data:
 snellere sluizen? -> wanneer wisselen?

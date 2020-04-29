@@ -188,7 +188,7 @@ class VesselComponent(sim.Component):
         while self.next_node != self.next_special_node:
             self.previous_node = self.current_node
             self.current_node = self.next_node
-            # yield self.check_new_fairway()
+            yield from self.check_new_fairway(doing_crossroad=True)
             self.next_node = self.nodes_path.pop(0)
             start = (self.current_node.x, self.current_node.y)
             end = (self.next_node.x, self.next_node.y)
@@ -333,7 +333,7 @@ class VesselComponent(sim.Component):
             else:
                 previous = node
 
-    def check_new_fairway(self):
+    def check_new_fairway(self, doing_crossroad=False):
         current_trajectory = self.trajectories[0][0]
         current_direction = self.trajectories[0][1]
         if self.current_node == current_trajectory.get_end_point(current_direction):
@@ -344,7 +344,7 @@ class VesselComponent(sim.Component):
         else:
             if self.previous_node == current_trajectory.get_start_point(current_direction):
                 current_trajectory.waiting[current_direction].append(self)
-                while not self.can_enter():
+                while not self.can_enter() and not doing_crossroad:
                     yield self.passivate()
                 current_trajectory.waiting[current_direction].remove(self)
                 current_trajectory.moving[current_direction].append(self)
