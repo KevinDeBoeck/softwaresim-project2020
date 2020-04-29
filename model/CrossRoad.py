@@ -36,7 +36,7 @@ class CrossRoad(Node, sim.Component):
 
     def process(self):
         if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:
-            while True:
+            while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
                 queue = self.find_most_right_filled_queue()
                 if queue is None:
                     self.crossroad_empty = True
@@ -51,7 +51,7 @@ class CrossRoad(Node, sim.Component):
             queues = self.intersections_list
             queues_count = len(queues)
             previous_switch = GlobalVars.environment.now()
-            while True:
+            while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
                 queue = queues[index]
                 if len(queue) > 0:
                     vessel = queue.pop()
@@ -67,7 +67,7 @@ class CrossRoad(Node, sim.Component):
             queues = self.intersections_list
             queues_count = len(queues)
             previous_switch = GlobalVars.environment.now()
-            while True:
+            while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
                 queue = queues[index]
                 if len(queue) > 0:
                     vessel = queue.pop()

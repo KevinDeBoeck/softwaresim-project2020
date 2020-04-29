@@ -124,10 +124,19 @@ class VesselComponent(sim.Component):
             if self.stop_time == 0:
                 yield from self.perform_crossroad()
 
-            ### CHECK IF CROSSROAD
-            ### THE REAL STUFF
-            ### STUFF
             if type(self.next_node).__name__ == 'Lock':
+                if not self.next_node.check_fit_empty(self.vessel):
+                    print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
+                        GlobalVars.environment.now()))
+                    current_trajectory = self.trajectories[0][0]
+                    current_direction = self.trajectories[0][1]
+                    current_trajectory.moving[current_direction].remove(self)
+                    GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
+                    GlobalVars.num_vessels_failed += 1
+                    GlobalVars.update_counters()
+                    if self.animation is not None:
+                        self.animation.remove()
+                    return
                 yield from self.perform_lock()
             elif type(self.next_node).__name__ == 'Bridge':
                 yield from self.perform_bridge()
@@ -202,7 +211,7 @@ class VesselComponent(sim.Component):
                 yield self.hold(required_time)
 
     def perform_lock(self):
-        GlobalVars.num_vessels_waiting_lock = GlobalVars.num_vessels_waiting_lock + 1
+        self.enter(GlobalVars.queue_vessels_waiting_lock)
         GlobalVars.update_counters()
 
         lock = self.next_node
@@ -237,13 +246,13 @@ class VesselComponent(sim.Component):
             self.next_special_node = None
         self.stop_time = float('inf')
 
-        GlobalVars.num_vessels_waiting_lock = GlobalVars.num_vessels_waiting_lock - 1
+        self.leave(GlobalVars.queue_vessels_waiting_lock)
         GlobalVars.update_counters()
 
     def perform_bridge(self):
         bridge = self.next_node
         if bridge.movable:
-            GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge + 1
+            self.enter(GlobalVars.queue_vessels_waiting_bridge)
             GlobalVars.update_counters()
 
             yield self.request(bridge.order)
@@ -269,11 +278,11 @@ class VesselComponent(sim.Component):
 
             self.release(bridge.order)
 
-            GlobalVars.num_vessels_waiting_bridge = GlobalVars.num_vessels_waiting_bridge - 1
+            self.leave(GlobalVars.queue_vessels_waiting_bridge)
             GlobalVars.update_counters()
 
     def perform_crossroad(self):
-        GlobalVars.num_vessels_waiting_crossroad = GlobalVars.num_vessels_waiting_crossroad + 1
+        self.enter(GlobalVars.queue_vessels_waiting_crossroad)
         GlobalVars.update_counters()
 
         # print("ENTERED: " + self.vessel.id)
@@ -307,8 +316,10 @@ class VesselComponent(sim.Component):
         self.stop_time = float('inf')
         # print("LEFT: " + self.vessel.id)
 
-        GlobalVars.num_vessels_waiting_crossroad = GlobalVars.num_vessels_waiting_crossroad - 1
+        self.leave(GlobalVars.queue_vessels_waiting_crossroad)
         GlobalVars.update_counters()
+
+        yield from self.check_new_fairway_after_crossroad()
 
     def time_till_next_special_node(self):
         start = (self.current_node.x, self.current_node.y)
@@ -344,10 +355,28 @@ class VesselComponent(sim.Component):
         else:
             if self.previous_node == current_trajectory.get_start_point(current_direction):
                 current_trajectory.waiting[current_direction].append(self)
-                while not self.can_enter() and not doing_crossroad:
+                while not doing_crossroad and not self.can_enter():
+                    self.enter(GlobalVars.queue_vessels_waiting_segment)
+                    GlobalVars.update_counters()
                     yield self.passivate()
+                    self.leave(GlobalVars.queue_vessels_waiting_segment)
+                    GlobalVars.update_counters()
                 current_trajectory.waiting[current_direction].remove(self)
                 current_trajectory.moving[current_direction].append(self)
+
+    def check_new_fairway_after_crossroad(self):
+        current_trajectory = self.trajectories[0][0]
+        current_direction = self.trajectories[0][1]
+        current_trajectory.moving[current_direction].remove(self)
+        current_trajectory.waiting[current_direction].append(self)
+        while not self.can_enter():
+            self.enter(GlobalVars.queue_vessels_waiting_segment)
+            GlobalVars.update_counters()
+            yield self.passivate()
+            self.leave(GlobalVars.queue_vessels_waiting_segment)
+            GlobalVars.update_counters()
+        current_trajectory.waiting[current_direction].remove(self)
+        current_trajectory.moving[current_direction].append(self)
 
     def can_enter(self):
         current_trajectory = self.trajectories[0][0]

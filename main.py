@@ -13,7 +13,7 @@ IO.read_data()
 network = Network()
 GlobalVars.network = network
 # Simulation
-GlobalVars.crossroad_type = CrossRoadType.AdvanceRight
+GlobalVars.crossroad_type = CrossRoadType.SmartSigns
 GlobalVars.animate = True
 GlobalVars.zoom = True
 GlobalVars.x_min = 3.140237
@@ -22,7 +22,7 @@ GlobalVars.x_min, GlobalVars.y_min = Utilities.normalize(GlobalVars.x_min, Globa
 GlobalVars.x_max = 3.6
 GlobalVars.y_max = 50.8
 GlobalVars.x_max, GlobalVars.y_max = Utilities.normalize(GlobalVars.x_max, GlobalVars.y_max)
-env = sim.Environment(trace=False, time_unit='minutes')
+env = sim.Environment(trace=False, time_unit='minutes', random_seed=0)
 GlobalVars.environment = env
 if GlobalVars.zoom:
     env.animation_parameters(x0=GlobalVars.x_min, x1=GlobalVars.x_max, y0=GlobalVars.y_min,
@@ -35,11 +35,20 @@ else:
 env.modelname("Alsic Waterway Simulation")
 network.generate_graph()
 network.draw_network()
+GlobalVars.init()
 
 GlobalVars.update_counters()
 
 env.suppress_trace_linenumbers(True)
 # Generate the vessel
 VesselComponentGenerator()
-
 env.run()
+
+GlobalVars.queue_vessels_waiting_segment.print_histograms()
+GlobalVars.queue_vessels_waiting_segment.print_statistics()
+GlobalVars.queue_vessels_waiting_crossroad.print_histograms()
+GlobalVars.queue_vessels_waiting_crossroad.print_statistics()
+GlobalVars.queue_vessels_waiting_bridge.print_histograms()
+GlobalVars.queue_vessels_waiting_bridge.print_statistics()
+GlobalVars.queue_vessels_waiting_lock.print_histograms()
+GlobalVars.queue_vessels_waiting_lock.print_statistics()

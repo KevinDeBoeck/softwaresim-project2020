@@ -64,7 +64,7 @@ def read_passages():
     #         if index < (l-1):
     #             next_trajectory = vessel.trajectory_route[index + 1]
 
-    GlobalVars.num_vessels = len(vessels)
+    GlobalVars.num_vessels = len(vessel_dict)
     return vessels, vessel_dict
 
 

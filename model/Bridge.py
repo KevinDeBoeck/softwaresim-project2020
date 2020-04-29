@@ -73,7 +73,7 @@ class Bridge(Node, sim.Component):
         if self.movable:
             yield self.request(self.key_in)
 
-            while True:
+            while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
                 if len(self.key_in.requesters()) == 0:
                     yield self.passivate()
 

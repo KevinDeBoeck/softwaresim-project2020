@@ -81,7 +81,7 @@ class Lock(Node, sim.Component):
             yield self.request(self.key_in[side])
         yield self.request(self.key_out)
 
-        while True:
+        while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
             for vessel in self.wait_in[self.side]:
                 vessel.activate()
             if len(self.wait_in[self.side]) == 0:
@@ -109,4 +109,12 @@ class Lock(Node, sim.Component):
         if len(self.packer) > 0 and len(self.packer[0]) > count:
             return True
         else:
+            if self.isscheduled():
+                self.activate()
             return False
+
+    def check_fit_empty(self, vessel: Vessel) -> bool:
+        if vessel.length > self.length or vessel.width > self.width:
+            return False
+        else:
+            return True
