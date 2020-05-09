@@ -18,16 +18,18 @@ with open('project_files/passages_gen.csv', 'w') as file:
     df_vessels = df_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length']].drop_duplicates(subset='ShipID', keep='first')
     df_vessels = df_vessels.reset_index(drop=True)
 
+    options = [
+        ["Traject1", "Traject2", "Traject3", "Traject4", "Traject5", "Traject6"],
+        ["Traject6", "Traject5", "Traject4", "Traject3", "Traject2", "Traject1"],
+        ["Traject1", "Traject2", "Traject7"],
+        ["Traject7", "Traject2", "Traject1"],
+        ["Traject7", "Traject3", "Traject4", "Traject5", "Traject6"],
+        ["Traject6", "Traject5", "Traject4", "Traject3", "Traject7"]
+    ]
+
     for index, row in df_vessels.iterrows():
-        if bool(random.getrandbits(1)):
-            for idx in range(1, 7):
-                file.write(
-                    "Traject" + str(idx) + ";" + row['ShipID'] + ";" + row['CEMTKlasse'] + ";" + str(
-                        row['Width']) + ";" +
-                    str(row['Length']) + "\n")
-        else:
-            for idx in reversed(range(1, 7)):
-                file.write(
-                    "Traject" + str(idx) + ";" + row['ShipID'] + ";" + row['CEMTKlasse'] + ";" + str(
-                        row['Width']) + ";" +
-                    str(row['Length']) + "\n")
+        choice = random.choice(options)
+        for traject in choice:
+            file.write(
+                traject + ";" + row['ShipID'] + ";" + row['CEMTKlasse'] + ";" + str(
+                    row['Width']) + ";" + str(row['Length']) + "\n")

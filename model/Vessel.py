@@ -1,4 +1,5 @@
 import math
+import random
 
 import salabim as sim
 
@@ -125,18 +126,20 @@ class VesselComponent(sim.Component):
                 yield from self.perform_crossroad()
 
             if type(self.next_node).__name__ == 'Lock':
-                if not self.next_node.check_fit_empty(self.vessel):
-                    print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
-                        GlobalVars.environment.now()))
-                    current_trajectory = self.trajectories[0][0]
-                    current_direction = self.trajectories[0][1]
-                    current_trajectory.moving[current_direction].remove(self)
-                    GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
-                    GlobalVars.num_vessels_failed += 1
-                    GlobalVars.update_counters()
-                    if self.animation is not None:
-                        self.animation.remove()
-                    return
+                # if not self.next_node.check_fit_empty(self.vessel):
+                #     # print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
+                #     #     GlobalVars.environment.now()))
+                #     print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
+                #         (self.next_node.x, self.next_node.y)))
+                #     current_trajectory = self.trajectories[0][0]
+                #     current_direction = self.trajectories[0][1]
+                #     current_trajectory.moving[current_direction].remove(self)
+                #     GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
+                #     GlobalVars.num_vessels_failed += 1
+                #     GlobalVars.update_counters()
+                #     if self.animation is not None:
+                #         self.animation.remove()
+                #     return
                 yield from self.perform_lock()
             elif type(self.next_node).__name__ == 'Bridge':
                 yield from self.perform_bridge()
@@ -223,21 +226,34 @@ class VesselComponent(sim.Component):
         if lock.ispassive():
             lock.activate()
         possible = False
+        resized = False
+
+        self.enter(lock.wait_in[side])
         while not possible:
             if lock.side == side:
+                if not lock.check_fit_empty(self.vessel):
+                    resized = True
+                    old_length = self.vessel.length
+                    old_width = self.vessel.width
+                    if self.vessel.length > lock.length:
+                        self.vessel.length = lock.length
+                    if self.vessel.width > lock.width:
+                        self.vessel.width = lock.width
                 if lock.check_fit(self.vessel):
                     possible = True
                     continue
-            self.enter(lock.wait_in[side])
             yield self.passivate()
-            self.leave(lock.wait_in[side])
+        self.leave(lock.wait_in[side])
+
         yield self.request(lock.key_in[side])
-        # self.enter(lockqueue)
         yield self.hold(GlobalVars.lock_inout_time)
         self.release(lock.key_in[side])
+
+        if len(lock.wait_in[side]) > 0:
+            lock.wait_in[side][0].activate()
+
         yield self.request(lock.key_out)
         yield self.hold(GlobalVars.lock_inout_time)
-        # self.leave(lockqueue)
         self.release(lock.key_out)
 
         if len(self.special_nodes_path) != 0:
@@ -247,6 +263,11 @@ class VesselComponent(sim.Component):
         self.stop_time = float('inf')
 
         self.leave(GlobalVars.queue_vessels_waiting_lock)
+
+        if resized:
+            self.vessel.length = old_length
+            self.vessel.width = old_width
+        # print(','.join(vessel.vessel.id for vessel in GlobalVars.queue_vessels_waiting_lock))
         GlobalVars.update_counters()
 
     def perform_bridge(self):

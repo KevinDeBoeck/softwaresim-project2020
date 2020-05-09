@@ -63,6 +63,8 @@ bridge_open_time = 5
 bridge_pass_time = 1
 bridge_min_wait = 10
 
+seed = 0
+
 
 def init():
     global queue_vessels_waiting_lock
@@ -85,26 +87,26 @@ def update_counters():
     delta = x_max - x_min
     if anim_num_vessels_in_network is None:
         anim_num_vessels_in_network = Animate(text='Vessels: ' + str(num_vessels_in_network),
-                                              textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.6 * delta,
+                                              textcolor0='black', x0=x_min + 0.7 * delta, y0=y_min + 0.6 * delta,
                                               fontsize0=4)
         anim_num_vessels_waiting_bridge = Animate(text='Vessels at bridges: ' + str(len(queue_vessels_waiting_bridge)),
-                                                  textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.55 * delta,
+                                                  textcolor0='black', x0=x_min + 0.7 * delta, y0=y_min + 0.55 * delta,
                                                   fontsize0=4)
         anim_num_vessels_waiting_lock = Animate(text='Vessels at locks: ' + str(len(queue_vessels_waiting_lock)),
-                                                textcolor0='black', x0=x_min + 0.8 * delta, y0=y_min + 0.5 * delta,
+                                                textcolor0='black', x0=x_min + 0.7 * delta, y0=y_min + 0.5 * delta,
                                                 fontsize0=4)
         anim_num_vessels_waiting_crossroad = Animate(
             text='Vessels at crossroad: ' + str(len(queue_vessels_waiting_crossroad)),
-            textcolor0='black', x0=x_min + 0.8 * delta,
+            textcolor0='black', x0=x_min + 0.7 * delta,
             y0=y_min + 0.45 * delta,
             fontsize0=4)
         anim_num_vessels_waiting_segment = Animate(
             text='Vessels waiting at segment: ' + str(len(queue_vessels_waiting_segment)),
-            textcolor0='black', x0=x_min + 0.8 * delta,
+            textcolor0='black', x0=x_min + 0.7 * delta,
             y0=y_min + 0.4 * delta,
             fontsize0=4)
         anim_num_vessels_finished = Animate(text='Vessels finished: ' + str(num_vessels_finished),
-                                            textcolor0='black', x0=x_min + 0.8 * delta,
+                                            textcolor0='black', x0=x_min + 0.7 * delta,
                                             y0=y_min + 0.35 * delta,
                                             fontsize0=4)
     else:

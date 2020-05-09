@@ -1,4 +1,5 @@
 import salabim as sim
+import copy
 from rectpack import newPacker, SORT_NONE, SkylineBl
 
 from model import GlobalVars, Utilities
@@ -23,6 +24,7 @@ class Lock(Node, sim.Component):
         self.side = left
         self.length = length
         self.width = width
+        self.waiting = False
 
         self.packer = newPacker(sort_algo=SORT_NONE, pack_algo=SkylineBl, rotation=False)
         # GuillotineBssfSas
@@ -82,14 +84,16 @@ class Lock(Node, sim.Component):
         yield self.request(self.key_out)
 
         while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
-            for vessel in self.wait_in[self.side]:
-                vessel.activate()
+            if len(self.wait_in[self.side]) > 0:
+                self.wait_in[self.side][0].activate()
             if len(self.wait_in[self.side]) == 0:
                 if len(self.wait_in[-self.side]) == 0:
                     yield self.passivate()
 
             self.release(self.key_in[self.side])
+            self.waiting = True
             yield self.hold(GlobalVars.lock_wait_time, mode="Wait")
+            self.waiting = False
             yield self.request((self.key_in[self.side], 1, 1000))
             yield self.hold(GlobalVars.lock_switch_time, mode="Switch")
             self.side = -self.side
@@ -100,17 +104,19 @@ class Lock(Node, sim.Component):
             self.packer.pack()
 
     def check_fit(self, vessel: Vessel) -> bool:
+        packer = self.packer
+
         if (len(self.packer.rect_list())) == 0:
             count = 0
         else:
             count = len(self.packer[0])
-        self.packer.add_rect(vessel.width, vessel.length)
-        self.packer.pack()
-        if len(self.packer) > 0 and len(self.packer[0]) > count:
+        packer.add_rect(vessel.width, vessel.length)
+        packer.pack()
+        if len(packer) > 0 and len(packer[0]) > count:
             return True
         else:
-            if self.isscheduled():
-                self.activate()
+            if self.isscheduled() and self.waiting:
+                self.hold()
             return False
 
     def check_fit_empty(self, vessel: Vessel) -> bool:
