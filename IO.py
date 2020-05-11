@@ -13,12 +13,12 @@ from model.Lock import Lock
 from model.Trajectory import Trajectory
 from model.Vessel import Vessel
 
-trajectories_file = 'project_files/trajectories_gen.geojson'
+trajectories_file = 'project_files/trajectories.geojson'
 waterway_file = 'project_files/fairwaysections.geojson'  # All sections in flanders
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_gen.csv'
+passages_file = 'project_files/passages_in_v3.csv'
 trajectory_info_base = 'project_files/trajectory_info/'
 
 trajectory_dict = {}
@@ -65,7 +65,7 @@ def read_passages():
     #             next_trajectory = vessel.trajectory_route[index + 1]
 
     GlobalVars.num_vessels = len(vessel_dict)
-    return vessels, vessel_dict
+    return vessel_dict
 
 
 def read_trajectories():
@@ -188,4 +188,4 @@ def read_data():
     # Read all the locks in the network
     Config.locks = read_locks()
 
-    Config.vessels, Config.vessels_dict = read_passages()
+    Config.vessels_dict = read_passages()

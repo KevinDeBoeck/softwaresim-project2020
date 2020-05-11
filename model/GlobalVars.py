@@ -6,7 +6,6 @@ fairway_section_list = []
 
 trajectories_dict = {}
 
-vessels = []
 bridges = []
 locks = []
 
