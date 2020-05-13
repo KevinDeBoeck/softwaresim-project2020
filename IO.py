@@ -119,8 +119,9 @@ def read_network():
     for feature in data['features']:
         fw_code = feature['properties']['fw_code']
         coordinates = feature['geometry']['coordinates']
+        speed = feature['properties']['calspeed']
 
-        fairway_section = FairwaySection(fw_code, coordinates)
+        fairway_section = FairwaySection(fw_code, coordinates,speed)
         fairway_sections_list.append(fairway_section)
 
     return fairway_sections_list

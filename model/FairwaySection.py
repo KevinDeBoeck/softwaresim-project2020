@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 import salabim as sim
 
@@ -7,13 +9,15 @@ from model.Node import Node
 
 class FairwaySection:
     """Defines a single fairway section"""
-    speed = 13 * 1000 / 60  # m/min
 
-    def __init__(self, fw_code, set_of_coordinate_pairs):
+    def __init__(self, fw_code, set_of_coordinate_pairs, speed):
         self.nodes = []
         self.bridges = []
         self.locks = []
         self.fw_code = fw_code
+        if speed is None or math.isnan(speed) or speed == 0:
+            speed = 13
+        self.speed = speed * 1000 / 60
         GlobalVars.fairway_section_dict[self.fw_code] = self
 
         tmp = []
