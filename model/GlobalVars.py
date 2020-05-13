@@ -31,7 +31,7 @@ y_min = 0
 x_max = 0
 y_max = 0
 
-num_vessels_in_network = 0
+queue_vessels_in_network = None
 queue_vessels_waiting_bridge = None
 queue_vessels_waiting_lock = None
 queue_vessels_waiting_crossroad = None
@@ -66,10 +66,12 @@ seed = 0
 
 
 def init():
+    global queue_vessels_in_network
     global queue_vessels_waiting_lock
     global queue_vessels_waiting_segment
     global queue_vessels_waiting_crossroad
     global queue_vessels_waiting_bridge
+    queue_vessels_in_network = sim.Queue(name="Vessels in network")
     queue_vessels_waiting_bridge = sim.Queue(name="Vessels waiting at bridges")
     queue_vessels_waiting_crossroad = sim.Queue(name="Vessels waiting at crossroad")
     queue_vessels_waiting_lock = sim.Queue(name="Vessels waiting at locks")
@@ -85,7 +87,7 @@ def update_counters():
     global anim_num_vessels_finished
     delta = x_max - x_min
     if anim_num_vessels_in_network is None:
-        anim_num_vessels_in_network = Animate(text='Vessels: ' + str(num_vessels_in_network),
+        anim_num_vessels_in_network = Animate(text='Vessels: ' + str(len(queue_vessels_in_network)),
                                               textcolor0='black', x0=x_min + 0.7 * delta, y0=y_min + 0.6 * delta,
                                               fontsize0=4)
         anim_num_vessels_waiting_bridge = Animate(text='Vessels at bridges: ' + str(len(queue_vessels_waiting_bridge)),
@@ -109,7 +111,7 @@ def update_counters():
                                             y0=y_min + 0.35 * delta,
                                             fontsize0=4)
     else:
-        anim_num_vessels_in_network.update(text='Vessels: ' + str(num_vessels_in_network))
+        anim_num_vessels_in_network.update(text='Vessels: ' + str(len(queue_vessels_in_network)))
         anim_num_vessels_waiting_bridge.update(text='Vessels at bridges: ' + str(len(queue_vessels_waiting_bridge)))
         anim_num_vessels_waiting_lock.update(text='Vessels at locks: ' + str(len(queue_vessels_waiting_lock)))
         anim_num_vessels_waiting_crossroad.update(

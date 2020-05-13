@@ -52,6 +52,7 @@ VesselComponentGenerator()
 env.run()
 
 
+GlobalVars.queue_vessels_in_network.print_statistics()
 GlobalVars.queue_vessels_waiting_segment.print_statistics()
 GlobalVars.queue_vessels_waiting_crossroad.print_statistics()
 GlobalVars.queue_vessels_waiting_bridge.print_statistics()

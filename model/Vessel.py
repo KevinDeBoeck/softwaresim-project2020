@@ -80,7 +80,7 @@ class VesselComponent(sim.Component):
                 count += 1
 
     def process(self):
-        GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network + 1
+        self.enter(GlobalVars.queue_vessels_in_network)
         GlobalVars.update_counters()
 
         for trajectory, direction in self.trajectories:
@@ -137,7 +137,7 @@ class VesselComponent(sim.Component):
         if self.animation is not None:
             self.animation.remove()
 
-        GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
+        self.leave(GlobalVars.queue_vessels_in_network)
         GlobalVars.num_vessels_finished = GlobalVars.num_vessels_finished + 1
         GlobalVars.update_counters()
         print("Vessel " + str(self.vessel.id) + " finished at " + str(GlobalVars.environment.now()))
@@ -263,38 +263,33 @@ class VesselComponent(sim.Component):
 
         yield self.request(bridge.order)
 
-        if bridge.movable:
-            if bridge.check_fit(self):
-                if bridge.state == open:
-                    self.enter(GlobalVars.queue_vessels_waiting_bridge)
-                    GlobalVars.update_counters()
-                    bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
+        if bridge.check_fit_closed(self):
+            yield self.request(bridge.moving)
+            yield self.hold(GlobalVars.bridge_pass_time)
+            self.release(bridge.moving)
+        else:
+            self.enter(GlobalVars.queue_vessels_waiting_bridge)
+            GlobalVars.update_counters()
 
-                yield self.request(bridge.moving)
+            yield self.request(bridge.moving)
+
+            if bridge.state == open:
+                bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
                 yield self.hold(GlobalVars.bridge_pass_time)
+                self.leave(GlobalVars.queue_vessels_waiting_bridge)
                 self.release(bridge.moving)
-                if bridge.state == open:
-                    self.leave(GlobalVars.queue_vessels_waiting_bridge)
-                    GlobalVars.update_counters()
-            else:
-                self.enter(GlobalVars.queue_vessels_waiting_bridge)
                 GlobalVars.update_counters()
+            else:
                 if bridge.ispassive():
                     bridge.activate()
-
-                yield self.request(bridge.key_in)
-
-                bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
-                yield self.request(bridge.moving)
-                yield self.hold(GlobalVars.bridge_pass_time)
                 self.release(bridge.moving)
-
-                self.release(bridge.key_in)
+                yield self.hold(0)
+                yield self.request(bridge.moving)
+                bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
+                yield self.hold(GlobalVars.bridge_pass_time)
                 self.leave(GlobalVars.queue_vessels_waiting_bridge)
+                self.release(bridge.moving)
                 GlobalVars.update_counters()
-        else:
-            yield self.hold(GlobalVars.bridge_pass_time)
-
         self.release(bridge.order)
         if bridge.movable:
             if len(self.special_nodes_path) != 0:
@@ -307,7 +302,7 @@ class VesselComponent(sim.Component):
         self.enter(GlobalVars.queue_vessels_waiting_crossroad)
         GlobalVars.update_counters()
 
-        print("ENTERED: " + self.vessel.id)
+        #print("ENTERED: " + str(self.vessel.id))
         crossroad = self.next_special_node
 
         if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:

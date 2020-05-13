@@ -19,7 +19,6 @@ class Bridge(Node, sim.Component):
         self.left = None
         self.right = None
         self.state = closed
-        self.key_in = None
         self.order = None
         self.moving = None
         self.movable = movable
@@ -67,25 +66,21 @@ class Bridge(Node, sim.Component):
 
             self.left = neighbors[0]
             self.right = neighbors[1]
-            self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
             self.order = sim.Resource(name="Bridge at " + str(coordinate) + " => order")
             self.moving = sim.Resource(name="Bridge at " + str(coordinate) + " => moving")
 
     def process(self):
         if self.movable:
-            yield self.request(self.key_in)
 
             while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
-                if len(self.key_in.requesters()) == 0:
+                if len(self.order.requesters()) == 0:
                     yield self.passivate()
 
                 yield self.request((self.moving, 1, 1000))
                 yield self.hold(GlobalVars.bridge_open_time)
                 self.release(self.moving)
-                self.release(self.key_in)
                 self.state = -self.state
                 yield self.hold(GlobalVars.bridge_min_wait)
-                yield self.request(self.key_in)
                 yield self.request((self.moving, 1, 1000))
                 yield self.hold(GlobalVars.bridge_open_time)
                 self.release(self.moving)
@@ -95,6 +90,12 @@ class Bridge(Node, sim.Component):
 
     def check_fit(self, vessel: VesselComponent) -> bool:
         if self.state == open or not self.movable or vessel.vessel.height < self.height:
+            return True
+        else:
+            return False
+
+    def check_fit_closed(self, vessel: VesselComponent) -> bool:
+        if not self.movable or vessel.vessel.height < self.height:
             return True
         else:
             return False

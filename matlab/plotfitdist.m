@@ -41,7 +41,7 @@ linewidth= 1.5;
 legnd= 'on';
 pdat= 'on';
 pdist= 1;
-linecol= [.6 .8 1; 1 .6 0; .6 .8 0; .8 .6 1];
+linecol= [1 0 0; 1 .6 0; .6 .8 0; .8 .6 1];
 
 
 % Arguments
