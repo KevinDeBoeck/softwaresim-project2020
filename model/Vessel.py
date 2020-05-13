@@ -260,20 +260,25 @@ class VesselComponent(sim.Component):
 
     def perform_bridge(self):
         bridge = self.next_node
-        self.enter(GlobalVars.queue_vessels_waiting_bridge)
-        GlobalVars.update_counters()
 
         yield self.request(bridge.order)
 
         if bridge.movable:
             if bridge.check_fit(self):
                 if bridge.state == open:
+                    self.enter(GlobalVars.queue_vessels_waiting_bridge)
+                    GlobalVars.update_counters()
                     bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
 
                 yield self.request(bridge.moving)
                 yield self.hold(GlobalVars.bridge_pass_time)
                 self.release(bridge.moving)
+                if bridge.state == open:
+                    self.leave(GlobalVars.queue_vessels_waiting_bridge)
+                    GlobalVars.update_counters()
             else:
+                self.enter(GlobalVars.queue_vessels_waiting_bridge)
+                GlobalVars.update_counters()
                 if bridge.ispassive():
                     bridge.activate()
 
@@ -285,26 +290,24 @@ class VesselComponent(sim.Component):
                 self.release(bridge.moving)
 
                 self.release(bridge.key_in)
-
+                self.leave(GlobalVars.queue_vessels_waiting_bridge)
+                GlobalVars.update_counters()
         else:
             yield self.hold(GlobalVars.bridge_pass_time)
 
         self.release(bridge.order)
-
-        if len(self.special_nodes_path) != 0:
-            self.next_special_node = self.special_nodes_path.pop(0)
-        else:
-            self.next_special_node = None
-        self.stop_time = float('inf')
-
-        self.leave(GlobalVars.queue_vessels_waiting_bridge)
-        GlobalVars.update_counters()
+        if bridge.movable:
+            if len(self.special_nodes_path) != 0:
+                self.next_special_node = self.special_nodes_path.pop(0)
+            else:
+                self.next_special_node = None
+            self.stop_time = float('inf')
 
     def perform_crossroad(self):
         self.enter(GlobalVars.queue_vessels_waiting_crossroad)
         GlobalVars.update_counters()
 
-        # print("ENTERED: " + self.vessel.id)
+        print("ENTERED: " + self.vessel.id)
         crossroad = self.next_special_node
 
         if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:
