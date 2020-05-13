@@ -7,7 +7,7 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_in.csv'
+passages_file = 'project_files/passages_in_v3.csv'
 
 with open('project_files/passages_gen.csv', 'w') as file:
     file.write("TrajectName;ShipID;CEMTKlasse;Width;Length\n")
@@ -31,5 +31,5 @@ with open('project_files/passages_gen.csv', 'w') as file:
         choice = random.choice(options)
         for traject in choice:
             file.write(
-                traject + ";" + row['ShipID'] + ";" + row['CEMTKlasse'] + ";" + str(
+                traject + ";" + str(row['ShipID']) + ";" + row['CEMTKlasse'] + ";" + str(
                     row['Width']) + ";" + str(row['Length']) + "\n")

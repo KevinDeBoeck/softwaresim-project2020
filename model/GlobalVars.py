@@ -55,8 +55,8 @@ crossroad_cyclic_inter_vessel_delay = 1
 crossroad_cyclic_clear_time = crossroad_stop_time
 
 lock_inout_time = 1
-lock_wait_time = 10
-lock_switch_time = 5
+lock_wait_time = 15
+lock_switch_time = 8
 
 bridge_open_time = 5
 bridge_pass_time = 1

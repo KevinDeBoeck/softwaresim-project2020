@@ -13,12 +13,12 @@ from model.Lock import Lock
 from model.Trajectory import Trajectory
 from model.Vessel import Vessel
 
-trajectories_file = 'project_files/trajectories.geojson'
+trajectories_file = 'project_files/trajectories_gen.geojson'
 waterway_file = 'project_files/fairwaysections.geojson'  # All sections in flanders
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_in_v3.csv'
+passages_file = 'project_files/passages_gen.csv'
 trajectory_info_base = 'project_files/trajectory_info/'
 
 trajectory_dict = {}

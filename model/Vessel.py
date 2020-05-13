@@ -1,5 +1,4 @@
 import math
-import random
 
 import salabim as sim
 
@@ -8,6 +7,9 @@ from model.CrossRoad import CrossRoadType
 
 left = -1
 right = +1
+
+closed = -1
+open = +1
 
 DOWN = -1
 UP = +1
@@ -126,20 +128,6 @@ class VesselComponent(sim.Component):
                 yield from self.perform_crossroad()
 
             if type(self.next_node).__name__ == 'Lock':
-                # if not self.next_node.check_fit_empty(self.vessel):
-                #     # print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
-                #     #     GlobalVars.environment.now()))
-                #     print("Vessel " + str(self.vessel.id) + " failed to finish because did not fit in lock at " + str(
-                #         (self.next_node.x, self.next_node.y)))
-                #     current_trajectory = self.trajectories[0][0]
-                #     current_direction = self.trajectories[0][1]
-                #     current_trajectory.moving[current_direction].remove(self)
-                #     GlobalVars.num_vessels_in_network = GlobalVars.num_vessels_in_network - 1
-                #     GlobalVars.num_vessels_failed += 1
-                #     GlobalVars.update_counters()
-                #     if self.animation is not None:
-                #         self.animation.remove()
-                #     return
                 yield from self.perform_lock()
             elif type(self.next_node).__name__ == 'Bridge':
                 yield from self.perform_bridge()
@@ -272,35 +260,45 @@ class VesselComponent(sim.Component):
 
     def perform_bridge(self):
         bridge = self.next_node
+        self.enter(GlobalVars.queue_vessels_waiting_bridge)
+        GlobalVars.update_counters()
+
+        yield self.request(bridge.order)
+
         if bridge.movable:
-            self.enter(GlobalVars.queue_vessels_waiting_bridge)
-            GlobalVars.update_counters()
+            if bridge.check_fit(self):
+                if bridge.state == open:
+                    bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
 
-            yield self.request(bridge.order)
-
-            needed_up = False
-
-            if not bridge.check_fit(self) and bridge.ispassive():
-                bridge.activate()
-                needed_up = True
-
-            if needed_up:
-                yield self.request(bridge.key_in)
-                bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
-            yield self.hold(GlobalVars.bridge_pass_time)
-            if len(self.special_nodes_path) != 0:
-                self.next_special_node = self.special_nodes_path.pop(0)
+                yield self.request(bridge.moving)
+                yield self.hold(GlobalVars.bridge_pass_time)
+                self.release(bridge.moving)
             else:
-                self.next_special_node = None
-            self.stop_time = float('inf')
+                if bridge.ispassive():
+                    bridge.activate()
 
-            if needed_up:
+                yield self.request(bridge.key_in)
+
+                bridge.hold(GlobalVars.bridge_min_wait + GlobalVars.bridge_pass_time)
+                yield self.request(bridge.moving)
+                yield self.hold(GlobalVars.bridge_pass_time)
+                self.release(bridge.moving)
+
                 self.release(bridge.key_in)
 
-            self.release(bridge.order)
+        else:
+            yield self.hold(GlobalVars.bridge_pass_time)
 
-            self.leave(GlobalVars.queue_vessels_waiting_bridge)
-            GlobalVars.update_counters()
+        self.release(bridge.order)
+
+        if len(self.special_nodes_path) != 0:
+            self.next_special_node = self.special_nodes_path.pop(0)
+        else:
+            self.next_special_node = None
+        self.stop_time = float('inf')
+
+        self.leave(GlobalVars.queue_vessels_waiting_bridge)
+        GlobalVars.update_counters()
 
     def perform_crossroad(self):
         self.enter(GlobalVars.queue_vessels_waiting_crossroad)
@@ -409,7 +407,12 @@ class VesselComponent(sim.Component):
 
 
 class VesselComponentGenerator(sim.Component):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.distr = sim.Bounded(sim.Exponential(35.1274), upperbound=150)
+
     def process(self):
         for _, vessel in GlobalVars.vessels_dict.items():
             VesselComponent(vessel)
-            yield self.hold(sim.Poisson(10).sample())
+            yield self.hold(self.distr.sample())

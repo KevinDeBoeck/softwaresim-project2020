@@ -4,7 +4,7 @@ import salabim as sim
 
 from model import GlobalVars, Utilities
 from model.Node import Node
-from model.Vessel import Vessel
+from model.Vessel import Vessel, VesselComponent
 
 closed = -1
 open = +1
@@ -21,6 +21,7 @@ class Bridge(Node, sim.Component):
         self.state = closed
         self.key_in = None
         self.order = None
+        self.moving = None
         self.movable = movable
         if height is None or math.isnan(height):
             height = 0
@@ -68,6 +69,7 @@ class Bridge(Node, sim.Component):
             self.right = neighbors[1]
             self.key_in = sim.Resource(name="Bridge at " + str(coordinate) + " => key in")
             self.order = sim.Resource(name="Bridge at " + str(coordinate) + " => order")
+            self.moving = sim.Resource(name="Bridge at " + str(coordinate) + " => moving")
 
     def process(self):
         if self.movable:
@@ -77,17 +79,21 @@ class Bridge(Node, sim.Component):
                 if len(self.key_in.requesters()) == 0:
                     yield self.passivate()
 
+                yield self.request((self.moving, 1, 1000))
                 yield self.hold(GlobalVars.bridge_open_time)
+                self.release(self.moving)
                 self.release(self.key_in)
                 self.state = -self.state
                 yield self.hold(GlobalVars.bridge_min_wait)
                 yield self.request(self.key_in)
+                yield self.request((self.moving, 1, 1000))
                 yield self.hold(GlobalVars.bridge_open_time)
+                self.release(self.moving)
                 self.state = -self.state
         else:
             self.state = open
 
-    def check_fit(self, vessel: Vessel) -> bool:
+    def check_fit(self, vessel: VesselComponent) -> bool:
         if self.state == open or not self.movable or vessel.vessel.height < self.height:
             return True
         else:

@@ -1,6 +1,9 @@
-import pandas as pd
-from model.Vessel import Vessel
 import datetime
+
+import pandas as pd
+
+from model.Vessel import Vessel
+
 
 def read_passages():
     format_str = '%Y-%m-%d %H:%M:%S.%f'
@@ -41,9 +44,10 @@ def get_between_time(vessels):
     prev = vessels.pop(0)
     while len(vessels) > 0:
         curr = vessels.pop(0)
-        diff = curr.trajectory_route[0]-prev.trajectory_route[0]
+        diff = curr.trajectory_route[0] - prev.trajectory_route[0]
         minutes = diff.seconds / 60
-        between_times.append(minutes)
+        if minutes < 60 * 6:
+            between_times.append(minutes)
         prev = curr
     return between_times
 
