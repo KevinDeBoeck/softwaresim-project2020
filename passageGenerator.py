@@ -10,12 +10,12 @@ terminals_file = 'project_files/terminals.geojson'
 passages_file = 'project_files/passages_in_v3.csv'
 
 with open('project_files/passages_gen.csv', 'w') as file:
-    file.write("TrajectName;ShipID;CEMTKlasse;Width;Length\n")
+    file.write("TrajectName;ShipID;CEMTKlasse;Width;Length;Height\n")
 
     df_passages = pd.read_csv(passages_file, sep=';')
 
     # Get all the ships
-    df_vessels = df_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length']].drop_duplicates(subset='ShipID', keep='first')
+    df_vessels = df_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length', 'Height']].drop_duplicates(subset='ShipID', keep='first')
     df_vessels = df_vessels.reset_index(drop=True)
 
     options = [
@@ -32,4 +32,4 @@ with open('project_files/passages_gen.csv', 'w') as file:
         for traject in choice:
             file.write(
                 traject + ";" + str(row['ShipID']) + ";" + row['CEMTKlasse'] + ";" + str(
-                    row['Width']) + ";" + str(row['Length']) + "\n")
+                    row['Width']) + ";" + str(row['Length']) + ";" + str(row['Height']) + "\n")

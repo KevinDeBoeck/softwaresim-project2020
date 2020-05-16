@@ -5,9 +5,9 @@ from model.Vessel import Vessel
 def read_passages():
     """Read the different passages"""
     bad_passages = pd.read_csv("project_files/passages_in_v2.csv", sep=";")
-
+    bad_passages.drop(columns='index',inplace=True)
     # Get all the ships
-    df_vessels = bad_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length']].drop_duplicates(inplace=False)
+    df_vessels = bad_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length', 'Height']].drop_duplicates(inplace=False)
     df_vessels = df_vessels.reset_index(drop=True)
 
     vessel_dict = {}
@@ -17,9 +17,7 @@ def read_passages():
     for index, row in df_vessels.iterrows():
         # Make a new object
 
-        height = 1
-
-        vessel = Vessel(row['ShipID'], row['Length'], row['Width'], height, row['CEMTKlasse'])
+        vessel = Vessel(row['ShipID'], row['Length'], row['Width'], row['Height'], row['CEMTKlasse'])
         vessel_dict[row['ShipID']] = vessel
 
     # Connect the route

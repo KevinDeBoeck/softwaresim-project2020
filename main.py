@@ -20,7 +20,7 @@ network = Network()
 GlobalVars.network = network
 # Simulation
 GlobalVars.crossroad_type = CrossRoadType.CyclicSigns
-GlobalVars.animate = False
+GlobalVars.animate = True
 GlobalVars.zoom = True
 GlobalVars.x_min = 3.140237
 GlobalVars.y_min = 50.794897
