@@ -51,10 +51,11 @@ class Bridge(Node, sim.Component):
 
     def draw(self):
         coordinate_tuple = Utilities.normalize(self.x, self.y)
-        size = 1
-        if GlobalVars.zoom:
-            size = size / 2
-        self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='lime', linewidth=size, layer=0)
+        size = 3/4
+        if self.movable:
+            self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='yellow', linewidth=size, layer=0)
+        else:
+            self.animate = sim.AnimatePoints(spec=coordinate_tuple, linecolor='turquoise', linewidth=size, layer=0)
 
     def init_node(self, graph):
         if self.useful:

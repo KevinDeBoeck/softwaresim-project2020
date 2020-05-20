@@ -49,9 +49,7 @@ class FairwaySection:
         # Make a tuple (accepted by the 'AnimatePoints' function
         fairway_tuple = tuple(fairway_arr)
         # Draw all the fairway points on the map
-        size = 1
-        if GlobalVars.zoom:
-            size = size / 2
+        size = 3/4
         sim.AnimateLine(spec=fairway_tuple, linewidth=size, linecolor='blue', layer=4)
 
         for node in self.nodes:

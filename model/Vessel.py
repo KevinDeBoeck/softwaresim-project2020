@@ -145,13 +145,14 @@ class VesselComponent(sim.Component):
     def perform_animation(self):
         start = (self.current_node.x, self.current_node.y)
         end = (self.next_node.x, self.next_node.y)
+        size = 1
         if GlobalVars.network.graph.has_edge(start, end):
             edge = GlobalVars.network.graph.edges[start, end, 0]
             required_time = edge['time']
             start_xy = Utilities.normalize(*start)
             end_xy = Utilities.normalize(*end)
             if self.animation is None:
-                self.animation = sim.Animate(circle0=(1 / 2,), fillcolor0="black", x0=start_xy[0],
+                self.animation = sim.Animate(circle0=(size,), fillcolor0="black", x0=start_xy[0],
                                              x1=end_xy[0],
                                              y0=start_xy[1], y1=end_xy[1],
                                              t1=GlobalVars.environment.now() + required_time, layer=1)
@@ -234,6 +235,7 @@ class VesselComponent(sim.Component):
         self.leave(lock.wait_in[side])
 
         yield self.request(lock.key_in[side])
+        lock.hold(GlobalVars.lock_wait_time + GlobalVars.lock_inout_time)
         yield self.hold(GlobalVars.lock_inout_time)
         self.release(lock.key_in[side])
 

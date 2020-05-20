@@ -45,6 +45,7 @@ network.draw_network()
 GlobalVars.init()
 
 GlobalVars.update_counters()
+GlobalVars.draw_legend()
 
 env.suppress_trace_linenumbers(True)
 # Generate the vessel

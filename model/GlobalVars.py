@@ -55,8 +55,8 @@ crossroad_cyclic_inter_vessel_delay = 1
 crossroad_cyclic_clear_time = crossroad_stop_time
 
 lock_inout_time = 1
-lock_wait_time = 15
-lock_switch_time = 8
+lock_wait_time = 10
+lock_switch_time = 17
 
 bridge_open_time = 5
 bridge_pass_time = 1
@@ -119,3 +119,36 @@ def update_counters():
         anim_num_vessels_waiting_segment.update(
             text='Vessels waiting at segment: ' + str(len(queue_vessels_waiting_segment)))
         anim_num_vessels_finished.update(text='Vessels finished: ' + str(num_vessels_finished))
+
+
+def draw_legend():
+    delta = x_max - x_min
+
+    size = 0.75
+
+    sim.AnimateText(text="""\
+
+    Legend
+-----------------
+    Movable Bridge
+    Unmovable Bridge
+    Lock
+    Vessel
+    Crossroad
+    Water
+-----------------
+""", textcolor='black', fontsize=2, text_anchor='nw', x=x_min + 0.7 * delta,
+                    y=y_min + 0.3 * delta)
+
+    sim.Animate(circle0=(size,), fillcolor0="yellow", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.238 * delta)
+    sim.Animate(circle0=(size,), fillcolor0="turquoise", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.2205 * delta)
+    sim.Animate(circle0=(size,), fillcolor0="orangered", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.203 * delta)
+    sim.Animate(circle0=(size,), fillcolor0="black", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.1855 * delta)
+    sim.Animate(circle0=(size,), fillcolor0="red", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.168 * delta)
+    sim.Animate(circle0=(size,), fillcolor0="blue", x0=x_min + 0.7 * delta,
+                y0=y_min + 0.1505 * delta)
