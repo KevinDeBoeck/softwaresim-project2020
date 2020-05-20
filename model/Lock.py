@@ -1,5 +1,4 @@
 import salabim as sim
-import copy
 from rectpack import newPacker, SORT_NONE, SkylineBl
 
 from model import GlobalVars, Utilities
@@ -86,9 +85,9 @@ class Lock(Node, sim.Component):
         while GlobalVars.num_vessels_failed + GlobalVars.num_vessels_finished != GlobalVars.num_vessels:
             if len(self.wait_in[self.side]) > 0:
                 self.wait_in[self.side][0].activate()
-            if len(self.wait_in[self.side]) == 0:
-                if len(self.wait_in[-self.side]) == 0:
-                    yield self.passivate()
+            if len(self.wait_in[self.side]) == 0 and len(self.wait_in[-self.side]) == 0 and len(
+                    self.key_in[self.side].requesters()) == 0 and len(self.key_in[-self.side].requesters()) == 0:
+                yield self.passivate()
 
             self.release(self.key_in[self.side])
             self.waiting = True

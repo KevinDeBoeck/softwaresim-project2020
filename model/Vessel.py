@@ -109,7 +109,7 @@ class VesselComponent(sim.Component):
         self.current_node = self.nodes_path.pop(0)
         if len(self.special_nodes_path) != 0:
             self.next_special_node = self.special_nodes_path.pop(0)
-        if self.current_node == self.next_special_node:
+        if len(self.special_nodes_path) != 0 and self.current_node == self.next_special_node:
             self.next_special_node = self.special_nodes_path.pop(0)
         while len(self.nodes_path) != 0:
             if type(self.next_special_node).__name__ == 'CrossRoad':
@@ -302,7 +302,7 @@ class VesselComponent(sim.Component):
         self.enter(GlobalVars.queue_vessels_waiting_crossroad)
         GlobalVars.update_counters()
 
-        #print("ENTERED: " + str(self.vessel.id))
+        # print("ENTERED: " + str(self.vessel.id))
         crossroad = self.next_special_node
 
         if GlobalVars.crossroad_type == CrossRoadType.AdvanceRight:
@@ -351,7 +351,8 @@ class VesselComponent(sim.Component):
             start = end
             if node == self.next_special_node:
                 return time
-        print("WE DID NOT ENCOUNTER THE SPECIAL NODE: %s" % self.vessel.id)
+        return float('inf')
+        # print("WE DID NOT ENCOUNTER THE SPECIAL NODE: %s" % self.vessel.id)
 
     def get_node_before_crossroad(self):
         previous = (self.nodes_path[0].x, self.nodes_path[0].y)
@@ -408,9 +409,14 @@ class VesselComponentGenerator(sim.Component):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.distr = sim.Bounded(sim.Exponential(35.1274), upperbound=150)
+        self.distr = sim.Bounded(sim.Exponential(30.9012), upperbound=200)
 
     def process(self):
-        for _, vessel in GlobalVars.vessels_dict.items():
+        vessels = list(GlobalVars.vessels_dict.values())
+
+        # while len(vessels) > 0:
+        #     vessel = random.choice(vessels)
+        #    vessels.remove(vessel)
+        for vessel in vessels:
             VesselComponent(vessel)
             yield self.hold(self.distr.sample())

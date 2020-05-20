@@ -18,7 +18,7 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_gen.csv'
+passages_file = 'project_files/passages_in_v3_working.csv'
 trajectory_info_base = 'project_files/trajectory_info/'
 
 trajectory_dict = {}

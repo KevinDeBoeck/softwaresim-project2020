@@ -39,9 +39,12 @@ def fix_data(vessels):
         first_line = vessel.trajectory_route.pop(0)
         first_line["ShipID"] = index
         new_data.append(first_line)
+
+        if index is 4:
+            print()
         if len(vessel.trajectory_route) > 0:
             second_line = vessel.trajectory_route.pop(0)
-            accending = first_line["TrajectName"] < second_line["TrajectName"]
+            ascending = first_line["TrajectName"] < second_line["TrajectName"]
             second_line["ShipID"] = index
             new_data.append(second_line)
 
@@ -49,22 +52,24 @@ def fix_data(vessels):
             while len(vessel.trajectory_route) > 0:
                 curr = vessel.trajectory_route.pop(0)
                 if prev["TrajectName"] < curr["TrajectName"]:
-                    if accending:
+                    if ascending:
                         curr["ShipID"] = index
                         new_data.append(curr)
                     else:
-                        index += 1
-                        accending = False
+                        #index += 1
+                        ascending = True
                         curr["ShipID"] = index
+                        new_data.append(prev)
                         new_data.append(curr)
                 if prev["TrajectName"] > curr["TrajectName"]:
-                    if not accending:
+                    if not ascending:
                         curr["ShipID"] = index
                         new_data.append(curr)
                     else:
-                        index += 1
-                        accending = True
+                        #index += 1
+                        ascending = False
                         curr["ShipID"] = index
+                        new_data.append(prev)
                         new_data.append(curr)
                 prev = curr
         index += 1
@@ -77,4 +82,4 @@ new_rows_list = fix_data(vessels)
 
 new_dataframe = pd.DataFrame(new_rows_list)
 
-new_dataframe.to_csv("project_files/passages_in_v3.csv", index=False, sep=";")
+new_dataframe.to_csv("project_files/passages_in_v3_working.csv", index=False, sep=";")

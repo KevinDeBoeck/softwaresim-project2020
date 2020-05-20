@@ -4,6 +4,7 @@ import math
 # import matplotlib.pyplot as plt
 import networkx as nx
 import salabim as sim
+import numpy as np
 
 from model import GlobalVars, Utilities
 from model.CrossRoad import CrossRoad

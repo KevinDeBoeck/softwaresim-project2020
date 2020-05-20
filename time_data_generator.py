@@ -9,7 +9,7 @@ def read_passages():
     format_str = '%Y-%m-%d %H:%M:%S.%f'
 
     """Read the different passages"""
-    bad_passages = pd.read_csv("project_files/passages_in_v2.csv", sep=";")
+    bad_passages = pd.read_csv("project_files/passages_in_v3_working.csv", sep=";")
 
     # Get all the ships
     df_vessels = bad_passages[['ShipID', 'CEMTKlasse', 'Width', 'Length']].drop_duplicates(inplace=False)
@@ -46,7 +46,7 @@ def get_between_time(vessels):
         curr = vessels.pop(0)
         diff = curr.trajectory_route[0] - prev.trajectory_route[0]
         minutes = diff.seconds / 60
-        if minutes < 60 * 6:
+        if minutes < 200:
             between_times.append(minutes)
         prev = curr
     return between_times
