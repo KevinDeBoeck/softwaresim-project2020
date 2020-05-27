@@ -23,7 +23,7 @@ i = seeds[4]
 # for i in seeds:
 GlobalVars.seed = i
 folder = 'crossroads'
-name = 'smartsigns'
+name = 'advanceright_nocross'
 
 out_file = 'output/{}/{}_{}.txt'.format(folder, name, str(GlobalVars.seed))
 
@@ -35,7 +35,7 @@ IO.read_data()
 network = Network()
 GlobalVars.network = network
 # Simulation
-GlobalVars.crossroad_type = CrossRoadType.SmartSigns
+GlobalVars.crossroad_type = CrossRoadType.AdvanceRight
 GlobalVars.animate = False
 GlobalVars.zoom = True
 GlobalVars.x_min = 3.140237

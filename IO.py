@@ -1,6 +1,5 @@
 import json
 import math
-import random
 
 import geopandas as gpd
 import pandas as pd
@@ -103,6 +102,12 @@ def read_trajectories():
                 cross_table[ship_type]['IV'] = bool(cross_tuple.IV)
                 cross_table[ship_type]['Va'] = bool(cross_tuple.Va)
                 cross_table[ship_type]['Vb'] = bool(cross_tuple.Vb)
+                # cross_table[ship_type]['I'] = True
+                # cross_table[ship_type]['II'] = True
+                # cross_table[ship_type]['III'] = True
+                # cross_table[ship_type]['IV'] = True
+                # cross_table[ship_type]['Va'] = True
+                # cross_table[ship_type]['Vb'] = True
 
     return trajectory_dict
 
@@ -119,7 +124,7 @@ def read_network():
         coordinates = feature['geometry']['coordinates']
         speed = feature['properties']['calspeed']
 
-        fairway_section = FairwaySection(fw_code, coordinates,speed)
+        fairway_section = FairwaySection(fw_code, coordinates, speed)
         fairway_sections_list.append(fairway_section)
 
     return fairway_sections_list
