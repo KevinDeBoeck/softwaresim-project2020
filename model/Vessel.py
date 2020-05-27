@@ -377,12 +377,12 @@ class VesselComponent(sim.Component):
         else:
             if self.previous_node == current_trajectory.get_start_point(current_direction):
                 current_trajectory.waiting[current_direction].append(self)
+                self.enter(GlobalVars.queue_vessels_waiting_segment)
+                GlobalVars.update_counters()
                 while not doing_crossroad and not self.can_enter():
-                    self.enter(GlobalVars.queue_vessels_waiting_segment)
-                    GlobalVars.update_counters()
                     yield self.passivate()
-                    self.leave(GlobalVars.queue_vessels_waiting_segment)
-                    GlobalVars.update_counters()
+                self.leave(GlobalVars.queue_vessels_waiting_segment)
+                GlobalVars.update_counters()
                 current_trajectory.waiting[current_direction].remove(self)
                 current_trajectory.moving[current_direction].append(self)
 
@@ -391,12 +391,12 @@ class VesselComponent(sim.Component):
         current_direction = self.trajectories[0][1]
         current_trajectory.moving[current_direction].remove(self)
         current_trajectory.waiting[current_direction].append(self)
+        self.enter(GlobalVars.queue_vessels_waiting_segment)
+        GlobalVars.update_counters()
         while not self.can_enter():
-            self.enter(GlobalVars.queue_vessels_waiting_segment)
-            GlobalVars.update_counters()
             yield self.passivate()
-            self.leave(GlobalVars.queue_vessels_waiting_segment)
-            GlobalVars.update_counters()
+        self.leave(GlobalVars.queue_vessels_waiting_segment)
+        GlobalVars.update_counters()
         current_trajectory.waiting[current_direction].remove(self)
         current_trajectory.moving[current_direction].append(self)
 

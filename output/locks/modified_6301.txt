@@ -80,56 +80,46 @@ Length of Vessels waiting at segments        duration          28827.232    2882
                                              95% percentile        1            1    
                                              maximum               3            3    
 
-Length of stay in Vessels waiting at segmentsentries             190          190            0    
-                                             mean                 25.397       25.397
-                                             std.deviation        14.994       14.994
+Length of stay in Vessels waiting at segmentsentries            5650          125         5525    
+                                             mean                  0.854       38.604
+                                             std.deviation         7.870       36.636
 
-                                             minimum               0.107        0.107
-                                             median               27.314       27.314
-                                             90% percentile       44           44    
-                                             95% percentile       46.743       46.743
-                                             maximum              50.999       50.999
+                                             minimum               0            0.107
+                                             median                0           27.706
+                                             90% percentile        0           92.963
+                                             95% percentile        0          124.607
+                                             maximum             159.227      159.227
 Histogram of Length of stay in Vessels waiting at segments
                         all    excl.zero         zero
 -------------- ------------ ------------ ------------
-entries             190          190            0    
-mean                 25.397       25.397
-std.deviation        14.994       14.994
+entries            5650          125         5525    
+mean                  0.854       38.604
+std.deviation         7.870       36.636
 
-minimum               0.107        0.107
-median               27.314       27.314
-90% percentile       44           44    
-95% percentile       46.743       46.743
-maximum              50.999       50.999
+minimum               0            0.107
+median                0           27.706
+90% percentile        0           92.963
+95% percentile        0          124.607
+maximum             159.227      159.227
 
            <=       entries     %  cum%
-        0             0       0     0   |                                                                              
-        2            12       6.3   6.3 *****|                                                                         
-        4             7       3.7  10   **      |                                                                      
-        6             4       2.1  12.1 *        |                                                                     
-        8            10       5.3  17.4 ****         |                                                                 
-       10             6       3.2  20.5 **              |                                                              
-       12             6       3.2  23.7 **                |                                                            
-       14            12       6.3  30.0 *****                  |                                                       
-       16             5       2.6  32.6 **                        |                                                    
-       18             8       4.2  36.8 ***                          |                                                 
-       20             8       4.2  41.1 ***                             |                                              
-       22             5       2.6  43.7 **                                |                                            
-       24             3       1.6  45.3 *                                   |                                          
-       26             5       2.6  47.9 **                                    |                                        
-       28             7       3.7  51.6 **                                       |                                     
-       30             7       3.7  55.3 **                                          |                                  
-       32            21      11.1  66.3 ********                                             |                         
-       34             4       2.1  68.4 *                                                     |                        
-       36             4       2.1  70.5 *                                                       |                      
-       38             4       2.1  72.6 *                                                         |                    
-       40             4       2.1  74.7 *                                                          |                   
-       42            20      10.5  85.3 ********                                                            |          
-       44            11       5.8  91.1 ****                                                                    |      
-       46             6       3.2  94.2 **                                                                         |   
-       48             2       1.1  95.3                                                                             |  
-       50             3       1.6  96.8 *                                                                            | 
-       52             6       3.2 100.0 **                                                                             |
+        0          5525      97.8  97.8 ******************************************************************************|
+       10            24       0.4  98.2                                                                               |
+       20            25       0.4  98.7                                                                               |
+       30            20       0.4  99.0                                                                                |
+       40            14       0.2  99.3                                                                                |
+       50            10       0.2  99.4                                                                                |
+       60             6       0.1  99.5                                                                                |
+       70             7       0.1  99.7                                                                                |
+       80             3       0.1  99.7                                                                                |
+       90             2       0.0  99.8                                                                                |
+      100             2       0.0  99.8                                                                                |
+      110             2       0.0  99.8                                                                                |
+      120             1       0.0  99.8                                                                                |
+      130             4       0.1  99.9                                                                                |
+      140             3       0.1 100.0                                                                                |
+      150             0       0   100.0                                                                                |
+      160             2       0.0 100.0                                                                                |
           inf         0       0   100.0                                                                                |
 
 Statistics of Vessels waiting at crossroad at     28827.232
