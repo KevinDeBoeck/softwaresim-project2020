@@ -1,4 +1,5 @@
 import math
+import random
 
 import salabim as sim
 
@@ -235,7 +236,8 @@ class VesselComponent(sim.Component):
         self.leave(lock.wait_in[side])
 
         yield self.request(lock.key_in[side])
-        lock.hold(GlobalVars.lock_wait_time + GlobalVars.lock_inout_time)
+        if lock.waiting:
+            lock.hold(GlobalVars.lock_wait_time + GlobalVars.lock_inout_time)
         yield self.hold(GlobalVars.lock_inout_time)
         self.release(lock.key_in[side])
 
@@ -416,9 +418,9 @@ class VesselComponentGenerator(sim.Component):
     def process(self):
         vessels = list(GlobalVars.vessels_dict.values())
 
-        # while len(vessels) > 0:
-        #     vessel = random.choice(vessels)
-        #    vessels.remove(vessel)
-        for vessel in vessels:
+        while len(vessels) > 0:
+            vessel = random.choice(vessels)
+            vessels.remove(vessel)
+            # for vessel in vessels:
             VesselComponent(vessel)
             yield self.hold(self.distr.sample())

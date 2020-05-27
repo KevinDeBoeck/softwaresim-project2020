@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import expon
 data = pd.read_csv("times.csv")
-data_list = data['data'].tolist()
+data_list = data['data_queue_vessels_waiting_lock'].tolist()
 parrams = genextreme.fit(data_list)
 
 fig, ax = plt.subplots(1, 1)

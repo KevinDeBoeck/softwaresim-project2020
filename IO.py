@@ -14,11 +14,11 @@ from model.Trajectory import Trajectory
 from model.Vessel import Vessel
 
 trajectories_file = 'project_files/trajectories_gen.geojson'
-waterway_file = 'project_files/fairwaysections.geojson'  # All sections in flanders
+waterway_file = 'project_files/fairwaysections_modified.geojson'  # All sections in flanders
 bridges_file = 'project_files/bridges.geojson'
-locks_file = 'project_files/locks.geojson'
+locks_file = 'project_files/locks_modified.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_in_v3_working.csv'
+passages_file = 'project_files/passages_gen.csv'
 trajectory_info_base = 'project_files/trajectory_info/'
 
 trajectory_dict = {}
@@ -174,7 +174,7 @@ def read_terminals():
 
 
 def read_data():
-    """ Read all the relevant data"""
+    """ Read all the relevant data_queue_vessels_waiting_lock"""
 
     Config.trajectories_dict = read_trajectories()
 

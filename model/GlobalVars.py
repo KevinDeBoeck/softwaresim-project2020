@@ -1,6 +1,8 @@
 import salabim as sim
 from salabim import Animate
 
+import IO
+
 fairway_section_dict = {}
 fairway_section_list = []
 
@@ -56,13 +58,38 @@ crossroad_cyclic_clear_time = crossroad_stop_time
 
 lock_inout_time = 1
 lock_wait_time = 10
-lock_switch_time = 17
+lock_switch_time = 10
 
 bridge_open_time = 5
 bridge_pass_time = 1
 bridge_min_wait = 10
 
 seed = 0
+
+
+def reset():
+    global fairway_section_dict
+    global fairway_section_list
+    global trajectories_dict
+    global bridges
+    global locks
+    global network
+    global environment
+    global num_vessels_finished
+    global num_vessels_failed
+    global num_vessels
+
+    fairway_section_dict = {}
+    fairway_section_list = []
+    trajectories_dict = {}
+    bridges = []
+    locks = []
+    network = None
+    environment = None
+    num_vessels_finished = 0
+    num_vessels_failed = 0
+    num_vessels = 0
+    IO.trajectory_dict = {}
 
 
 def init():

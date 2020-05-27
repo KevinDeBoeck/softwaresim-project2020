@@ -7,7 +7,7 @@ waterway_file = 'project_files/fairwaysections.geojson'  # All sections in fland
 bridges_file = 'project_files/bridges.geojson'
 locks_file = 'project_files/locks.geojson'
 terminals_file = 'project_files/terminals.geojson'
-passages_file = 'project_files/passages_in_v3.csv'
+passages_file = 'project_files/passages_in_v3_working.csv'
 
 with open('project_files/passages_gen.csv', 'w') as file:
     file.write("TrajectName;ShipID;CEMTKlasse;Width;Length;Height\n")

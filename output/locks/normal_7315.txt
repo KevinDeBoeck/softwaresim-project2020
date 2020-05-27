@@ -1,0 +1,276 @@
+Statistics of Vessels in network at     27537.680
+                                                                     all    excl.zero         zero
+-------------------------------------------- -------------- ------------ ------------ ------------
+Length of Vessels in network                 duration          27537.680    27537.680        0    
+                                             mean                 10.092       10.092
+                                             std.deviation         3.163        3.163
+
+                                             minimum               0            0    
+                                             median               10           10    
+                                             90% percentile       14           14    
+                                             95% percentile       15           15    
+                                             maximum              20           20    
+
+Length of stay in Vessels in network         entries             941          941            0    
+                                             mean                295.339      295.339
+                                             std.deviation        89.173       89.173
+
+                                             minimum             148.827      148.827
+                                             median              315.289      315.289
+                                             90% percentile      403.475      403.475
+                                             95% percentile      425.114      425.114
+                                             maximum             489.466      489.466
+Histogram of Length of stay in Vessels in network
+                        all    excl.zero         zero
+-------------- ------------ ------------ ------------
+entries             941          941            0    
+mean                295.339      295.339
+std.deviation        89.173       89.173
+
+minimum             148.827      148.827
+median              315.289      315.289
+90% percentile      403.475      403.475
+95% percentile      425.114      425.114
+maximum             489.466      489.466
+
+           <=       entries     %  cum%
+      140             0       0     0   |                                                                              
+      160            50       5.3   5.3 ****|                                                                          
+      180           104      11.1  16.4 ********     |                                                                 
+      200            95      10.1  26.5 ********             |                                                         
+      220            28       3.0  29.4 **                     |                                                       
+      240            10       1.1  30.5                         |                                                      
+      260            19       2.0  32.5 *                         |                                                    
+      280            41       4.4  36.9 ***                          |                                                 
+      300            67       7.1  44.0 *****                              |                                           
+      320            83       8.8  52.8 *******                                   |                                    
+      340           109      11.6  64.4 *********                                          |                           
+      360            82       8.7  73.1 ******                                                    |                    
+      380            79       8.4  81.5 ******                                                           |             
+      400            70       7.4  88.9 *****                                                                  |       
+      420            45       4.8  93.7 ***                                                                       |    
+      440            27       2.9  96.6 **                                                                           | 
+      460            21       2.2  98.8 *                                                                              |
+      480             8       0.9  99.7                                                                                |
+      500             3       0.3 100                                                                                   |
+          inf         0       0   100                                                                                   |
+
+Statistics of Vessels waiting at segments at     27537.680
+                                                                     all    excl.zero         zero
+-------------------------------------------- -------------- ------------ ------------ ------------
+Length of Vessels waiting at segments        duration          27537.680    27537.680        0    
+                                             mean                  0.134        0.134
+                                             std.deviation         0.406        0.406
+
+                                             minimum               0            0    
+                                             median                0            0    
+                                             90% percentile        1            1    
+                                             95% percentile        1            1    
+                                             maximum               4            4    
+
+Length of stay in Vessels waiting at segmentsentries             164          164            0    
+                                             mean                 22.502       22.502
+                                             std.deviation        14.879       14.879
+
+                                             minimum               0.097        0.097
+                                             median               22.194       22.194
+                                             90% percentile       42           42    
+                                             95% percentile       43.860       43.860
+                                             maximum              50.227       50.227
+Histogram of Length of stay in Vessels waiting at segments
+                        all    excl.zero         zero
+-------------- ------------ ------------ ------------
+entries             164          164            0    
+mean                 22.502       22.502
+std.deviation        14.879       14.879
+
+minimum               0.097        0.097
+median               22.194       22.194
+90% percentile       42           42    
+95% percentile       43.860       43.860
+maximum              50.227       50.227
+
+           <=       entries     %  cum%
+        0             0       0     0   |                                                                              
+        2            15       9.1   9.1 *******|                                                                       
+        4             7       4.3  13.4 ***       |                                                                    
+        6             6       3.7  17.1 **           |                                                                 
+        8             8       4.9  22.0 ***              |                                                             
+       10             9       5.5  27.4 ****                 |                                                         
+       12             9       5.5  32.9 ****                      |                                                    
+       14             9       5.5  38.4 ****                          |                                                
+       16             2       1.2  39.6                                |                                               
+       18             3       1.8  41.5 *                                |                                             
+       20             7       4.3  45.7 ***                                 |                                          
+       22             7       4.3  50   ***                                     |                                      
+       24             5       3.0  53.0 **                                        |                                    
+       26             6       3.7  56.7 **                                           |                                 
+       28             5       3.0  59.8 **                                             |                               
+       30            10       6.1  65.9 ****                                                |                          
+       32            10       6.1  72.0 ****                                                     |                     
+       34             2       1.2  73.2                                                           |                    
+       36             4       2.4  75.6 *                                                           |                  
+       38             2       1.2  76.8                                                              |                 
+       40             1       0.6  77.4                                                              |                 
+       42            27      16.5  93.9 *************                                                              |   
+       44             3       1.8  95.7 *                                                                           |  
+       46             1       0.6  96.3                                                                              | 
+       48             2       1.2  97.6                                                                               |
+       50             3       1.8  99.4 *                                                                              |
+       52             1       0.6 100.0                                                                                 |
+          inf         0       0   100.0                                                                                 |
+
+Statistics of Vessels waiting at crossroad at     27537.680
+                                                                     all    excl.zero         zero
+-------------------------------------------- -------------- ------------ ------------ ------------
+Length of Vessels waiting at crossroad       duration          27537.680    27537.680        0    
+                                             mean                  0.084        0.084
+                                             std.deviation         0.295        0.295
+
+                                             minimum               0            0    
+                                             median                0            0    
+                                             90% percentile        0            0    
+                                             95% percentile        1            1    
+                                             maximum               3            3    
+
+Length of stay in Vessels waiting at crossroaentries            1254         1254            0    
+                                             mean                  1.840        1.840
+                                             std.deviation         0.530        0.530
+
+                                             minimum               1.021        1.021
+                                             median                2            2    
+                                             90% percentile        2.000        2.000
+                                             95% percentile        3.000        3.000
+                                             maximum               5.000        5.000
+Histogram of Length of stay in Vessels waiting at crossroad
+                        all    excl.zero         zero
+-------------- ------------ ------------ ------------
+entries            1254         1254            0    
+mean                  1.840        1.840
+std.deviation         0.530        0.530
+
+minimum               1.021        1.021
+median                2            2    
+90% percentile        2.000        2.000
+95% percentile        3.000        3.000
+maximum               5.000        5.000
+
+           <=       entries     %  cum%
+        1             0       0     0   |                                                                              
+        2          1110      88.5  88.5 **********************************************************************|        
+        3           129      10.3  98.8 ********                                                                       |
+        4            13       1.0  99.8                                                                                |
+        5             2       0.2 100                                                                                   |
+          inf         0       0   100                                                                                   |
+
+Statistics of Vessels waiting at bridges at     27537.680
+                                                                     all    excl.zero         zero
+-------------------------------------------- -------------- ------------ ------------ ------------
+Length of Vessels waiting at bridges         duration          27537.680    27537.680        0    
+                                             mean                  0.095        0.095
+                                             std.deviation         0.301        0.301
+
+                                             minimum               0            0    
+                                             median                0            0    
+                                             90% percentile        0            0    
+                                             95% percentile        1            1    
+                                             maximum               2            2    
+
+Length of stay in Vessels waiting at bridges entries             481          481            0    
+                                             mean                  5.451        5.451
+                                             std.deviation         1.712        1.712
+
+                                             minimum               1            1    
+                                             median                6            6    
+                                             90% percentile        6            6    
+                                             95% percentile        6            6    
+                                             maximum              10.337       10.337
+Histogram of Length of stay in Vessels waiting at bridges
+                        all    excl.zero         zero
+-------------- ------------ ------------ ------------
+entries             481          481            0    
+mean                  5.451        5.451
+std.deviation         1.712        1.712
+
+minimum               1            1    
+median                6            6    
+90% percentile        6            6    
+95% percentile        6            6    
+maximum              10.337       10.337
+
+           <=       entries     %  cum%
+        1            59      12.3  12.3 *********|                                                                     
+        2             0       0    12.3          |                                                                     
+        3             0       0    12.3          |                                                                     
+        4             0       0    12.3          |                                                                     
+        5             0       0    12.3          |                                                                     
+        6           404      84.0  96.3 *******************************************************************          | 
+        7             6       1.2  97.5                                                                               |
+        8             5       1.0  98.5                                                                               |
+        9             4       0.8  99.4                                                                                |
+       10             2       0.4  99.8                                                                                |
+       11             1       0.2 100.0                                                                                 |
+          inf         0       0   100.0                                                                                 |
+
+Statistics of Vessels waiting at locks at     27537.680
+                                                                     all    excl.zero         zero
+-------------------------------------------- -------------- ------------ ------------ ------------
+Length of Vessels waiting at locks           duration          27537.680    27537.680        0    
+                                             mean                  4.385        4.385
+                                             std.deviation         2.003        2.003
+
+                                             minimum               0            0    
+                                             median                4            4    
+                                             90% percentile        7            7    
+                                             95% percentile        8            8    
+                                             maximum              13           13    
+
+Length of stay in Vessels waiting at locks   entries            3205         3205            0    
+                                             mean                 37.677       37.677
+                                             std.deviation        13.907       13.907
+
+                                             minimum              12           12    
+                                             median               42           42    
+                                             90% percentile       53           53    
+                                             95% percentile       59.433       59.433
+                                             maximum             123.537      123.537
+Histogram of Length of stay in Vessels waiting at locks
+                        all    excl.zero         zero
+-------------- ------------ ------------ ------------
+entries            3205         3205            0    
+mean                 37.677       37.677
+std.deviation        13.907       13.907
+
+minimum              12           12    
+median               42           42    
+90% percentile       53           53    
+95% percentile       59.433       59.433
+maximum             123.537      123.537
+
+           <=       entries     %  cum%
+       10             0       0     0   |                                                                              
+       15            41       1.3   1.3 *|                                                                             
+       20            21       0.7   1.9  |                                                                             
+       25           925      28.9  30.8 *********************** |                                                      
+       30           124       3.9  34.7 ***                        |                                                   
+       35           206       6.4  41.1 *****                           |                                              
+       40           155       4.8  45.9 ***                                 |                                          
+       45           960      30.0  75.9 ***********************                                     |                  
+       50           247       7.7  83.6 ******                                                            |            
+       55           317       9.9  93.5 *******                                                                   |    
+       60            57       1.8  95.3 *                                                                           |  
+       65            45       1.4  96.7 *                                                                            | 
+       70            29       0.9  97.6                                                                               |
+       75            31       1.0  98.5                                                                               |
+       80            16       0.5  99.0                                                                                |
+       85            13       0.4  99.4                                                                                |
+       90             9       0.3  99.7                                                                                |
+       95             3       0.1  99.8                                                                                |
+      100             1       0.0  99.8                                                                                |
+      105             1       0.0  99.9                                                                                |
+      110             1       0.0  99.9                                                                                |
+      115             2       0.1 100.0                                                                                |
+      120             0       0   100.0                                                                                |
+      125             1       0.0 100.0                                                                                |
+          inf         0       0   100.0                                                                                |
+
